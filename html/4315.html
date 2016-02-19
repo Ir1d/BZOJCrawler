@@ -1,0 +1,74 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4315. -- queue</title><center><h2>4315: queue</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>19  <span class="green">Solved: </span>5<br/>[<a href="submitpage.php?id=4315">Submit</a>][<a href="problemstatus.php?id=4315">Status</a>][<a href="bbs.php?id=4315">Discuss</a>]</center><h2>Description</h2><div class="content"><div>自从小C接过宇宙大总统的职位后，为了巩固自己的统治，他决定给全宇宙的精英排个队，这样，下次聚集精英们的时候，不至于乱成一锅粥。</div>
+<div>当然，精英们可是非常挑剔的，它们对于排队可有很苛刻的要求。</div>
+<div>为了方便描述，n个精英，被编号1~n。排完队之后，每个精英要求，自己的后面（不必是严格后面）都必须有一个人的编号和自己的编号相差为1（+1或-1）；</div>
+<div>而且，有很多特别霸气的精英，比如Mars之类的人，他们认为自己只能站在队伍的某个位置，小C必须满足他们的需求。</div>
+<div>小C想知道，存在多少方案满足精英们如此苛刻的条件。</div>
+<p></p></div><h2>Input</h2><div class="content"><div>第一行： 两个正整数n， k，表示有n个精英，k个人强制要求自己的位置。</div>
+<div>第2~k+1行，两个整数a，b，表示编号为a的精英要求自己站在队伍的第b个位置；</div>
+<p></p></div><h2>Output</h2><div class="content"><div> 一个整数，输出方案， 答案对10^9+7 取模</div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 2<br/>
+1 1<br/>
+2 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>【样例解释】</div><br/>
+<div>两种方案为：</div><br/>
+<div>1 5 2 3 4</div><br/>
+<div>1 5 2 4 3 </div><br/>
+<div>最后一个人由于后面没有人，所以不要求后面有人和他编号相差为1</div><br/>
+<div>强行要求位置的人，他的后面也必须有人和他编号相差为1（除非他是最后一个）</div><br/>
+<div>【数据约定】</div><br/>
+<div> 100% n &lt;= 100000， k&lt;=n;</div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4315">Submit</a>][<a href="problemstatus.php?id=4315">Status</a>][<a href="bbs.php?id=4315">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

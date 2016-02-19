@@ -1,0 +1,79 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3443. -- 装备合成</title><center><h2>3443: 装备合成</h2><span class="green">Time Limit: </span>15 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>57  <span class="green">Solved: </span>26<br/>[<a href="submitpage.php?id=3443">Submit</a>][<a href="problemstatus.php?id=3443">Status</a>][<a href="bbs.php?id=3443">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium">【背景】</span></div>
+<div><span style="font-size: medium">    lll6924在某游戏中有n件装备。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">    游戏中共有m种属性，装备有属性加成。当将A装备合成到B装备上时，A装备消失，B装备的所有小于A装备的属性更新为A装备的这个属性。然而lll6924的记性不太好，因为装备很多，所以一些属性常常记错，他在合成时会突然想起，某个装备的某个属性的初始值应该是多少（暂且认为修改后是正确的，这个属性可能会被修改多次）（请注意，这是理解题意的难点，请结合样例）。在合成过程中lll6924想知道一些装备的一些属性（根据之前给出的数据（初始属性、合成、修改），输出装备当前认为是正确的属性）。</span></div></div><h2>Input</h2><div class="content"><div><span style="font-size: medium">    输入有n+1+q行，第一行有三个用空格隔开的正整数n、m、q，q表示操作（合成操作、询问操作和修改操作）数。接下来的n行，每行有m个用空格隔开的正整数，表示这个装备的各个属性。接下来的q行，每行格式为“k a b c”，若k为1，则为将第a个装备合成到第b个装备，输入数据保证a、b装备存在，此时c=0。若k为2，则为询问第a个装备的第b个属性（若第a个装备已被合成掉，则输出该装备在被合成前的第b个属性是多少），此时c=0。若k为3，则为将第a个装备的第b个属性的初始值更新为c（注意，若a装备已被合成掉，该操作仍然有效，会影响他合成到的装备的属性）。</span></div></div><h2>Output</h2><div class="content"><div><span style="font-size: medium">    输出如输入格式所述，每个输出占一行。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 5 10<br/>
+1 2 3 4 3<br/>
+0 0 0 0 0<br/>
+2 0 0 0 0<br/>
+1 1 2 0<br/>
+2 2 3 0<br/>
+3 2 4 5<br/>
+1 2 3 0<br/>
+3 1 3 2<br/>
+2 3 1 0<br/>
+3 3 1 0<br/>
+2 3 1 0<br/>
+2 3 4 0<br/>
+2 2 3 0<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">3<br/>
+2<br/>
+1<br/>
+5<br/>
+2<br/>
+【数据范围及约定】<br/>
+100%的数据，0＜n≤1500,0＜m≤400，0＜q≤200000，0≤装备属性≤50000。<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" height="487" src="image/_JudgeOnline_upload_201402_11_jpg" width="606"/></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By lll6924 at“冬令营后竞速放松赛”">By lll6924 at“冬令营后竞速放松赛”</a></p></div><center>[<a href="submitpage.php?id=3443">Submit</a>][<a href="problemstatus.php?id=3443">Status</a>][<a href="bbs.php?id=3443">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

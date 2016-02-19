@@ -1,0 +1,61 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1153. -- [CTSC2006]拼图Jigsaw</title><center><h2>1153: [CTSC2006]拼图Jigsaw</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>64 MBSec  <span class="red">Special Judge</span><br/><span class="green">Submit: </span>94  <span class="green">Solved: </span>28<br/>[<a href="submitpage.php?id=1153">Submit</a>][<a href="problemstatus.php?id=1153">Status</a>][<a href="bbs.php?id=1153">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">5 岁的小P 对剪纸很感兴趣，他总是喜欢把一个矩形的纸片剪成一个又一个的凸多边形。但是，每一次剪完后，他总是怀疑自己弄丢了一些纸片。聪明的他想到了一个方法来检测纸片是否弄丢：他将这些凸多边形拼起来，如果能够拼成一个矩形，他就认为纸片没有弄丢。由于纸片的数量不是很多，这个工作并不难。但是，久而久之，他对这项工作不感兴趣了，所以，他找到了你，希望你能够告诉他，这些凸多边形纸片能不能够拼成矩形。</span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行只有一个正整数n（1≤n≤8），表示凸多边形的个数。以下n 行每一行描述一个凸多边形，格式如下：第i+1 行的第一个数mi（3≤mi≤8）表示凸多边形的点数，接下来有mi 对实数，一对实数给出了一个点的坐标，这mi 个顶点按照从任意一个顶点出发的逆时针顺序给出。且所有实数都在(-1000,1000)的范围内，小数点后不超过8 位。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">如果不能拼成矩形，输出只有一行“No”。如果能拼成矩形，输出的第一行为“Yes”。接下来的n 行描述拼法。如果能够拼成一个X*Y 的矩形，那么矩形的四个顶点的坐标是(0,0)、 (0,Y)、(X,Y)、(X,0)。这n 行输出每一个凸多边形的顶点的坐标（拼成矩形后）。按照输入的顺序，即第一个输出的凸多边形对应输入的第一个凸多边形。对于每一个凸多边形，输出也按照输入的顺序，即一个多边形的第一个顶点对应输入的第一个顶点。这样，输出总共有n 行，第i 行有mi 对数。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3<br/>
+4 0 0 4 -1 5 4 0 4<br/>
+4 0 0 5 -1 8 3 0 3<br/>
+4 0 0 0 -8 3 -4 4 0</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">Yes<br/>
+0 4 4 3 5 8 0 8<br/>
+5 8 4 3 8 0 8 8<br/>
+0 0 8 0 4 3 0 4</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" border="0" src="image/images_1153_jpg"/> </p><br/>
+<p>由于矩形纸片的两面的颜色不同，所以纸片只能旋转和平移，不能翻转。所以，输出的mi 个顶点也应该是逆时针顺序的。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1153">Submit</a>][<a href="problemstatus.php?id=1153">Status</a>][<a href="bbs.php?id=1153">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

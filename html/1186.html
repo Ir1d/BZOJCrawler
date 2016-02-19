@@ -1,0 +1,70 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1186. -- [HNOI2007]胜负一子</title><center><h2>1186: [HNOI2007]胜负一子</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>20  <span class="green">Solved: </span>2<br/>[<a href="submitpage.php?id=1186">Submit</a>][<a href="problemstatus.php?id=1186">Status</a>][<a href="bbs.php?id=1186">Discuss</a>]</center><h2>Description</h2><div class="content"><p>五子棋是一种流传很广的棋类游戏，在一个15×15的棋盘上，对弈双方执黑白棋子（类似于围棋），执黑子者先下，凡落下的棋子不能被提起，即不存在挪子和吃子的情况。为了简化问题，假设黑方不存在“禁手”，“禁手”是五子棋术语，指禁止走棋子的地方。当某选手的棋子在横、竖、45度斜线方向、135度斜线方向之一先出现相连的5个棋子时，该选手获胜。先考虑轮到黑棋走的一盘残局，请给出黑棋获胜的最少步数和在该步数下能获胜的所有不同的下一步走法。</p></div><h2>Input</h2><div class="content"><p>输入文件中共有15行，每行有15个由一个空格隔开的整数。第i行，第j列的整数记做vij，用vij=0，1，2表示第i行，第j列的位置为空、有1黑子、有1白子，从左上角开始，按从左至右，自上而下的顺序输入，即输入的第1行第1列整数v11表示第1行第1列位置的状态，输入的第15行第15列整数v15，15表示第15行第15列位置的状态。</p></div><h2>Output</h2><div class="content"><p>输出文件中的第一行为两个整数a和b，其中：a表示黑棋获胜的最少步数，b表示黑棋在a步获胜的所有不同的下一步走法的种数。从第二行到第b+1行，每行有两个整数，分别表示黑棋在a步获胜的一种下一步走法落子位置的行数i和列数j，要求这些走法按照15i+j的大小从小到大排列。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 2 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 2 0 2 0 0 0 0 0<br/>
+0 0 0 0 0 0 2 1 1 2 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 1 2 1 0 0 0 0 0<br/>
+0 0 0 0 0 0 2 1 1 1 1 2 0 0 0<br/>
+0 0 0 0 0 0 0 1 0 1 0 1 0 0 0<br/>
+0 0 0 0 0 0 2 2 0 1 1 0 2 0 0<br/>
+0 0 0 0 0 0 0 0 0 2 0 2 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0<br/>
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">3 2<br/>
+10 9<br/>
+10 11</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=数据由SillyHook生成">数据由SillyHook生成</a></p></div><center>[<a href="submitpage.php?id=1186">Submit</a>][<a href="problemstatus.php?id=1186">Status</a>][<a href="bbs.php?id=1186">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1068. -- [SCOI2007]压缩</title><center><h2>1068: [SCOI2007]压缩</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>773  <span class="green">Solved: </span>483<br/>[<a href="submitpage.php?id=1068">Submit</a>][<a href="problemstatus.php?id=1068">Status</a>][<a href="bbs.php?id=1068">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">给一个由小写字母组成的字符串，我们可以用一种简单的方法来压缩其中的重复信息。压缩后的字符串除了小写字母外还可以（但不必）包含大写字母R与M，其中M标记重复串的开始，R重复从上一个M（如果当前位置左边没有M，则从串的开始算起）开始的解压结果（称为缓冲串）。 bcdcdcdcd可以压缩为bMcdRR，下面是解压缩的过程：</span></p>
+<p><span style="font-size: medium"> <img alt="" border="0" src="image/images_1068_1_jpg"/> </span></p>
+<p><span style="font-size: medium">另一个例子是abcabcdabcabcdxyxyz可以被压缩为abcRdRMxyRz。</span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">输入仅一行，包含待压缩字符串，仅包含小写字母，长度为n。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">输出仅一行，即压缩后字符串的最短长度。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">bcdcdcdcdxcdcdcdcd</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">12</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">在第一个例子中，解为aaaRa，在第二个例子中，解为bMcdRRxMcdRR。 <br/><br/>
+【限制】 <br/><br/>
+100%的数据满足：1&lt;=n&lt;=50 100%的数据满足：1&lt;=n&lt;=50<br/><br/>
+</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1068">Submit</a>][<a href="problemstatus.php?id=1068">Status</a>][<a href="bbs.php?id=1068">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

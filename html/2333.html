@@ -1,0 +1,103 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2333. -- [SCOI2011]棘手的操作</title><center><h2>2333: [SCOI2011]棘手的操作</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>1277  <span class="green">Solved: </span>484<br/>[<a href="submitpage.php?id=2333">Submit</a>][<a href="problemstatus.php?id=2333">Status</a>][<a href="bbs.php?id=2333">Discuss</a>]</center><h2>Description</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">有<font face="Times New Roman">N</font><font face="宋体">个节点，标号从</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">N</font><font face="宋体">，这</font><font face="Times New Roman">N</font><font face="宋体">个节点一开始相互不连通。第</font><font face="Times New Roman">i</font><font face="宋体">个节点的初始权值为</font><font face="Times New Roman">a[i]</font><font face="宋体">，接下来有如下一些操作：</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">U x y:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">加一条边，连接第<font face="Times New Roman">x</font><font face="宋体">个节点和第</font><font face="Times New Roman">y</font><font face="宋体">个节点</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A1 x v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点的权值增加</font><font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A2 x v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点所在的</font>连通块的所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A3 v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F1 x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点当前的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F2 x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点所在的连通块中，权值最大的节点的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F3:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出所有节点中，权值最大的节点的权值</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span> </p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输入的第一行是一个整数<font face="Times New Roman">N</font><font face="宋体">，代表节点个数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">接下来一行输入<font face="Times New Roman">N</font><font face="宋体">个整数，</font><font face="Times New Roman">a[1], a[2], …, a[N]</font><font face="宋体">，代表</font><font face="Times New Roman">N</font><font face="宋体">个节点的初始权值。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">再下一行输入一个整数<font face="Times New Roman">Q</font><font face="宋体">，代表接下来的操作数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">最后输入<font face="Times New Roman">Q</font><font face="宋体">行，每行的格式如题目描述所示。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">对于操作<font face="Times New Roman">F1, F2, F3</font><font face="宋体">，输出对应的结果，每个结果占一行。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3<br/>
+<br/>
+0 0 0<br/>
+<br/>
+8<br/>
+<br/>
+A1 3 -20<br/>
+<br/>
+A1 2 20<br/>
+<br/>
+U 1 3<br/>
+<br/>
+A2 1 10<br/>
+<br/>
+F1 3<br/>
+<br/>
+F2 3<br/>
+<br/>
+A3 -10<br/>
+<br/>
+F3<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+-10<br/>
+<br/>
+10<br/>
+<br/>
+10<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><br/><br/>
+ 对于30%的数据，保证 N&lt;=100，Q&lt;=10000</p><br/>
+<p>对于80%的数据，保证 N&lt;=100000，Q&lt;=100000</p><br/>
+<p>对于100%的数据，保证 N&lt;=300000，Q&lt;=300000</p><br/>
+<p>对于所有的数据，保证输入合法，并且 -1000&lt;=v, a[1], a[2], …, a[N]&lt;=1000<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day2">Day2</a></p></div><center>[<a href="submitpage.php?id=2333">Submit</a>][<a href="problemstatus.php?id=2333">Status</a>][<a href="bbs.php?id=2333">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

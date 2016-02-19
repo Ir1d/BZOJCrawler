@@ -1,0 +1,82 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2305. -- [Apio2011]猜单词</title><center><h2>2305: [Apio2011]猜单词</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>15  <span class="green">Solved: </span>0<br/>[<a href="submitpage.php?id=2305">Submit</a>][<a href="problemstatus.php?id=2305">Status</a>][<a href="bbs.php?id=2305">Discuss</a>]</center><h2>Description</h2><div class="content"><p>　　“猜单词”是一个双人游戏，在伊朗的青年学生中广为流行。假设有两个游戏者A和B，A作为先手，首先在一个双方都知道的语料库中选出一个单词，并记在脑海中。随后，他在一张小纸片上划下与单词字母数相等的小横线（不妨设为n条）。 <br/>
+　　接下来，B尝试猜出这个单词。每一轮，B选择一个字母并告诉 A。A按如下规则回应： </p>
+<ul>
+<li>若B 所说的字母在单词中出现，A就把它写在对应的横线上。如果整个单词已经完整（所有的字母已经被猜出），B获胜。 </li>
+<li>否则，如果字母没有在单词中出现，A就把它写在最左侧的下方仍为空白的横线下。如果所有横线下的空白处都已经有字母（也就是说，在这一轮前B已经猜了n个错误字母），那么B就输了，A 获胜。</li>
+</ul>
+<p>例如，A 从语料库中选出了单词RED，且B已经依次猜了字母 A, E, C, D, B和R。每一步的结果都在下图中展现。最终B 获胜。但如果B 在最后一步猜了S而不是R，他就输了。</p>
+<p><img alt="" height="162" src="image/_JudgeOnline_upload_201105_image_2305_png" width="782"/></p>
+<p></p>
+<p></p>
+<p>　　Aidin 是猜单词游戏迷。他相信，如果给定的语料库足够大，且其中的单词相对好，那么玩家 A（先手）可以采取一种不公平的行动——修改选择的单词。也就是说，既然玩家 A 只将单词记在脑海中而不写下来，那他能够在游戏过程中随时变化这个单词，只要使得和当前已经给出的结果仍然一致即可。例如，在<br/>
+上面的游戏中，如果单词RED, BED, LED和TED都在语料库中，那么在第4步之后，A就可以确信他将胜利。他将总是把B给出的字母写在横线下（也就是认定其为错误的字母），那么每一次他将至多在集合  {RED, BED, LED, TED}  中失去一个备选单词。最终他将向 B 宣布：“这个单词是，嗯，„„”，然后在他的集合中说出一个剩下的单词。 <br/>
+　　Aidin 想，如果语料库足够好，那么 A 甚至可能在游戏一开始就确定获胜。例如，如果选择的单词长度为2，而集合{ME, MD, DE, ED, AS, IS, AI, SI}中的单词都在语料库中，那么A 总能获胜。请自己找出A 获胜的策略。 <br/>
+　　给定一个语料库，Aidin想知道是否无论B如何进行游戏，玩家A一定能获胜？ <br/>
+　　请注意在任何一次游戏结束时，如果A获胜，A需要能够给出一个语料库中的单词作为被选出的单词，这个单词应当与A所有给出的回答一致。</p></div><h2>Input</h2><div class="content"><p>　　输入包含若干个语料库。每个语料库应该被独立地处理。 <br/>
+　　输入的第一行是一个整数 C，代表语料库的数目。随后 C 个语料库以 C 个模块的形式出现在输入中。每两个模块之间以一个空行隔开。1 ≤ C ≤ 20。 <br/>
+　　对于每个输入模块，第一行包含一个正整数 k，表示语料库中单词的个数。接下来的若干行中包含k个单词。相邻的单词以空格、制表符或换行符分隔。每个单词由小于7个大写英语字母组成。 <br/>
+　　每个单词都由不同的字母组成，也就是说，同一个字母在一个单词中出现的<br/>
+次数不会超过1次。</p></div><h2>Output</h2><div class="content"><p>　　对于每个语料库，如果玩家 A 有必胜策略（也就是说，不论 B 按什么方法猜，A总能获胜），输出一行“Yes”。否则输出一行“No”。输出不包含引号。</p>
+<p></p>
+<p>　　对于所有测试数据中，k ≤ 1000。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+12<br/>
+SI ME AND AI ARE MD AS WHEN ED IS DE<br/>
+HAPY<br/>
+<br/>
+5<br/>
+A B AB AC AD</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">Yes<br/>
+No<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>数据为国际加国内综合版</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2305">Submit</a>][<a href="problemstatus.php?id=2305">Status</a>][<a href="bbs.php?id=2305">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

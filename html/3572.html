@@ -1,0 +1,90 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3572. -- [Hnoi2014]世界树</title><center><h2>3572: [Hnoi2014]世界树</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>733  <span class="green">Solved: </span>413<br/>[<a href="submitpage.php?id=3572">Submit</a>][<a href="problemstatus.php?id=3572">Status</a>][<a href="bbs.php?id=3572">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium"> 世界树是一棵无比巨大的树，它伸出的枝干构成了整个世界。在这里，生存着各种各样的种族和生灵，他们共同信奉着绝对公正公平的女神艾莉森，在他们的信条里，公平是使世界树能够生生不息、持续运转的根本基石。<br/>
+    世界树的形态可以用一个数学模型来描述：世界树中有n个种族，种族的编号分别从1到n，分别生活在编号为1到n的聚居地上，种族的编号与其聚居地的编号相同。有的聚居地之间有双向的道路相连，道路的长度为1。保证连接的方式会形成一棵树结构，即所有的聚居地之间可以互相到达，并且不会出现环。定义两个聚居地之间的距离为连接他们的道路的长度；例如，若聚居地a和b之间有道路，b和c之间有道路，因为每条道路长度为1而且又不可能出现环，所卧a与c之间的距离为2。<br/>
+    出于对公平的考虑，第i年，世界树的国王需要授权m[i]个种族的聚居地为临时议事处。对于某个种族x（x为种族的编号），如果距离该种族最近的临时议事处为y（y为议事处所在聚居地的编号），则种族x将接受y议事处的管辖（如果有多个临时议事处到该聚居地的距离一样，则y为其中编号最小的临时议事处）。<br/>
+    现在国王想知道，在q年的时间里，每一年完成授权后，当年每个临时议事处将会管理多少个种族（议事处所在的聚居地也将接受该议事处管理）。 现在这个任务交给了以智慧著称的灵长类的你：程序猿。请帮国王完成这个任务吧。<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">    <br/>
+    第一行为一个正整数n，表示世界树中种族的个数。<br/>
+    接下来n-l行，每行两个正整数x，y，表示x聚居地与y聚居地之间有一条长度为1的双<br/>
+向道路。接下来一行为一个正整数q，表示国王询问的年数。<br/>
+    接下来q块，每块两行：<br/>
+    第i块的第一行为1个正整数m[i]，表示第i年授权的临时议事处的个数。<br/>
+    第i块的第二行为m[i]个正整数h[l]、h[2]、…、h[m[i]]，表示被授权为临时议事处的聚居地编号（保证互不相同）。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">    输出包含q行，第i行为m[i]个整数，该行的第j(j=1，2…，，m[i])个数表示第i年被授权的聚居地h[j]的临时议事处管理的种族个数。</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">10            <br/>
+21           <br/>
+32            <br/>
+43          <br/>
+54           <br/>
+61           <br/>
+73            <br/>
+83            <br/>
+94            <br/>
+10 1          <br/>
+5             <br/>
+2             <br/>
+61            <br/>
+5             <br/>
+27369         <br/>
+1             <br/>
+8             <br/>
+4             <br/>
+87103         <br/>
+5             <br/>
+29358  </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+19 <br/>
+31411<br/>
+10<br/>
+1135<br/>
+41311</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">N&lt;=300000, q&lt;=300000,m[1]+m[2]+…+m[q]&lt;=300000</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=3572">Submit</a>][<a href="problemstatus.php?id=3572">Status</a>][<a href="bbs.php?id=3572">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1264. -- [AHOI2006]基因匹配Match</title><center><h2>1264: [AHOI2006]基因匹配Match</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>805  <span class="green">Solved: </span>514<br/>[<a href="submitpage.php?id=1264">Submit</a>][<a href="problemstatus.php?id=1264">Status</a>][<a href="bbs.php?id=1264">Discuss</a>]</center><h2>Description</h2><div class="content">基因匹配（match）
+卡卡昨天晚上做梦梦见他和可可来到了另外一个星球，这个星球上生物的DNA序列由无数种碱基排列而成（地球上只有4种），而更奇怪的是，组成DNA序列的每一种碱基在该序列中正好出现5次！这样如果一个DNA序列有N种不同的碱基构成，那么它的长度一定是5N。
+卡卡醒来后向可可叙述了这个奇怪的梦，而可可这些日子正在研究生物信息学中的基因匹配问题，于是他决定为这个奇怪星球上的生物写一个简单的DNA匹配程序。
+
+为了描述基因匹配的原理，我们需要先定义子序列的概念：若从一个DNA序列（字符串）s中任意抽取一些碱基（字符），将它们仍按在s中的顺序排列成一个新串u，则称u是s的一个子序列。对于两个DNA序列s1和s2，如果存在一个序列u同时成为s1和s2的子序列，则称u是s1和s2的公共子序列。
+卡卡已知两个DNA序列s1和s2，求s1和s2的最大匹配就是指s1和s2最长公共子序列的长度。
+[任务]
+编写一个程序：
+	从输入文件中读入两个等长的DNA序列；
+	计算它们的最大匹配；
+	向输出文件打印你得到的结果。
+</div><h2>Input</h2><div class="content">输入文件中第一行有一个整数N，表示这个星球上某种生物使用了N种不同的碱基，以后将它们编号为1…N的整数。
+以下还有两行，每行描述一个DNA序列：包含5N个1…N的整数，且每一个整数在对应的序列中正好出现5次。
+</div><h2>Output</h2><div class="content">输出文件中只有一个整数，即两个DNA序列的最大匹配数目。
+</div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+1 1 2 2 1 1 2 1 2 2<br/>
+1 2 2 2 1 1 2 2 1 1<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">7<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p>[数据约束和评分方法]<br/>
+60%的测试数据中：1
+100%的测试数据中：1
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1264">Submit</a>][<a href="problemstatus.php?id=1264">Status</a>][<a href="bbs.php?id=1264">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

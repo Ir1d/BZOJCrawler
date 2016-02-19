@@ -1,0 +1,84 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3150. -- [Ctsc2013]猴子</title><center><h2>3150: [Ctsc2013]猴子</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MBSec  <span class="red">Special Judge</span><br/><span class="green">Submit: </span>104  <span class="green">Solved: </span>62<br/>[<a href="submitpage.php?id=3150">Submit</a>][<a href="problemstatus.php?id=3150">Status</a>][<a href="bbs.php?id=3150">Discuss</a>]</center><h2>Description</h2><div class="content"><div>
+<div style="margin: 6pt 0cm 0pt 20pt"><span style="font-size: medium"><span style="color: black">小</span><span style="color: black">Q</span><span style="color: black">和小</span><span style="color: black">M</span><span style="color: black">最近发明了一种卡牌游戏，叫猴子大战。 </span></span></div>
+<div style="margin: 6pt 0cm 0pt 20pt"><span style="font-size: medium"><span style="color: black">游戏最初小</span><span style="color: black">Q</span><span style="color: black">和小</span><span style="color: black">M</span><span style="color: black">各会取得一部分猴子牌。每局游戏，他们两个需要分别等概率地</span></span><span style="font-size: medium"><span style="color: black">从自己的猴子牌中抽取一张进行战斗。获胜的一方将获得双方的猴子牌。如果一方获得了所</span></span><span style="font-size: medium"><span style="color: black">有的猴子牌，则该方获得整场游戏的胜利。否则游戏将一直进行下去。 </span></span><span style="font-size: medium"><span style="color: black">在进行了若干场比赛以后，小</span><span style="color: black">Q</span><span style="color: black">和小</span><span style="color: black">M</span><span style="color: black">算出了一张胜率表，为每张猴子牌之间进行战</span></span></div>
+<div style="margin: 5pt 0cm 0pt"><span style="font-size: medium"><span style="color: black">斗双方获胜的概率。由于每场战斗一定会决出胜负，而且胜率不受先后顺序的影响，因此对</span></span><span style="font-size: medium"><span style="color: black">于任意的两张猴子牌</span><span style="color: black">A</span><span style="color: black">和</span><span style="color: black">B</span><span style="color: black">，</span><span style="color: black">A</span><span style="color: black">战胜</span><span style="color: black">B</span><span style="color: black">的概率加</span><span style="color: black">B</span><span style="color: black">战胜</span><span style="color: black">A</span><span style="color: black">的概率为</span><span style="color: black">1</span><span style="color: black">。 </span></span><span style="font-size: medium"><span style="color: black">由于自己老是输给小</span><span style="color: black">M</span><span style="color: black">，小</span><span style="color: black">Q</span><span style="color: black">开始怀疑自己每次拿到的猴子牌是否能获得胜利。他希</span></span><span style="font-size: medium"><span style="color: black">望求出自己拿到的每种猴子牌组合的获胜的概率。 </span></span><span style="font-size: medium"><span style="color: black">由于小</span><span style="color: black">Q</span><span style="color: black">接下来还有在</span><span style="color: black">CD</span><span style="color: black">市体育中心数以万计的运动计划，因此这个问题只能交给</span></span><span style="font-size: medium"><span style="color: black">你来解决了。 </span></span></div>
+</div>
+<p><span style="font-size: medium"><br clear="all"/>
+</span></p>
+<div>
+<div><span style="font-size: medium"> </span></div>
+</div></div><h2>Input</h2><div class="content"><div style="margin: 6pt 0cm 0pt 20pt"><span style="font-size: medium"><span style="color: black">输入的第一行包含两个正整数</span><span style="color: black">n</span><span style="color: black">和</span><span style="color: black">m</span><span style="color: black">，表示猴子牌的总张数和需要求的猴子牌组合的个</span></span><span style="font-size: medium"><span style="color: black">数。 </span></span><span style="font-size: medium"><span style="color: black">接下来有</span><span style="color: black">n</span><span style="color: black">行，每行包含</span><span style="color: black">n</span><span style="color: black">个实数，每个实数保留了两位小数。这</span><span style="color: black">n</span><span style="color: black">行中，其中第</span><span style="color: black">i</span><span style="color: black">行</span></span><span style="font-size: medium"><span style="color: black">第</span><span style="color: black">j列的数为P</span><sub><span style="color: black">i,j</span></sub><span style="color: black">，表示第</span><span style="color: black">i</span><span style="color: black">张猴子牌战胜第</span><span style="color: black">j</span><span style="color: black">张猴子牌的概率。保证P</span><sub><span style="color: black">i,j</span></sub> <span style="color: black">+ </span><span style="color: black">P</span><sub><span style="color: black">j,i</span></sub>  <span style="color: black">= </span><span style="color: black"> </span><span style="color: black">1。特别</span></span><span style="font-size: medium"><span style="color: black">地，P</span><sub><span style="color: black">i,j</span></sub> <span style="color: black">= 0.5</span><span style="color: black">，没有特殊意义。 </span></span><span style="font-size: medium"><span style="color: black">最后又</span><span style="color: black">m</span><span style="color: black">行。每行包含一个长度为</span><span style="color: black">n</span><span style="color: black">的无空格分隔的</span><span style="color: black">01</span><span style="color: black">串，表示一个猴子牌的组合。</span></span><span style="font-size: medium"><span style="color: black">其中第</span><span style="color: black">i</span><span style="color: black">个字符如果为</span><span style="color: black">0</span><span style="color: black">，表示最初第</span><span style="color: black">i</span><span style="color: black">张牌在小</span><span style="color: black">M</span><span style="color: black">处，否则表示在小</span><span style="color: black">Q</span><span style="color: black">处。 </span></span></div></div><h2>Output</h2><div class="content"><p><span style="font-size: medium"><span style="color: black">输出</span><span style="color: black">m</span><span style="color: black">行，每行一个实数，四舍五入保留八位小数（请强制输出八位浮点数），一次表</span></span><span style="font-size: medium"><span style="color: black">示每个给定的猴子牌组合下小</span><span style="color: black">Q</span><span style="color: black">获胜的概率。 </span></span></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 4 <br/>
+0.50 0.60 0.40 <br/>
+0.40 0.50 0.70 <br/>
+0.60 0.30 0.50 <br/>
+110 <br/>
+011 <br/>
+111 <br/>
+000 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">0.71304348 <br/>
+0.66086957 <br/>
+1.00000000 <br/>
+0.00000000 <br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><br/><br/>
+【评分方法】 <br/><br/>
+你的答案的每一行如果与我们给定的参考答案的差别均不超过2×10-6，则获得该测试点的得分，否则不得分。 参考答案保证与真实值的差别不超过10-8，因此如果你输出的答案保证与真实值差别不超过2×10-6 — 2×10-8，才能保证正确。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=vfleaking提供spj">vfleaking提供spj</a></p></div><center>[<a href="submitpage.php?id=3150">Submit</a>][<a href="problemstatus.php?id=3150">Status</a>][<a href="bbs.php?id=3150">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

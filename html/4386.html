@@ -1,0 +1,67 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4386. -- [POI2015]Wycieczki</title><center><h2>4386: [POI2015]Wycieczki</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>52  <span class="green">Solved: </span>11<br/>[<a href="submitpage.php?id=4386">Submit</a>][<a href="problemstatus.php?id=4386">Status</a>][<a href="bbs.php?id=4386">Discuss</a>]</center><h2>Description</h2><div class="content"><p>给定一张n个点m条边的带权有向图，每条边的边权只可能是1，2，3中的一种。<br/>
+将所有可能的路径按路径长度排序，请输出第k小的路径的长度，注意路径不一定是简单路径，即可以重复走同一个点。</p></div><h2>Input</h2><div class="content"><p>第一行包含三个整数n,m,k(1&lt;=n&lt;=40，1&lt;=m&lt;=1000，1&lt;=k&lt;=10^18)。<br/>
+接下来m行，每行三个整数u,v,c(1&lt;=u,v&lt;=n，u不等于v，1&lt;=c&lt;=3)，表示从u出发有一条到v的单向边，边长为c。<br/>
+可能有重边。</p></div><h2>Output</h2><div class="content"><p>包含一行一个正整数，即第k短的路径的长度，如果不存在，输出-1。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">6 6 11<br/>
+1 2 1<br/>
+2 3 2<br/>
+3 4 2<br/>
+4 5 1<br/>
+5 3 1<br/>
+4 6 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>长度为1的路径有1-&gt;2，5-&gt;3，4-&gt;5。<br/><br/>
+长度为2的路径有2-&gt;3，3-&gt;4，4-&gt;5-&gt;3。<br/><br/>
+长度为3的路径有4-&gt;6，1-&gt;2-&gt;3，3-&gt;4-&gt;5，5-&gt;3-&gt;4。<br/><br/>
+长度为4的路径有5-&gt;3-&gt;4-&gt;5。</p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢Claris">鸣谢Claris</a></p></div><center>[<a href="submitpage.php?id=4386">Submit</a>][<a href="problemstatus.php?id=4386">Status</a>][<a href="bbs.php?id=4386">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

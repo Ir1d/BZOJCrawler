@@ -1,0 +1,61 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1091. -- [SCOI2003]切割多边形</title><center><h2>1091: [SCOI2003]切割多边形</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>277  <span class="green">Solved: </span>103<br/>[<a href="submitpage.php?id=1091">Submit</a>][<a href="problemstatus.php?id=1091">Status</a>][<a href="bbs.php?id=1091">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium;">有一个凸p边形(p&lt;=8)，我们希望通过切割得到它。一开始的时候，你有一个n*m的矩形，即它的四角的坐标分别为(0,0), (0,m), (n,0), (n,m)。每次你可以选择一条直线把当前图形切割成两部分，保留其中一个部分（另一部分扔掉）切割线的长度为此直线在多边形内部的部分的长度。求出最短的切割线总长度。下面是一个例子。我们需要得到中间的多边形。</span></p>
+<p><span style="font-size: medium;"> <img alt="" border="0" src="image/images_1091_1_jpg"/> </span></p>
+<p><span style="font-size: medium;">分别沿着直线1，2，3，4进行切割即可，得到中间的四边形。</span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium;">第一行有两个整数n, m(0 &lt; n,m &lt; 500)，第二行为一个整数p(3&lt;=p&lt;=8)。以下p行每行为两个整数x, y(0 &lt; x &lt; n, 0 &lt; y &lt; m)，为按顺时针给出的各顶点坐标。数据保证多边形的是凸的，无三点共线。输入数据无错误。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium;">仅一行，为最短切割线的总长度，四舍五入到小数点后3位。允许有0.001的误差。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">100 100<br/>
+4<br/>
+80 80<br/>
+70 30<br/>
+20 20<br/>
+20 80</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">312.575</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium;">样例对应于图中给出的例子。</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1091">Submit</a>][<a href="problemstatus.php?id=1091">Status</a>][<a href="bbs.php?id=1091">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

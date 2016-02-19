@@ -1,0 +1,66 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2117. -- [2010国家集训队]Crash的旅游计划</title><center><h2>2117: [2010国家集训队]Crash的旅游计划</h2><span class="green">Time Limit: </span>150 Sec  <span class="green">Memory Limit: </span>552 MB<br/><span class="green">Submit: </span>84  <span class="green">Solved: </span>13<br/>[<a href="submitpage.php?id=2117">Submit</a>][<a href="problemstatus.php?id=2117">Status</a>][<a href="bbs.php?id=2117">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">眼看着假期就要到了，Crash由于长期切题而感到无聊了，因此他决定利用这个假期和好友陶陶一起出去旅游。 Crash和陶陶所要去的城市里有N (N &gt; 1) 个景点，Crash用正整数1到N给景点标号。这些景点之间通过N − 1条无向道路相连，每条道路有一个长度，并且保证任意两个景点之间都有且仅有一条路径相连。现在对于一个景点s，Crash和陶陶从s出发，然后访问一个景点序列{v0, v1, v2, … , vk}，其中v0就是s，且vi-1和vi(0 &lt; i ≤ k)之间有道路相连。需要注意的是，陶陶和Crash访问的景点序列中不会只有景点s。为了使旅程不显得乏味，在一个景点序列里他们不会重复走某条道路。我们定义这个序列的旅游代价为经过道路的长度和。下面问题出现了：陶陶：我们走一条景点数最多的景点序列吧。 Crash：倒，你想把我累死啊。陶陶：谁叫你整天坐在电脑前面，不出来锻炼，这下子傻了吧，哈哈哈哈~~ Crash：不行，如果你非要走景点数最多的我就不陪你走了。陶陶：笑喷油你很跳嘛！ Crash：这样吧，我们来写伸展树，如果我写的比你快，你就要听我的。陶陶：这样不公平哎，我们来玩PES吧，当然你要让我选法国队，如果你输了你就要听我的。 Crash：倒，你这是欺负我，T_T~ 陶陶：笑喷油好说话哎。 Crash：囧…… …… 这样搞了半天，最终陶陶和Crash用很多次包剪锤决定出选择旅游代价第K小 的景点序列。不过呢Crash和陶陶还没确定开始旅行的景点s，因此他希望你对于每个景点i，计算从景点i开始的景点序列中旅游代价第K小的值。 </span></p></div><h2>Input</h2><div class="content"><p>共N行。第1行包含一个字符和两个正整数，字符为ABCD中的一个，用来表示这个测试数据的类型（详见下面的数据规模和约定），另外两个正整数分别表示N和K (K &lt; N)。第2行至第N行，每行有三个正整数u、v和w (u, v ≤ N，w ≤ 10000)。表示u号景点和v号景点之间有一条道路，长度为w。输入文件保证符合题目的约定，即任意两个景点之间都有且仅有一条路径相连。</p></div><h2>Output</h2><div class="content"><p>共N行，每行有一个正整数。第i行的正整数表示从i号景点开始的景点序列中旅游代价第K小的代价。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">A 6 3<br/>
+1 2 2<br/>
+1 3 4<br/>
+1 4 3<br/>
+3 5 1<br/>
+3 6 2<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4<br/>
+6<br/>
+4<br/>
+7<br/>
+5<br/>
+6<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>样例1中输出对应的景点序列分别为：1号景点是{1, 3}，2号景点是{2, 1, 3}，3号景点是{3, 1}，4号景点是{4, 1, 3}，5号景点是{5, 3, 1}，6号景点是{6, 3, 1}。 保证每个景点到1号景点需要经过的道路数不超过30。 N ≤ 50000</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2117">Submit</a>][<a href="problemstatus.php?id=2117">Status</a>][<a href="bbs.php?id=2117">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

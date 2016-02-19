@@ -1,0 +1,327 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2427. -- [HAOI2010]软件安装</title><center><h2>2427: [HAOI2010]软件安装</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>696  <span class="green">Solved: </span>280<br/>[<a href="submitpage.php?id=2427">Submit</a>][<a href="problemstatus.php?id=2427">Status</a>][<a href="bbs.php?id=2427">Discuss</a>]</center><h2>Description</h2><div class="content"><p><b style="mso-bidi-font-weight:normal"><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>现在我们的手头有</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>N</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>个软件，对于一个软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>i</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>，它要占用</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>W<sub>i</sub></span><span lang="RU" style='font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>的磁盘空间，它的价值为</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>V<sub>i</sub></span><span lang="RU" style='font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>。我们希望从中选择一些软件安装到一台磁盘容量为</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>M</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>计算机上，使得这些软件的价值尽可能大（即</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>V<sub>i</sub></span><span lang="RU" style='font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>的和最大）。</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br/>
+<br/>
+</span><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>但是现在有个问题：软件之间存在依赖关系，即软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>i</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>只有在安装了软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>j</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>（包括软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>j</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>的直接或间接依赖）的情况下才能正确工作（软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>i</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>依赖软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>j)</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>。幸运的是，一个软件最多依赖另外一个软件。如果一个软件不能正常工作，那么它能够发挥的作用为</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>0</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>。</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br/>
+<br/>
+</span><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>我们现在知道了软件之间的依赖关系：软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>i</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>依赖软件</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>D<sub>i</sub></span><span lang="RU" style='font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>。现在请你设计出一种方案，安装价值尽量大的软件。一个软件只能被安装一次，如果一个软件没有依赖则</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>D<sub>i</sub>=0</span><span lang="RU" style='font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>，这时只要这个软件安装了，它就能正常工作。</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br style="mso-special-character:line-break"/>
+<br style="mso-special-character:line-break"/>
+</span></b></p>
+<p></p></div><h2>Input</h2><div class="content"><p><b style="mso-bidi-font-weight:normal"><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>第</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>1</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>行：</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>N, M</span><span lang="RU" style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:宋体;color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'> </span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><span style="mso-spacerun:yes"> </span></span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>（</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>0&lt;=N&lt;=100, 0&lt;=M&lt;=500</span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>）</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br/>
+</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><span style="mso-spacerun:yes">      </span></span><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>第</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>2</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>行：</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>W<sub>1</sub>, W<sub>2</sub>, ... W<sub>i</sub>, ..., W<sub>n</sub> </span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'>（</span><span lang="RU" style='font-size:12.0pt;
+font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>0&lt;=W<sub>i</sub>&lt;=M</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'> </span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>）</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br/>
+</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><span style="mso-spacerun:yes">      </span></span><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>第</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>3</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>行：</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>V<sub>1</sub>, V<sub>2</sub>, ..., V<sub>i</sub>, ..., V<sub>n</sub> </span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><span style="mso-spacerun:yes"> </span></span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>（</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>0&lt;=Vi&lt;=1000</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'> </span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>）</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br/>
+</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";
+mso-fareast-font-family:宋体;color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA'><span style="mso-spacerun:yes">      </span></span><span lang="RU" style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>第</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>4</span><span lang="RU" style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA'>行：</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>D<sub>1</sub>, D<sub>2</sub>, ..., D<sub>i</sub>, ..., D<sub>n</sub></span><sub><span lang="RU" style='font-size:12.0pt;font-family:
+"Times New Roman";mso-fareast-font-family:宋体;color:black;background:white;
+mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA'> </span></sub><span style='font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>（</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'>0&lt;=D<sub>i</sub>&lt;=N, D<sub>i</sub>≠i</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+宋体;color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'> </span><span style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman";mso-bidi-font-family:"Times New Roman";
+color:black;background:white;mso-shading:windowtext;mso-pattern:solid white;
+mso-ansi-language:RU;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA'>）</span><span lang="RU" style='font-size:12.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";color:black;background:white;mso-shading:windowtext;
+mso-pattern:solid white;mso-ansi-language:RU;mso-fareast-language:RU;
+mso-bidi-language:AR-SA'><br style="mso-special-character:line-break"/>
+<br style="mso-special-character:line-break"/>
+</span></b></p>
+<p></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin-left:18.0pt;mso-para-margin-left:1.5gd"><b><span class="Apple-style-span" style="font-weight: normal; "><b style="mso-bidi-font-weight:normal"><span lang="RU" style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;color:black;
+background:white;mso-shading:windowtext;mso-pattern:solid white;mso-ansi-language:
+RU;mso-fareast-language:RU;mso-bidi-language:AR-SA">一个整数，代表最大价值。</span></b></span></b></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 10<br/>
+5 5 6<br/>
+2 3 4<br/>
+0 1 1 </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">5</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day2">Day2</a></p></div><center>[<a href="submitpage.php?id=2427">Submit</a>][<a href="problemstatus.php?id=2427">Status</a>][<a href="bbs.php?id=2427">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

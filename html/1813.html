@@ -1,0 +1,72 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1813. -- [Ioi2005]bir
+</title><center><h2>1813: [Ioi2005]bir
+</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>64 MB<br/><span class="green">Submit: </span>33  <span class="green">Solved: </span>17<br/>[<a href="submitpage.php?id=1813">Submit</a>][<a href="problemstatus.php?id=1813">Status</a>][<a href="bbs.php?id=1813">Discuss</a>]</center><h2>Description</h2><div class="content">今天是Byteman的生日。有n个孩子参加他的生日宴会（包括Byteman）。孩子们从1到n编号。Byteman的父母准备了一张大圆桌并放了n把椅子在圆桌周围。孩子们来了就坐下。1号孩子坐其中一个，然后2号孩子坐在他左边，然后3号孩子坐在2号左边，以此类推。最后n号孩子坐在最后一个空椅子上，也就是n-1号孩子和1号孩子之间。
+Byteman的父母非常了解这些孩子，知道如果有些孩子坐在一起就会非常吵。因此他们将按特定顺序调整这些孩子的座位。用一个置换p1,p2,…,pn (p1,p2…pn是1到n的整数)来表示这个顺序。孩子p1将坐在p2和pn之间，孩子pi(i=2,3,…n-1)将坐在孩子pi-1和pi+1之间，孩子pn将坐在孩子pn-1和p1之间。需要注意的是p1可以坐在pn左边也可以坐在pn右边。
+让所有孩子按给定顺序做好，Byteman父母必须让每个孩子绕圆桌向左或向右移动一些座位。他们必须决定每个孩子如何移动，也就是说它们必须决定一个方向，以及距离。对于给定的移动信号，所有孩子立刻站起来，移到合适的位置坐下。
+串座过程使研会变得乱七八糟，乱七八糟值等于所有孩子中最大移动距离，孩子们可以以很多种方式移动，Byteman父母将选择乱七八糟值最小的。帮他们找到这一种方案。
+任务
+你的任务是写一个程序：
+*从标准输入读入孩子的数目和描述目标序列的那个置换。
+*算出最小的乱七八糟值。
+*向标准输出输出结果。
+</div><h2>Input</h2><div class="content">第一行包括一个整数n(1≤n≤1000000)。
+第二行包括n个整数p1,p2,…,pn，以一个空格分开。p1,p2,…,pn是集合{1,2,…n}的一个置换，描述目标顺序。
+另外，50%的数据n不超过1000。
+</div><h2>Output</h2><div class="content">一行包含一个整数：最小的乱七八糟值。
+</div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">6<br/>
+3 4 5 1 2 6	</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1813">Submit</a>][<a href="problemstatus.php?id=1813">Status</a>][<a href="bbs.php?id=1813">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

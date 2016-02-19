@@ -1,0 +1,87 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4154. -- [Ipsc2015]Generating Synergy</title><center><h2>4154: [Ipsc2015]Generating Synergy</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>243  <span class="green">Solved: </span>91<br/>[<a href="submitpage.php?id=4154">Submit</a>][<a href="problemstatus.php?id=4154">Status</a>][<a href="bbs.php?id=4154">Discuss</a>]</center><h2>Description</h2><div class="content"><div>
+<div>给定一棵以1为根的有根树,初始所有节点颜色为1,每次将距离节点a不超过l的a的子节点染成c,或询问点a的颜色</div>
+<div></div>
+</div>
+<p></p></div><h2>Input</h2><div class="content"><div>
+<div>第一行一个数T,表示数据组数</div>
+<div>接下来每组数据的第一行三个数n,c,q表示结点个数,颜色数和操作数</div>
+<div>接下来一行n-1个数描述2..n的父节点</div>
+<div>接下来q行每行三个数a,l,c</div>
+<div>若c为0,表示询问a的颜色</div>
+<div>否则将距离a不超过l的a的子节点染成c</div>
+</div>
+<p></p></div><h2>Output</h2><div class="content"><div>
+<div>设当前是第i个操作,y_i为本次询问的答案(若本次操作是一个修改则y_i为0),令z_i=i*y_i,请输出z_1+z_2+...+z_q模10^9+7</div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">1<br/>
+4 3 7<br/>
+1 2 2<br/>
+3 0 0<br/>
+2 1 3<br/>
+3 0 0<br/>
+1 0 2<br/>
+2 0 0<br/>
+4 1 1<br/>
+4 0 0</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">32</span></div><h2>HINT</h2>
+<div class="content"><p></p><div><br/>
+<div><br/>
+<div>第1,3,5,7的询问的答案分别为1,3,3,1,所以答案为 1*1+2*0+3*3+4*0+5*3+6*0+7*1=32.</div><br/>
+<div>数据范围:</div><br/>
+<div>对于100%的数据T&lt;=6,n,m,c&lt;=10^5,</div><br/>
+<div>1&lt;=a&lt;=n,0&lt;=l&lt;=n,0&lt;=c&lt;=c</div><br/>
+</div><br/>
+</div><br/>
+<div></div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4154">Submit</a>][<a href="problemstatus.php?id=4154">Status</a>][<a href="bbs.php?id=4154">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

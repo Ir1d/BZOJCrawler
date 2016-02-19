@@ -1,0 +1,59 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2041. -- [2009国家集训队]陶陶玩红警</title><center><h2>2041: [2009国家集训队]陶陶玩红警</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>259 MB<br/><span class="green">Submit: </span>15  <span class="green">Solved: </span>10<br/>[<a href="submitpage.php?id=2041">Submit</a>][<a href="problemstatus.php?id=2041">Status</a>][<a href="bbs.php?id=2041">Discuss</a>]</center><h2>Description</h2><div class="content"><p>陶陶最近开始玩红警了，他玩的是自己MOD的一个红警版本。这个版本是这样的：你只能造两样东西，战车工厂和坦克。最初你有一个战车工厂，然后在接下来的每一秒内你可以有两种选择(假设当前有k个战车工厂)：1，建造一个战车工厂；2，建造k辆坦克。注意，战车工厂和坦克是不能同时建造的。 陶陶在玩了一个月红警后，认为自己红警水平很厉害了。于是他向curimit发了一份挑战书，他还嚣张地说他会对curimit发动N次攻击。第i次攻击在第time[i]秒末，陶陶会使用num[i]辆坦克来进攻，消灭掉curimit家里同等数量的坦克。如果此时curimit家里没有这么多的坦克的话，那么curimit就死翘翘了。 curimit接到战书后看到看到陶陶如此强大的攻势，被吓得不轻。他想请你帮帮忙，帮他制定一份作战计划（什么时候造战车工厂，什么时候造坦克）：curimit希望在抵挡了陶陶的N轮进攻之后，在第final秒末发动最终的总攻击，一举歼灭陶陶的老家。他希望你的作战计划能够在第final秒末造出最多数量的坦克。</p></div><h2>Input</h2><div class="content"><p>第1行为两个整数N，final，含义如题目中所述。 接下来N行，第i行有两个数time[i]和num[i]，含义如题目中所述。</p></div><h2>Output</h2><div class="content"><p>如果curimit无法抵挡陶陶的进攻，那么输出“No Answer!”；否则输出第final秒末curimit最多能拥有多少辆坦克。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 10<br/>
+5 3<br/>
+7 13<br/>
+9 4<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">8<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>第1秒：造战车工厂。 第2秒：造战车工厂。 第3秒：造战车工厂。 第4秒：造坦克，当前坦克数：4。 第5秒：造坦克，当前坦克数：8。 第5秒：陶陶带了3辆坦克冲了进来，当前坦克数：5。 第6秒：造坦克，当前坦克数：9。 第7秒：造坦克，当前坦克数：13。 第7秒：陶陶带了13辆坦克冲了进来，当前坦克数：0。 第8秒：造坦克，当前坦克数：4。 第9秒：造坦克，当前坦克数：8。 第9秒：陶陶带了4辆坦克冲了进来，当前坦克数：4。 第10秒：造坦克，当前坦克数：8。 在第10秒末，curimit家里最多有8辆坦克。【数据规模和约定】 10%的数据中N≤5，final≤10； 30%的数据中N≤1000，final≤1000； 100%的数据中N≤100000，final≤10^ 9，0≤num[i]≤10^ 18； 100%的数据中1≤time[1]</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=版权所有者： 宋文杰">版权所有者： 宋文杰</a></p></div><center>[<a href="submitpage.php?id=2041">Submit</a>][<a href="problemstatus.php?id=2041">Status</a>][<a href="bbs.php?id=2041">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

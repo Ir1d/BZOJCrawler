@@ -1,0 +1,78 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3577. -- 玩手机</title><center><h2>3577: 玩手机</h2><span class="green">Time Limit: </span>12 Sec  <span class="green">Memory Limit: </span>32 MB<br/><span class="green">Submit: </span>124  <span class="green">Solved: </span>41<br/>[<a href="submitpage.php?id=3577">Submit</a>][<a href="problemstatus.php?id=3577">Status</a>][<a href="bbs.php?id=3577">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">现在有一堆手机放在坐标网格里面（坐标从1开始），坐标(i,j)的格子有s_(i,j)个手机。<br/>
+玩手机当然需要有信号，不过这里的手机与基站与我们不太一样。基站分为两种：发送站和接收站（以下简称为A站和B站）。每个手机必须同时与一个A站和一个B站通信才能工作。<br/>
+每个基站有一个正方形的覆盖范围（平行于网格）。覆盖范围可以用左下角和右上角的坐标表示（范围包括边角）。显然，手机只有在某个基站的范围内才能与这个基站通信。除此之外，每个基站还有最大接入的手机数量限制。<br/>
+求最大同时工作的手机数量。</span></p>
+<p></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行四个整数R,C,a,b，表示坐标网格的规模是R×C，共有a个A站和b个B站。<br/>
+接下来是一个R×C的矩阵，第i行第j列的数为s_(i,j)。<br/>
+接下来a行，每行5个数w,x1,y1,x2,y2，表示第i个A站最大接入w个手机，覆盖范围为(x1,y1)～(x2,y2)。<br/>
+接下来b行，每行5个数w,x1,y1,x2,y2，含义同上。</span></p>
+<p></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">一个整数，即最大同时工作的手机数量。</span></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3 1 2<br/>
+1 1 1<br/>
+1 1 1<br/>
+1 1 1<br/>
+100 1 1 3 3<br/>
+4 1 1 2 2<br/>
+4 2 2 3 3<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">7<br/>
+<br/>
+数据规模与约定<br/>
+1≤R,C≤60,0≤a,b≤10,000,0≤s,w≤10,000,1≤x1≤x2≤R,1≤y1≤y2≤C。<br/>
+<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Streaming #2 by saffah
+">Streaming #2 by saffah<br/>
+</a></p></div><center>[<a href="submitpage.php?id=3577">Submit</a>][<a href="problemstatus.php?id=3577">Status</a>][<a href="bbs.php?id=3577">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

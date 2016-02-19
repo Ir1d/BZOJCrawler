@@ -1,0 +1,82 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2332. -- [SCOI2011]植物大战僵尸</title><center><h2>2332: [SCOI2011]植物大战僵尸</h2><span class="green">Time Limit: </span>40 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>40  <span class="green">Solved: </span>13<br/>[<a href="submitpage.php?id=2332">Submit</a>][<a href="problemstatus.php?id=2332">Status</a>][<a href="bbs.php?id=2332">Discuss</a>]</center><h2>Description</h2><div class="content"><div class="Section0" style="layout-grid:  15.6pt none">
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">坚果保龄球是植物大战僵尸中的一个小游戏。现在疯狂戴夫只给了<font face="Times New Roman">lxhgww</font><font face="宋体">一些最普通的坚果，让</font><font face="Times New Roman">lxhgww</font><font face="宋体">像保龄球一样把坚果扔出去，砸死院子里的僵尸。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">院子一共由<font face="Times New Roman">N</font><font face="宋体">条轨道组成，从上到下依次编号从</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">N</font><font face="宋体">，每条轨道又被分成若干格。院子里一共有</font><font face="Times New Roman">M</font><font face="宋体">只僵尸，每只僵尸站在某个格子内，并且可以认为它的位置不会变化。游戏可以分成</font><font face="Times New Roman">K</font><font face="宋体">个回合，在每个回合中，你可以选择一条轨道，把一个坚果扔出去。被扔出去的坚果首先会沿着轨道直线的从左往右滚动，直到撞到第一只僵尸之后，它开始沿着</font><font face="Times New Roman">45</font><font face="宋体">度的斜线滚动，并且向中心的一侧滚动（即前</font><font face="Times New Roman">N/2</font><font face="宋体">行的向右下滚动，后</font><font face="Times New Roman">N/2</font><font face="宋体">行的向右上滚动，题目保证</font><font face="Times New Roman">N</font><font face="宋体">是偶数）。院子的两边是围墙。斜着走的坚果撞到围墙或者僵尸会反弹，即从往右上走变成往右下走，或者反过来。直到坚果不再能打到任何僵尸之后，该回合结束。注意：多只僵尸可能站在同一格，这个时候坚果每次只会撞死该格子的其中一只僵尸。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">为了砸死尽量多的僵尸，现在<font face="Times New Roman">lxhgww</font><font face="宋体">决定在每回合的开始，选择在当前情况下可以砸死最多僵尸的一条路线扔出坚果。在出现相同的情况时，他会选择编号最小的轨道扔出。为了了解这个做法的效果，现在</font><font face="Times New Roman">lxhgww</font><font face="宋体">需要你帮助他计算这个方法可以砸死的僵尸数目。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+</div>
+<!--EndFragment--></div><h2>Input</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输入的第一行有<font face="Times New Roman">3</font><font face="宋体">个整数，</font><font face="Times New Roman">N</font><font face="宋体">，</font><font face="Times New Roman">M</font><font face="宋体">，</font><font face="Times New Roman">K</font><font face="宋体">。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">接下来<font face="Times New Roman">M</font><font face="宋体">行，每行两个整数</font><font face="Times New Roman">X</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">, Y</span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">，表示第<font face="Times New Roman">i</font><font face="宋体">个僵尸位于第</font><font face="Times New Roman">Y</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">条轨道，从左数第<font face="Times New Roman">X</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">个格子中。</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span> </p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出数据包括<font face="Times New Roman">K+1</font><font face="宋体">行。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">前<font face="Times New Roman">K</font><font face="宋体">行，每行</font><font face="Times New Roman">2</font><font face="宋体">个数据</font><font face="Times New Roman">A</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">, B</span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">，表示在第<font face="Times New Roman">i</font><font face="宋体">个回合，从第</font><font face="Times New Roman">A</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">条轨道扔出坚果，这个坚果在运行过程中打到了<font face="Times New Roman">B</font></span><span style="font-size: 10.5pt; vertical-align: sub; font-family: 'Times New Roman'; mso-spacerun: 'yes'">i</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">个僵尸。</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">最后一行是一个数字，表示被打到的僵尸总数。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata"><br/>
+<br/>
+4 2 1<br/>
+<br/>
+1 2<br/>
+<br/>
+5 2<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+2 2<br/>
+<br/>
+2<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>【数据范围】</p><br/>
+<p>对于20%的数据，保证： N&lt;=200，M&lt;=500，K&lt;=200，Xi&lt;=200；</p><br/>
+<p>对于50%的数据，保证： N&lt;=200，M&lt;=200000，K&lt;=200，Xi&lt;=1000000；</p><br/>
+<p>对于100%的数据，保证： N&lt;=20000，M&lt;=200000，K&lt;=100000，Xi&lt;=1000000；</p><br/>
+<p>对于所有的数据，保证：1&lt;=Yi&lt;=N<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day1">Day1</a></p></div><center>[<a href="submitpage.php?id=2332">Submit</a>][<a href="problemstatus.php?id=2332">Status</a>][<a href="bbs.php?id=2332">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

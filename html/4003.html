@@ -1,0 +1,88 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4003. -- [JLOI2015]城池攻占</title><center><h2>4003: [JLOI2015]城池攻占</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>687  <span class="green">Solved: </span>250<br/>[<a href="submitpage.php?id=4003">Submit</a>][<a href="problemstatus.php?id=4003">Status</a>][<a href="bbs.php?id=4003">Discuss</a>]</center><h2>Description</h2><div class="content"><p>小铭铭最近获得了一副新的桌游，游戏中需要用 m 个骑士攻占 n 个城池。</p>
+<div>这 n 个城池用 1 到 n 的整数表示。除 1 号城池外，城池 i 会受到另一座城池 fi 的管辖，</div>
+<div>其中 fi &lt;i。也就是说，所有城池构成了一棵有根树。这 m 个骑士用 1 到 m 的整数表示，其</div>
+<div>中第 i 个骑士的初始战斗力为 si，第一个攻击的城池为 ci。</div>
+<div>每个城池有一个防御值 hi，如果一个骑士的战斗力大于等于城池的生命值，那么骑士就可</div>
+<div>以占领这座城池；否则占领失败，骑士将在这座城池牺牲。占领一个城池以后，骑士的战斗力</div>
+<div>将发生变化，然后继续攻击管辖这座城池的城池，直到占领 1 号城池，或牺牲为止。</div>
+<div>除 1 号城池外，每个城池 i 会给出一个战斗力变化参数 ai;vi。若 ai =0，攻占城池 i 以后骑士战斗力会增加 vi；若 ai =1，攻占城池 i 以后，战斗力会乘以 vi。注意每个骑士是单独计算的。也就是说一个骑士攻击一座城池，不管结果如何，均不会影响其他骑士攻击这座城池的结果。</div>
+<div>现在的问题是，对于每个城池，输出有多少个骑士在这里牺牲；对于每个骑士，输出他攻占的城池数量。</div></div><h2>Input</h2><div class="content"><p>第 1 行包含两个正整数 n;m，表示城池的数量和骑士的数量。</p>
+<div>第 2 行包含 n 个整数，其中第 i 个数为 hi，表示城池 i 的防御值。</div>
+<div>第 3 到 n +1 行，每行包含三个整数。其中第 i +1 行的三个数为 fi;ai;vi，分别表示管辖</div>
+<div>这座城池的城池编号和两个战斗力变化参数。</div>
+<div>第 n +2 到 n + m +1 行，每行包含两个整数。其中第 n + i 行的两个数为 si;ci，分别表</div>
+<div>示初始战斗力和第一个攻击的城池。</div></div><h2>Output</h2><div class="content"><p> 输出 n + m 行，每行包含一个非负整数。其中前 n 行分别表示在城池 1 到 n 牺牲的骑士</p>
+<div>数量，后 m 行分别表示骑士 1 到 m 攻占的城池数量。</div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 5<br/>
+50 20 10 10 30<br/>
+1 1 2<br/>
+2 0 5<br/>
+2 0 -10<br/>
+1 0 10<br/>
+20 2<br/>
+10 3<br/>
+40 4<br/>
+20 4<br/>
+35 5</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+2<br/>
+0<br/>
+0<br/>
+0<br/>
+1<br/>
+1<br/>
+3<br/>
+1<br/>
+1</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> 对于 100% 的数据，1 &lt;= n;m &lt;= 300000; 1 &lt;= fi&lt;i; 1 &lt;= ci &lt;= n; -10^18 &lt;= hi,vi,si &lt;= 10^18;ai等于1或者2；当 ai =1 时，vi &gt; 0；保证任何时候骑士战斗力值的绝对值不超过 10^18。</p><br/>
+<div></div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4003">Submit</a>][<a href="problemstatus.php?id=4003">Status</a>][<a href="bbs.php?id=4003">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

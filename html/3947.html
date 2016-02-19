@@ -1,0 +1,171 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3947. -- 无聊的大爷们</title><center><h2>3947: 无聊的大爷们</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>4  <span class="green">Solved: </span>1<br/>[<a href="submitpage.php?id=3947">Submit</a>][<a href="problemstatus.php?id=3947">Status</a>][<a href="bbs.php?id=3947">Discuss</a>]</center><h2>Description</h2><div class="content"><div>这是本次互测最水的一道题，希望大家珍惜机会。</div>
+<div>2015年的集训队的集训队互测就要开始了。大爷们的时间很宝贵，每个人都有自己的安排。比如说A大爷要参加省选享受虐人的快感；B大爷刚好某天和他的某个妹子约好了要去XXX；C大爷到外太空旅游去了，要过几天才回来，诸如此类。（为了保护当事人隐私权，所有人物名称皆为化名）</div>
+<div>问题是，集训队互测的时间表和每天的出题人已经排好了。因为某种诡异的原因，时间被安排在了周末——意味着已经无法修改互测的时间了。唯一的方法就是更改互测的顺序。</div>
+<div>不过这种事情难不倒集训队的大爷们，所以QQ群上经常看到这样的对话：</div>
+<div>``orz XXX大爷''</div>
+<div>``orz，有什么事么？''</div>
+<div>``4月20号我要去参加省选啊，我们换一下好不？''</div>
+<div>``我这边没问题，这就去换吧。''</div>
+<div></div>
+<div>本来事情就这样解决了，但是由于大爷们实在是太神了，所以互测时间总是换来换去的。虽然大爷们对此毫不在意，但大爷们过于频繁的交换信息引发了庞大的信息爆炸，其总量超越了当今互联网的物理容量的总和，最终瘫痪了整个信息社会，引发了全球人民的联名抗议。</div>
+<div>这下就有点麻烦了。只能要求大爷们尽可能快地协商好了。这个问题也难不倒大爷们，通过大爷们的量子计算机对平行世界的观测，从未来带来了安排好的时间表，所以只需要尽可能快地交换了。</div>
+<div></div>
+<div>现在已知：</div>
+<div>1.开始安排的互测时间表，以及未来的互测时间表。</div>
+<div>2.任意两个大爷交换互测时间所需时间为1s，会带来2^g[i][j]的信息量。若g[i][j]=-1则表明这两位大爷的交流产生的信息量已经无法测定，即无穷大。</div>
+<div>3.一个大爷在一个时刻只可以进行一次交换，但是同一时刻可以发生许多交换。</div>
+<div>4.为了拯救被崩溃的人类社会，希望能够得到一种安排，使得大爷们交换所占用的时间尽可能小。在占用时间最小的前提下，请减小大爷们交换产生的总信息量。</div>
+<div>5.总信息量的计算公式为大爷每一次交换产生的所有信息量的乘积。</div>
+<div></div>
+<div>请2014年的您编程完成这个来自未来任务，拯救人类的未来吧！</div>
+<div>（若对题意有所疑惑，请仔细参考样例及样例说明）</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class="content"><div>首先输入n，表示2015年国家队候选人人数，大爷从1开始标号。</div>
+<div>接下来一行输入n个数{a[i]}，表示开始安排的互测时间表：a[i]表示第i次测试是由a[i]这位大爷。</div>
+<div>接下来一行输入n个数{b[i]}，表示未来安排的互测时间表：b[i]表示第i次测试是由大爷b[i]主持。</div>
+<div>保证a，b为排列。</div>
+<div>接下来一个n*n的矩阵，第i行第j列表示g[i][j]，保证g[i][j]=g[j][i]。但是对于任意i，g[i][i]不一定为0，意味着一旦大爷开始独自思考人生，世界将迎来末日。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class="content"><div>第一行输出一个整数，表示大爷交换的最小耗时，以秒为单位，具体见样例。</div>
+<div>接下来输出一个整数，表示在最小耗时的前提下的最小信息量。为了减少您写高精度的负担，若答案为ans，请输出ans以2为底的对数，如果该信息量无法测定，请输出-1。</div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">样例输入1：<br/>
+9<br/>
+1 2 3 4 5 6 7 8 9<br/>
+2 3 1 5 6 4 8 7 9<br/>
+1 1 1 1 1 1 1 1 1<br/>
+1 2 2 2 2 2 2 2 2<br/>
+1 2 3 3 3 3 3 3 3<br/>
+1 2 3 4 4 4 4 4 4<br/>
+1 2 3 4 5 5 5 5 5<br/>
+1 2 3 4 5 6 6 6 6<br/>
+1 2 3 4 5 6 7 7 7<br/>
+1 2 3 4 5 6 7 8 8<br/>
+1 2 3 4 5 6 7 8 9<br/>
+样例输入2：<br/>
+1<br/>
+1<br/>
+1<br/>
+-1<br/>
+样例输入3：<br/>
+2<br/>
+1 2<br/>
+2 1<br/>
+1 2<br/>
+2 1<br/>
+样例输入4：<br/>
+5<br/>
+1 2 3 4 5<br/>
+2 3 1 5 4<br/>
+12 12 12 13 23<br/>
+12 73 23 12 1<br/>
+12 23 23 0 2<br/>
+13 12 0 23 1<br/>
+23 1 2 1 7<br/>
+样例输入5:<br/>
+8<br/>
+1 2 3 4 5 6 7 8<br/>
+2 3 4 1 6 7 8 5<br/>
+2 2 2 2 1 1 1 1<br/>
+2 2 2 2 1 1 1 1<br/>
+2 2 2 2 1 1 1 1<br/>
+2 2 2 2 1 1 1 1<br/>
+1 1 1 1 2 2 2 2<br/>
+1 1 1 1 2 2 2 2<br/>
+1 1 1 1 2 2 2 2<br/>
+1 1 1 1 2 2 2 2<br/>
+样例输入6：<br/>
+5<br/>
+1 2 3 4 5<br/>
+2 3 4 5 1<br/>
+-1 -1 -1 -1 -1<br/>
+-1 -1 -1 -1 -1<br/>
+-1 -1 -1 -1 -1<br/>
+-1 -1 -1 -1 -1<br/>
+-1 -1 -1 -1 -1</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">样例输出1：<br/>
+2<br/>
+17<br/>
+样例输出2：<br/>
+0<br/>
+0<br/>
+样例输出3：<br/>
+1<br/>
+2<br/>
+样例输出4：<br/>
+2<br/>
+25<br/>
+样例输出5：<br/>
+2<br/>
+8<br/>
+样例输出6：<br/>
+2<br/>
+-1</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>样例说明</div><br/>
+<div>给定一个置换，我们总是可以将其拆成轮换的形式。</div><br/>
+<div>在样例2中，未来的顺序和现在的顺序没有区别，不需要交换，故时间和最小信息量都为0。</div><br/>
+<div>在样例3中，我们只需要花费1s交换大爷1和大爷2，信息量为2，显然不存在其它方案。</div><br/>
+<div>在样例4中，置换(2,3,1,5,4)可以分成两个轮换(1,2,3)(4,5)，分别为长度为2和长度为3的轮换。显然最小所需时间为2：第一秒交换（2,3）(4,5)，第二秒交换(1,3)。不过信息量最小的方案却为第一秒交换（1,2）（4,5），第二秒(3,1)</div><br/>
+<div>在样例5中，给定的是两个长度为4的轮换。最小所需时间依旧为2，因为我们既可以第一秒交换（1,4）（2,3）第二秒交换（2,4）完成一个轮换，亦可以在第一秒交换（2,4）第二秒交换（1,2）（3,4）。无论哪种的最小信息量都为2*2*3=12。但是如果我们第一秒交换（1,5）（2,8）（3,7）（4,6），第二秒交换（1,6）（2,5）（3,8）（4,7），所需要的最小信息量为8。</div><br/>
+<div>在样例6中，给定的是一个长度为5的轮换，最小所需时间依旧为2，因为我们可以第一秒交换（2,5）（3,4），第二秒交换（1,2）（3,4）完成轮换。显然第二问的答案为-1。</div><br/>
+<div>数据规模和约定</div><br/>
+<div>考虑两个轮换A,B，若存在A中某元素与B中某元素交换的代价不为-1，在A,B之间连一条边。</div><br/>
+<div>数据保证：</div><br/>
+<div>1.对于前20%的数据，n&lt;=20。</div><br/>
+<div>2.另有10%的数据，第二问的答案为-1。</div><br/>
+<div>3.另有15%的数据，只存在长度小于等于3的轮换。</div><br/>
+<div>4.对于前60%的数据，轮换个数小于等于23（除去长度为1的轮换）。</div><br/>
+<div>5.另有30%的数据，轮换之间的连边不会形成环。</div><br/>
+<div>6.对于100%的数据，n&lt;=100，0&lt;=g[i][j]&lt;=10000或g[i][j]=-1</div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=2014年国家集训队十五人互测">2014年国家集训队十五人互测</a></p></div><center>[<a href="submitpage.php?id=3947">Submit</a>][<a href="problemstatus.php?id=3947">Status</a>][<a href="bbs.php?id=3947">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

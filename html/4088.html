@@ -1,0 +1,159 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4088. -- [Sdoi2015]cube</title><center><h2>4088: [Sdoi2015]cube</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>512 MBSec  <span class="red">Special Judge</span><br/><span class="green">Submit: </span>20  <span class="green">Solved: </span>7<br/>[<a href="submitpage.php?id=4088">Submit</a>][<a href="problemstatus.php?id=4088">Status</a>][<a href="bbs.php?id=4088">Discuss</a>]</center><h2>Description</h2><div class="content"><p> <span style="font-family: sans-serif; font-size: 14px; line-height: 23px; text-indent: 2em;">小渊是个聪明的孩子，他经常会给周围的小朋友们讲些自己认为有趣的内容。最近，他准备给小朋友们讲解彩色水平光源照射下的立体图，并请你帮他在平面上画出来。</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">小渊有一块面积为m*n的矩形区域，上面有m*n个边长为1的格子，每个格子上堆了一些同样大小的积木（积木的长宽高都是1）。为了方便阐述，我们假设这块区域是坐北朝南的，下面我们给出一个例子。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img alt="" height="520" src="image/_JudgeOnline_upload_201505_1_png" width="740"/></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><span style="line-height: 23px;">小渊想请你打印出这些格子的立体图。我们定义每个积木为如下格式，并且不会做任何翻转旋转，只会严格以这一种形式摆放（左侧是应该打印出来的图样，右侧为对应每一个位置符号的十进制ASCII，其中ASCII为32的符号为空格）：</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img alt="" height="266" src="image/_JudgeOnline_upload_201505_2_png" width="740"/></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><span style="background-color: transparent; line-height: 23px; text-indent: 2em;">在良好的光学环境下，小渊将T束平行光同时照射在这些积木上。这些平行光首先满足一定是红绿蓝三基色之一，其次入射角度满足：与x轴y轴的夹角度数均为45的倍数；且与z轴正方向的夹角或为45度，或为0度，或为315度。具体来说，我们最多会考虑9个方向的不同平行光，它们的入射方向可以被描述为：</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   西北方45度仰角  正北方45度仰角  东北方45度仰角</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   正西方45度仰角  垂直从上入射光  正东方45度仰角</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   西南方45度仰角  正南方45度仰角  东南方45度仰角</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于每一个单位积木来说，可以打印出来的三个表面被分为12个小三角形，如下图所示（下图中用符号0,1,2,。。。，9,a,b分别表示了12个小三角形的区域）。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><img alt="" height="416" src="image/_JudgeOnline_upload_201505_3_png" width="425"/></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"><span style="font-family: Arial, Verdana, sans-serif; font-size: 12px;"> </span><span style="line-height: 23px; text-indent: 2em;">红绿蓝三基色分别用字母RGB来表示。</span></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">而二次叠加后的三种颜色青黄紫，分别用YCP来表示。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于三次叠加后的颜色，也就是白色，用W来表示。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;"></p></div><h2>Input</h2><div class="content"><p></p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">第一行有两个正整数m和n，表示区域有m行n列。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">之后m行，依次由远及近描述了每一行的情况。每一行给出n个正整数，表示第i行第j列中有堆放了多少积木。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">之后3行，每行三个字符，描述了9个对应方向（与地图描述方向相同）的光照颜色。其中每一个字符或者为RGB中之一，表示对应的颜色。或者为*，表示没有照射光。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">这九个方向依次是：</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   西北方45度仰角  正北方45度仰角  东北方45度仰角</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   正西方45度仰角  垂直从上入射光  正东方45度仰角</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">   西南方45度仰角  正南方45度仰角  东南方45度仰角</p>
+<pre class="datafield" style="margin: 7px 30px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; line-height: 23px;">
+</pre></div><h2>Output</h2><div class="content"><p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">输出给出了打印后的效果。</p>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; text-indent: 2em; font-family: sans-serif; line-height: 23px;">其中要求输出结果不含前导空行，结尾也没有额外空行。输出的第一列不能全是空格，且每一行末尾也没有额外空格。</p>
+<pre class="datafield" style="margin: 7px 30px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; white-space: pre-wrap; word-wrap: break-word; font-family: 'Courier New', Courier, monospace; line-height: 23px;">
+</pre></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">#1<br/>
+2 2<br/>
+2 1<br/>
+1 1<br/>
+R**<br/>
+***<br/>
+**G<br/>
+<br/>
+#2<br/>
+3 4<br/>
+1 1 2 1<br/>
+1 2 1 2<br/>
+2 1 2 1<br/>
+**B<br/>
+***<br/>
+R*G<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">#1<br/>
+        +-------+<br/>
+       /Y\YYYY’/|<br/>
+      /YY.*’YY/G|<br/>
+     /.YYYY\Y/G/|<br/>
+    +-------+G.G|<br/>
+    |\GGGGG/|\:G|<br/>
+    |G\GGG/G|G*G|<br/>
+    |GG\G/GG|G:\|<br/>
+    |GGGXGGG|G’G+-------+<br/>
+    |GG/G\GG|/G/G\YYYY’/|<br/>
+    |G/GGG\G|G/GG.*’YY/G|<br/>
+    |/GGGGG\|/.GGGG\Y/G/|<br/>
+    +-------+-------+G.G|<br/>
+   /Y\GGGG’/G\GGGG’/|\:G|<br/>
+  /YY.*’GG/GG.*’GG/G|G*G|<br/>
+ /.YYYY\G/.GGGG\G/G/|G:\|<br/>
++-------+-------+G.G|G’G+<br/>
+|\GGGGG/|\GGGGG/|\:G|/G/<br/>
+|G\GGG/G|G\GGG/G|G*G|G/<br/>
+|GG\G/GG|GG\G/GG|G:\|/<br/>
+|GGGXGGG|GGGXGGG|G’G+<br/>
+|GG/G\GG|GG/G\GG|/G/<br/>
+|G/GGG\G|G/GGG\G|G/<br/>
+|/GGGGG\|/GGGGG\|/<br/>
++-------+-------+<br/>
+<br/>
+#2<br/>
+                    +-------+<br/>
+                   /W\WWWW’/|<br/>
+                  /WW.*’WW/C|<br/>
+                 /.WWWW\W/C/|<br/>
+        +-------+-------+-------+<br/>
+       /W\WWWW’/|\YYYYY/W\WWWW’/|<br/>
+      /WW.*’WW/C|G\YYY/WW.*’WW/C|<br/>
+     /.WWWW\W/C/|GG\Y/.WWWW\W/C/|<br/>
+    +-------+-------+-------+-------+C.C|---+<br/>
+   /W\WWWW’/|\YYYYY/W\WWWW’/|\YYYYY/|\:C|C’/|<br/>
+  /WW.*’WW/C|G\YYY/WW.*’WW/C|G\YYY/Y|C*C|C/C|<br/>
+ /.WWWW\W/C/|GG\Y/.WWWW\W/C/|GG\Y/YY|C:\|/C/|<br/>
++-------+C.G|GGG+-------+C.G|GGGXYYY|C’C+C.C|<br/>
+|\YYYYY/|\:G|GG/|\YYYYY/|\:G|GG/G\YY|/C/|\:C|<br/>
+|Y\YYY/Y|C*G|G/K|Y\YYY/Y|C*G|G/GGG\Y|C/C|C*C|<br/>
+|YY\Y/YY|C:\|/KK|YY\Y/YY|C:\|/GGGGG\|/C/|C:\|<br/>
+|YYYXYYY|C’G+---|YYYXYYY|C'G+-------+C.C|C’C+<br/>
+|YY/Y\YY|/G/G\KK|YY/Y\YY|/G/G\GGGG’/|\:C|/C/<br/>
+|Y/YYY\Y|G/GG.*’|Y/YYY\Y|G/GG.*’WW/C|C*C|C/<br/>
+|/YYYYY\|/.YYYY\|/YYYYY\|/.WWWW\W/C/|C:\|/<br/>
++-------+-------+-------+-------+C.C|C’C+<br/>
+|\YYYYY/|\YYYYY/|\YYYYY/|\YYYYY/|\:C|/C/<br/>
+|Y\YYY/Y|Y\YYY/Y|Y\YYY/Y|Y\YYY/Y|C*C|C/<br/>
+|YY\Y/YY|YY\Y/YY|YY\Y/YY|YY\Y/YY|C:\|/<br/>
+|YYYXYYY|YYYXYYY|YYYXYYY|YYYXYYY|C’C+<br/>
+|YY/Y\YY|YY/Y\YY|YY/Y\YY|YY/Y\YY|/C/<br/>
+|Y/YYY\Y|Y/YYY\Y|Y/YYY\Y|Y/YYY\Y|C/<br/>
+|/YYYYY\|/YYYYY\|/YYYYY\|/YYYYY\|/<br/>
++-------+-------+-------+-------+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> </p><br/>
+<p><img alt="" height="300" src="image/_JudgeOnline_upload_201505_5_png" width="456"/></p><br/>
+<p><span style="background-color: transparent; font-family: sans-serif; font-size: 14px; line-height: 23px; text-indent: 2em;">对于15%的数据，1&lt;=n,m&lt;=100,没有入射光。</span></p><br/>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于40%的数据，1&lt;=n,m&lt;=100,入射光只有一束，且入射方向一定是东南方。</p><br/>
+<p style="margin: 7px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 14px; vertical-align: baseline; background-color: transparent; text-indent: 2em; font-family: sans-serif; line-height: 23px;">对于100%的数据，1&lt;=n,m&lt;=100，每一个位置堆放的积木总数不超过100,入射光颜色可能是RGB中的任何一种颜色，最多可以有9束入射光。</p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4088">Submit</a>][<a href="problemstatus.php?id=4088">Status</a>][<a href="bbs.php?id=4088">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

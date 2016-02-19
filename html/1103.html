@@ -1,0 +1,76 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1103. -- [POI2007]大都市meg</title><center><h2>1103: [POI2007]大都市meg</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>1570  <span class="green">Solved: </span>790<br/>[<a href="submitpage.php?id=1103">Submit</a>][<a href="problemstatus.php?id=1103">Status</a>][<a href="bbs.php?id=1103">Discuss</a>]</center><h2>Description</h2><div class="content"><p>在经济全球化浪潮的影响下,习惯于漫步在清晨的乡间小路的邮递员Blue Mary也开始骑着摩托车传递邮件了。不过，她经常回忆起以前在乡间漫步的情景。昔日，乡下有依次编号为1..n的n个小村庄，某些村庄之间有一些双向的土路。从每个村庄都恰好有一条路径到达村庄1（即比特堡）。并且，对于每个村庄，它到比特堡的路径恰好只经过编号比它的编号小的村庄。另外，对于所有道路而言，它们都不在除村庄以外的其他地点相遇。在这个未开化的地方，从来没有过高架桥和地下铁道。随着时间的推移，越来越多的土路被改造成了公路。至今，Blue Mary还清晰地记得最后一条土路被改造为公路的情景。现在，这里已经没有土路了——所有的路都成为了公路，而昔日的村庄已经变成了一个大都市。 Blue Mary想起了在改造期间她送信的经历。她从比特堡出发，需要去某个村庄，并且在两次送信经历的间隔期间,有某些土路被改造成了公路.现在Blue Mary需要你的帮助：计算出每次送信她需要走过的土路数目。（对于公路，她可以骑摩托车；而对于土路，她就只好推车了。）</p></div><h2>Input</h2><div class="content"><p><br/>
+第一行是一个数n(1 &lt; = n &lt; = 2 50000). <br/>
+以下n-1行，每行两个整数a，b（1 &lt; =  a以下一行包含一个整数m（1 &lt; = m &lt; = 2 50000），表示Blue Mary曾经在改造期间送过m次信。 <br/>
+以下n+m-1行，每行有两种格式的若干信息，表示按时间先后发生过的n+m-1次事件: <br/>
+若这行为 A a b(a若这行为 W a, 则表示Blue Mary曾经从比特堡送信到村庄a。</p></div><h2>Output</h2><div class="content"><p>有m行，每行包含一个整数，表示对应的某次送信时经过的土路数目。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5<br/>
+1 2<br/>
+1 3<br/>
+1 4<br/>
+4 5<br/>
+4<br/>
+W 5<br/>
+A 1 4<br/>
+W 5<br/>
+A 4 5<br/>
+W 5<br/>
+W 2<br/>
+A 1 2<br/>
+A 1 3<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+1<br/>
+0<br/>
+1</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" border="0" src="image/images_1103_jpg"/></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1103">Submit</a>][<a href="problemstatus.php?id=1103">Status</a>][<a href="bbs.php?id=1103">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

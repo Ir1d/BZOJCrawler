@@ -1,0 +1,109 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2286. -- [Sdoi2011消耗战</title><center><h2>2286: [Sdoi2011消耗战</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>1436  <span class="green">Solved: </span>505<br/>[<a href="submitpage.php?id=2286">Submit</a>][<a href="problemstatus.php?id=2286">Status</a>][<a href="bbs.php?id=2286">Discuss</a>]</center><h2>Description</h2><div class="content"><p class="MsoTitle" style="margin: 12pt 0cm 3pt"></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">在一场战争中，战场由</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个岛屿和</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>n-1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个桥梁组成，保证每两个岛屿间有且仅有一条路径可达。现在，我军已经侦查到敌军的总部在编号为</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的岛屿，而且他们已经没有足够多的能源维系战斗，我军胜利在望。已知在其他</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>k</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个岛屿上有丰富能源，为了防止敌军获取能源，我军的任务是炸毁一些桥梁，使得敌军不能到达任何能源丰富的岛屿。由于不同桥梁的材质和结构不同，所以炸毁不同的桥梁有不同的代价，我军希望在满足目标的同时使得总代价最小。</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">侦查部门还发现，敌军有一台神秘机器。即使我军切断所有能源之后，他们也可以用那台机器。机器产生的效果不仅仅会修复所有我军炸毁的桥梁，而且会重新随机资源分布（但可以保证的是，资源不会分布到</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号岛屿上）。不过侦查部门还发现了这台机器只能够使用</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'>m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">次，所以我们只需要把每次任务完成即可。</span><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"'><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行一个整数</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，代表岛屿数量。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">n-1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行三个整数</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">u,v,w</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，代表</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">u</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号岛屿和</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">v</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">号岛屿由一条代价为</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">c</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的桥梁直接相连，保证</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">1&lt;=u,v&lt;=n</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">且</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">1&lt;=c&lt;=100000</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">n+1</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，一个整数</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，代表敌方机器能使用的次数。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，每行一个整数</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">k<sub>i</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，代表第</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">i</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">次后，有</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">k<sub>i</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个岛屿资源丰富，接下来</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">k</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">h<sub>1</sub>,h<sub>2</sub>,…h<sub>k</sub></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示资源丰富岛屿的编号。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输出有</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'">m</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行，分别代表每次任务的最小代价。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p> </o:p></span></p>
+<p class="NOI" style="margin: 13pt 0cm"><a name="OLE_LINK5"></a><a name="OLE_LINK4"></a><a name="OLE_LINK3"></a><a name="OLE_LINK2"></a></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">10<br/>
+<br/>
+1 5 13<br/>
+<br/>
+1 9 6<br/>
+<br/>
+2 1 19<br/>
+<br/>
+2 4 8<br/>
+<br/>
+2 3 91<br/>
+<br/>
+5 6 8<br/>
+<br/>
+7 5 4<br/>
+<br/>
+7 8 31<br/>
+<br/>
+10 7 9<br/>
+<br/>
+3<br/>
+<br/>
+2 10 6<br/>
+<br/>
+4 5 7 8 3<br/>
+<br/>
+3 9 4 6<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+12<br/>
+<br/>
+32<br/>
+<br/>
+22<br/>
+<br/>
+【数据规模和约定】<br/>
+<br/>
+对于10%的数据，2
+<br/>
+对于20%的数据，2
+<br/>
+对于40%的数据，2=1,sigma(ki)
+<br/>
+对于100%的数据，2=1,sigma(ki)
+<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Stage2 day2">Stage2 day2</a></p></div><center>[<a href="submitpage.php?id=2286">Submit</a>][<a href="problemstatus.php?id=2286">Status</a>][<a href="bbs.php?id=2286">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

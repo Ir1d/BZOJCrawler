@@ -1,0 +1,70 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3442. -- 学习小组</title><center><h2>3442: 学习小组</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>204  <span class="green">Solved: </span>90<br/>[<a href="submitpage.php?id=3442">Submit</a>][<a href="problemstatus.php?id=3442">Status</a>][<a href="bbs.php?id=3442">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium">【背景】</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">坑校准备鼓励学生参加学习小组。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">    共有n个学生，m个学习小组，每个学生有一定的喜好，只愿意参加其中的一些学习小组，但是校领导为学生考虑，规定一个学生最多参加k个学习小组。财务处的大叔就没那么好了，他想尽量多收钱，因为每个学生参加学习小组都要交一定的手续费，不同的学习小组有不同的手续费。然而，事与愿违，校领导又决定对学习小组组织者进行奖励，若有a个学生参加第i个学习小组，那么给这个学习小组组织者奖励Ci*a^2元。在参与学生（而不是每个学习小组的人数总和）尽量多的情况下，求财务处最少要支出多少钱（若为负数，则输出负数）（支出=总奖励费-总手续费）。</span></div></div><h2>Input</h2><div class="content"><div style="text-indent: 21pt"><span style="font-size: medium">输入有若干行，第一行有三个用空格隔开的正整数n、m、k。接下来的一行有m个正整数，表示每个Ci。第三行有m个正整数，表示参加每个学习小组需要交的手续费Fi。再接下来有一个n行m列的矩阵，表若第i行j列的数字是1，则表示第i个学生愿意参加第j个学习小组，若为0，则为不愿意。</span></div></div><h2>Output</h2><div class="content"><div> </div>
+<div style="text-indent: 21pt"><span style="font-size: medium">输出只有一个整数，为最小的支出。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata"><br/>
+3 3 1<br/>
+1 2 3<br/>
+3 2 1<br/>
+111<br/>
+111<br/>
+111<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+-2<br/>
+【样例解释】<br/>
+    参与学生最多为3，每个学生参加一个学习小组，若有两个学生参加第一个学习小组，一个学生参加第二个学习小组（一定要有人参加第二个学习小组），支出为-2，可以证明没有更优的方案了。<br/>
+【数据范围与约定】<br/>
+100%的数据，0＜n≤100，0＜m≤90，0＜k≤m，0＜Ci≤10，0＜Fi≤100。</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By lll6924 at “冬令营后竞速放松赛”">By lll6924 at “冬令营后竞速放松赛”</a></p></div><center>[<a href="submitpage.php?id=3442">Submit</a>][<a href="problemstatus.php?id=3442">Status</a>][<a href="bbs.php?id=3442">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

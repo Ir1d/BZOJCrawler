@@ -1,0 +1,79 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2561. -- 最小生成树</title><center><h2>2561: 最小生成树</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>1211  <span class="green">Solved: </span>585<br/>[<a href="submitpage.php?id=2561">Submit</a>][<a href="problemstatus.php?id=2561">Status</a>][<a href="bbs.php?id=2561">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">　给定一个边带正权的连通无向图G=(V,E)，其中N=|V|，M=|E|，N个点从1到N依次编号，给定三个正整数u，v，和L (u≠v)，假设现在加入一条边权为L的边(u,v)，那么需要删掉最少多少条边，才能够使得这条边既可能出现在最小生成树上，也可能出现在最大生成树上？<br/>
+</span></p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"><span style="font-size: medium">　</span></div></div><h2>Input</h2><div class="content"><p></p>
+<p></p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"></div>
+</div>
+<p></p>
+<p><br/>
+</p>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">　<font size="4">　第一行包含用空格隔开的两个整数，分别为N和M；<br/>
+　　接下来M行，每行包含三个正整数u，v和w表示图G存在一条边权为w的边(u,v)。<br/>
+　　最后一行包含用空格隔开的三个整数，分别为u，v，和 L；<br/>
+　　数据保证图中没有自环。<br/>
+</font>
+<div class="pdcont" style="font-size: 12pt; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体"><span style="font-size: medium">　</span></div>
+</div></div><h2>Output</h2><div class="content"><p><font size="4">　输出一行一个整数表示最少需要删掉的边的数量。<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 2<br/>
+3 2 1<br/>
+1 2 3<br/>
+1 2 2<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>对于20%的数据满足N ≤ 10，M ≤ 20，L ≤ 20；<br/><br/>
+　　对于50%的数据满足N ≤ 300，M ≤ 3000，L ≤ 200；<br/><br/>
+　　对于100%的数据满足N ≤ 20000，M ≤ 200000，L ≤ 20000。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=2012国家集训队Round 1 day1">2012国家集训队Round 1 day1</a></p></div><center>[<a href="submitpage.php?id=2561">Submit</a>][<a href="problemstatus.php?id=2561">Status</a>][<a href="bbs.php?id=2561">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

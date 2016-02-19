@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2140. -- 稳定婚姻</title><center><h2>2140: 稳定婚姻</h2><span class="green">Time Limit: </span>2 Sec  <span class="green">Memory Limit: </span>259 MB<br/><span class="green">Submit: </span>550  <span class="green">Solved: </span>252<br/>[<a href="submitpage.php?id=2140">Submit</a>][<a href="problemstatus.php?id=2140">Status</a>][<a href="bbs.php?id=2140">Discuss</a>]</center><h2>Description</h2><div class="content"><p>我国的离婚率连续7年上升，今年的头两季，平均每天有近5000对夫妇离婚，大城市的离婚率上升最快，有研究婚姻问题的专家认为，是与简化离婚手续有关。 25岁的姗姗和男友谈恋爱半年就结婚，结婚不到两个月就离婚，是典型的“闪婚闪离”例子，而离婚的导火线是两个人争玩电脑游戏，丈夫一气之下，把电脑炸烂。有社会工作者就表示，80后求助个案越来越多，有些是与父母过多干预有关。而根据民政部的统计，中国离婚五大城市首位是北京，其次是上海、深圳，广州和厦门，那么到底是什么原因导致我国成为离婚大国呢?有专家分析说，中国经济急速发展，加上女性越来越来越独立，另外，近年来简化离婚手续是其中一大原因。 ——以上内容摘自第一视频门户 现代生活给人们施加的压力越来越大，离婚率的不断升高已成为现代社会的一大问题。而其中有许许多多的个案是由婚姻中的“不安定因素”引起的。妻子与丈夫吵架后，心如绞痛，于是寻求前男友的安慰，进而夫妻矛盾激化，最终以离婚收场，类似上述的案例数不胜数。我们已知n对夫妻的婚姻状况，称第i对夫妻的男方为Bi，女方为Gi。若某男Bi与某女Gj曾经交往过（无论是大学，高中，亦或是幼儿园阶段，i≠j），则当某方与其配偶（即Bi与Gi或Bj与Gj）感情出现问题时，他们有私奔的可能性。不妨设Bi和其配偶Gi感情不和，于是Bi和Gj旧情复燃，进而Bj因被戴绿帽而感到不爽，联系上了他的初恋情人Gk……一串串的离婚事件像多米诺骨牌一般接踵而至。若在Bi和Gi离婚的前提下，这2n个人最终依然能够结合成n对情侣，那么我们称婚姻i为不安全的，否则婚姻i就是安全的。给定所需信息，你的任务是判断每对婚姻是否安全。</p></div><h2>Input</h2><div class="content"><p>第一行为一个正整数n，表示夫妻的对数；以下n行，每行包含两个字符串，表示这n对夫妻的姓名（先女后男），由一个空格隔开；第n+2行包含一个正整数m，表示曾经相互喜欢过的情侣对数；以下m行，每行包含两个字符串，表示这m对相互喜欢过的情侣姓名（先女后男），由一个空格隔开。</p></div><h2>Output</h2><div class="content"><p>输出文件共包含n行，第i行为“Safe”（如果婚姻i是安全的）或“Unsafe”（如果婚姻i是不安全的）。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">【样例输入1】<br/>
+2<br/>
+Melanie Ashley<br/>
+Scarlett Charles<br/>
+1<br/>
+Scarlett Ashley<br/>
+<br/>
+【样例输入2】<br/>
+2<br/>
+Melanie Ashley<br/>
+Scarlett Charles<br/>
+2<br/>
+Scarlett Ashley<br/>
+Melanie Charles<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">【样例输出1】<br/>
+Safe<br/>
+Safe<br/>
+<br/>
+【样例输出2】<br/>
+Unsafe<br/>
+Unsafe<br/>
+【数据规模和约定】<br/>
+对于100%的数据，所有姓名字符串中只包含英文大小写字母，大小写敏感，长度不大于8，保证每对关系只在输入文件中出现一次，输入文件的最后m行不会出现未在之前出现过的姓名，这2n个人的姓名各不相同，1≤n≤4000，0≤m≤20000。</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2140">Submit</a>][<a href="problemstatus.php?id=2140">Status</a>][<a href="bbs.php?id=2140">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1226. -- [SDOI2009]学校食堂Dining</title><center><h2>1226: [SDOI2009]学校食堂Dining</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>259 MB<br/><span class="green">Submit: </span>570  <span class="green">Solved: </span>350<br/>[<a href="submitpage.php?id=1226">Submit</a>][<a href="problemstatus.php?id=1226">Status</a>][<a href="bbs.php?id=1226">Discuss</a>]</center><h2>Description</h2><div class="content"><p>小F 的学校在城市的一个偏僻角落，所有学生都只好在学校吃饭。学校有一个食堂，虽然简陋，但食堂大厨总能做出让同学们满意的菜肴。当然，不同的人口味也不一定相同，但每个人的口味都可以用一个非负整数表示。由于人手不够，食堂每次只能为一个人做菜。做每道菜所需的时间是和前一道菜有关的，若前一道菜的对应的口味是a，这一道为b，则做这道菜所需的时间为（a or b）-（a and b），而做第一道菜是不需要计算时间的。其中，or 和and 表示整数逐位或运算及逐位与运算，C语言中对应的运算符为“|”和“&amp;”。学生数目相对于这个学校还是比较多的，吃饭做菜往往就会花去不少时间。因此，学校食堂偶尔会不按照大家的排队顺序做菜，以缩短总的进餐时间。虽然同学们能够理解学校食堂的这种做法，不过每个同学还是有一定容忍度的。也就是说，队伍中的第i 个同学，最多允许紧跟他身后的Bi 个人先拿到饭菜。一旦在此之后的任意同学比当前同学先拿到饭，当前同学将会十分愤怒。因此，食堂做菜还得照顾到同学们的情绪。现在，小F 想知道在满足所有人的容忍度这一前提下，自己的学校食堂做完这些菜最少需要多少时间。</p></div><h2>Input</h2><div class="content"><p>第一行包含一个正整数C，表示测试点的数据组数。每组数据的第一行包含一个正整数N，表示同学数。每组数据的第二行起共N行，每行包含两个用空格分隔的非负整数Ti和Bi，表示按队伍顺序从前往后的每个同学所需的菜的口味和这个同学的忍受度。每组数据之间没有多余空行。</p></div><h2>Output</h2><div class="content"><p>包含C行，每行一个整数，表示对应数据中食堂完成所有菜所需的最少时间。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+5<br/>
+5 2<br/>
+4 1<br/>
+12 0<br/>
+3 3<br/>
+2 2<br/>
+2<br/>
+5 0<br/>
+4 0<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">16<br/>
+1<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>对于第一组数据：同学1允许同学2或同学3在他之前拿到菜；同学2允许同学3在他之前拿到菜；同学3比较小气，他必须比他后面的同学先拿菜…… 一种最优的方案是按同学3、同学2、同学1、同学4、同学5做菜，每道菜所需的时间分别是0、8、1、6及1。 【数据规模和约定】对于30%的数据，满足1 ≤ N ≤ 20。对于100%的数据，满足1 ≤ N ≤ 1,000，0 ≤ Ti ≤ 1,000，0 ≤ Bi ≤ 7，1 ≤ C ≤ 5。存在30%的数据，满足0 ≤ Bi ≤ 1。存在65%的数据，满足0 ≤ Bi ≤ 5。存在45%的数据，满足0 ≤ Ti ≤ 130。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1226">Submit</a>][<a href="problemstatus.php?id=1226">Status</a>][<a href="bbs.php?id=1226">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

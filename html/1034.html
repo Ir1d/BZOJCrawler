@@ -1,0 +1,66 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1034. -- [ZJOI2008]泡泡堂BNB</title><center><h2>1034: [ZJOI2008]泡泡堂BNB</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>2047  <span class="green">Solved: </span>1079<br/>[<a href="submitpage.php?id=1034">Submit</a>][<a href="problemstatus.php?id=1034">Status</a>][<a href="bbs.php?id=1034">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium"><img alt="" border="0" src="image/images_1034_2_jpg"/> </span></p>
+<p><span style="font-size: medium">第XXXX届NOI期间，为了加强各省选手之间的交流，组委会决定组织一场省际电子竞技大赛，每一个省的代表队由n名选手组成，比赛的项目是老少咸宜的网络游戏泡泡堂。每一场比赛前，对阵双方的教练向组委会提交一份参赛选手的名单，决定了选手上场的顺序，一经确定，不得修改。比赛中，双方的一号选手，二号选手……，n号选手捉对厮杀，共进行n场比赛。每胜一场比赛得2分，平一场得1分，输一场不得分。最终将双方的单场得分相加得出总分，总分高的队伍晋级(总分相同抽签决定)。作为浙江队的领队，你已经在事先将各省所有选手的泡泡堂水平了解的一清二楚，并将其用一个实力值来衡量。为简化问题，我们假定选手在游戏中完全不受任何外界因素干扰，即实力强的选手一定可以战胜实力弱的选手，而两个实力相同的选手一定会战平。由于完全不知道对手会使用何种策略来确定出场顺序，所以所有的队伍都采取了这样一种策略，就是完全随机决定出场顺序。当然你不想这样不明不白的进行比赛。你想事先了解一下在最好与最坏的情况下，浙江队最终分别能得到多少分。 </span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">输入的第一行为一个整数n，表示每支代表队的人数。接下来n行，每行一个整数，描述了n位浙江队的选手的实力值。接下来n行，每行一个整数，描述了你的对手的n位选手的实力值。 20％的数据中，1&lt;=n&lt;=10； 40％的数据中，1&lt;=n&lt;=100； 60％的数据中，1&lt;=n&lt;=1000； 100％的数据中，1&lt;=n&lt;=100000，且所有选手的实力值在0到10000000之间。 </span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">包括两个用空格隔开的整数，分别表示浙江队在最好与最坏的情况下分别能得多少分。不要在行末输出多余的空白字符。 </span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+1<br/>
+3<br/>
+2<br/>
+4</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2 0<br/>
+样例说明<br/>
+我们分别称4位选手为A,B,C,D。则可能出现以下4种对战方式，最好情况下可得2分，最坏情况下得0分。<br/>
+	一	二	三	四<br/>
+	浙江	???	结果	浙江	???	结果	浙江	???	结果	浙江	???	结果<br/>
+一号选手	A	C	负	A	D	负	B	C	胜	B	D	负<br/>
+二号选手	B	D	负	B	C	胜	A	D	负	A	C	负<br/>
+总得分	0	2	2	0</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1034">Submit</a>][<a href="problemstatus.php?id=1034">Status</a>][<a href="bbs.php?id=1034">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

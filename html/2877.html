@@ -1,0 +1,69 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2877. -- [Noi2012]魔幻棋盘</title><center><h2>2877: [Noi2012]魔幻棋盘</h2><span class="green">Time Limit: </span>50 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>792  <span class="green">Solved: </span>315<br/>[<a href="submitpage.php?id=2877">Submit</a>][<a href="problemstatus.php?id=2877">Status</a>][<a href="bbs.php?id=2877">Discuss</a>]</center><h2>Description</h2><div class="content"></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行为两个正整数N,M，表示棋盘的大小。 第二行为两个正整数X,Y，表示棋盘守护者的位置。 第三行仅有一个正整数T，表示棋盘守护者将进行次操作。 接下来N行，每行有M个正整数，用来描述初始时棋盘上每个位置的数。 接下来T行，按操作的时间顺序给出T次操作。每行描述一次操作，以一个数字0或1开头： 若以数字0开头，表示此操作为询问，随后会有四个非负整数x1,y1,x2,y2，表示询问的区域是以棋盘守护者的位置为基础向上扩展x1行，向下扩展y1行，向左扩展x2列，向右扩展y2列得到的矩形区域（详见样例）。 若以数字1开头，表示此操作为修改，随后会有四个正整数x1,y1,x2,y2和一个整数c，表示修改区域的上、下边界分别为第x1,x2行，左、右边界分别为第y1,y2列（详见样例），在此矩形区域内的所有数统一加上c（注意c可能为负数）。<br/>
+</span></p></div><h2>Output</h2><div class="content"><p><br/>
+<font size="4"> 对于每次询问操作，每行输出一个数，表示该区域内所有数的最大公约数。<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2 2<br/>
+1 1 <br/>
+4 <br/>
+6 12 <br/>
+18 24<br/>
+0 0 0 1 0 <br/>
+1 1 1 1 2 6<br/>
+1 2 1 2 2 6<br/>
+0 0 0 1 1<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">6 6<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2877">Submit</a>][<a href="problemstatus.php?id=2877">Status</a>][<a href="bbs.php?id=2877">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2469. -- [中山市选2010]简单数谜</title><center><h2>2469: [中山市选2010]简单数谜</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>34  <span class="green">Solved: </span>22<br/>[<a href="submitpage.php?id=2469">Submit</a>][<a href="problemstatus.php?id=2469">Status</a>][<a href="bbs.php?id=2469">Discuss</a>]</center><h2>Description</h2><div class="content"><div style="text-indent: 21pt">很多人都曾经听说过数独，但你是否听说过数谜（Karuro）呢？实际上，数谜是数独的更大（且更难）的兄弟问题，而且在日本也是非常受欢迎的。</div>
+<div style="text-indent: 21pt">数谜问题和填字游戏类似，不过它要填的不是文字而是数字。数谜游戏的目标是用1-9填满所有空格，且这些数字相加的和满足相应的要求（或者称为“提示”），且在同一栏（“栏”是指一些水平或者竖直的连续的空格，用于提示的格子不算空格）不能填重复的数字。当所有格子按要求被填满后，这个数谜就看作被解决了。图1和图2是一个可能的数谜游戏示例。</div>
+<div style="text-indent: 21pt">当然，直接求解数谜问题的话会比较困难。所以现在我们需要解决的是一个更简单的数谜问题。简单数谜的形状是一个(n+1）行乘(m+1)列的矩形。而简单数谜也只有两种要求，就是行要求和列要求，且分别处于第一行和第一列，其他格子则是空格，而左上角是忽略不计的。coolzzz同学爱好简单数谜，他已经给一些简单数谜填好了其中的一些空格。现在，他想寻求你的帮助，来帮他完成这些简单数谜。如图3所示，2和9是coolzzz同学已经填好的空格，图4则是一个基于图3 的一个可能的解答。</div>
+<p><img alt="" height="314" src="image/_JudgeOnline_upload_201109_bbb_jpg" width="578"/></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入包含多组测试数据。第一行包含一个正整数</span><span lang="EN-US"><font face="Times New Roman">T</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示测试数据数目。每组数据第一行是</span><span lang="EN-US"><font face="Times New Roman">n(n&lt;10)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">和</span><span lang="EN-US"><font face="Times New Roman">m(m&lt;10)</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示数谜的形状的大小。接下来一行有</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，是相应的行要求；然后一行是</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，是相应的列要求。接下来的</span><span lang="EN-US"><font face="Times New Roman">n</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行每行有</span><span lang="EN-US"><font face="Times New Roman">m</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个小于</span><span lang="EN-US"><font face="Times New Roman">10</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的非负整数，</span><span lang="EN-US"><font face="Times New Roman">0</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">表示该空格还没有被填数字，其他表示</span><span lang="EN-US"><font face="Times New Roman">coolzzz</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">同学已经填好的数字。输入数据保证未填数字的空格不会超过</span><span lang="EN-US"><font face="Times New Roman">16</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个。</span></font></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于每组测试数据，输出若干行。如果基于</span><span lang="EN-US"><font face="Times New Roman">coolzzz</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">已填的结果，该数谜只有一个解，则输出该解；如果不止一个解，则输出一行“</span><span lang="EN-US"><font face="Times New Roman">Not unique.</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”；如果没有解，则输出一行“</span><span lang="EN-US"><font face="Times New Roman">No answer.</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">”。</span></font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3<br/>
+3 3<br/>
+6 6 6<br/>
+6 6 6<br/>
+0 0 0<br/>
+0 3 0<br/>
+0 0 0<br/>
+2 3<br/>
+10 17<br/>
+5 16 6<br/>
+2 0 0<br/>
+0 9 0<br/>
+2 2<br/>
+3 5<br/>
+4 4<br/>
+0 0<br/>
+0 0<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">Not unique.<br/>
+2 7 1<br/>
+3 9 5<br/>
+No answer.<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2469">Submit</a>][<a href="problemstatus.php?id=2469">Status</a>][<a href="bbs.php?id=2469">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

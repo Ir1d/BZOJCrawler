@@ -1,0 +1,88 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2596. -- [Wc2007]疯狂赛车</title><center><h2>2596: [Wc2007]疯狂赛车</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>512 MBSec  <span class="red">Special Judge</span><br/><span class="green">Submit: </span>78  <span class="green">Solved: </span>34<br/>[<a href="submitpage.php?id=2596">Submit</a>][<a href="problemstatus.php?id=2596">Status</a>][<a href="bbs.php?id=2596">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">布布是一个《泡泡堂》高手，拥有着近乎完美的战绩。他擅长很多地图，例如“小区10”、“海盗14”、“大海02”等等，不过他最喜欢的地图是“赛车”。<br/>
+在赛车地图中，每个玩家将得到一辆赛车，从起点出发，比赛谁最先到达终点。<br/>
+在地图中，包括有障碍、加油站、赛车跑道与沙地。障碍不可通过，并且赛车在赛车跑道与沙地上的行进速度是不一样的。</span></p>
+<p><span style="font-size: medium">现在我们来考虑一个简化版的赛车游戏。在这个简化版本的赛车游戏中：<br/>
+ 比赛在一个无限大的沙地平面上举行。<br/>
+ 赛道是一个从原点出发、由n条线段首尾相接组成的折线。<br/>
+ 出于安全考虑，赛道不会自交（即折线中的任何两条线段，相邻两条线段有且仅有一个公共点，其他任意两条线段均无公共点）。<br/>
+ 赛车在赛道上的速度为va，在沙地上的速度为vb，且满足 。<br/>
+ 为了增加比赛的挑战性，在赛道上逆向行驶是允许的。</span></p>
+<p><span style="font-size: medium">布布是一个操作非常精确的选手，他总能按照预想的道路行进至终点，但是他不知道哪个才是最快的路线，聪明的你，能帮助他么？<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">第1行包含一个整数n，表示赛道一共有n段；第2行包含两个实数va与vb，分别表示赛车在赛道上与沙地中的行进速度。<br/>
+接下来的n行，每行包含两个整数xi与yi，依次表示赛道的每一个转折点。即赛道的第一个线段是(0,0)(x1 , y1)，第二条线段是(x1 , y1) ( x2 , y2)，依次类推。其中(xn , yn)为终点。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">仅包含一个实数，表示从起点到终点最少所需时间。精确到小数点后6位。<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">【样例输入1】<br/>
+2<br/>
+2 1<br/>
+0 4<br/>
+4 4<br/>
+【样例输入2】<br/>
+2<br/>
+2 1<br/>
+4 4<br/>
+4 -4<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">【样例输出1】<br/>
+4.000000<br/>
+<br/>
+【样例输出2】<br/>
+5.464102<br/>
+<br/>
+<br/>
+N
+所有的坐标都在[-10^6 , 10^6]内。<br/>
+<br/>
+<br/>
+当你的结果跟正确结果误差不超过0.0001时，即算通过</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2596">Submit</a>][<a href="problemstatus.php?id=2596">Status</a>][<a href="bbs.php?id=2596">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

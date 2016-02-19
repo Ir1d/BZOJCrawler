@@ -1,0 +1,80 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1434. -- [ZJOI2009]染色游戏</title><center><h2>1434: [ZJOI2009]染色游戏</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>64 MB<br/><span class="green">Submit: </span>361  <span class="green">Solved: </span>211<br/>[<a href="submitpage.php?id=1434">Submit</a>][<a href="problemstatus.php?id=1434">Status</a>][<a href="bbs.php?id=1434">Discuss</a>]</center><h2>Description</h2><div class="content">一共n × m 个硬币，摆成n × m 的长方形。dongdong 和xixi 玩一个游戏，
+每次可以选择一个连通块，并把其中的硬币全部翻转，但是需要满足存在一个
+硬币属于这个连通块并且所有其他硬币都在它的左上方(可以正左方也可以正
+上方)，并且这个硬币是从反面向上翻成正面向上。dongdong 和xixi 轮流操作。
+如果某一方无法操作，那么他(她) 就输了。dongdong 先进行第一步操作，假
+设双方都采用最优策略。问dongdong 是否有必胜策略。</div><h2>Input</h2><div class="content">第一行一个数T，表示他们一共玩T 局游戏。接下来是T 组游戏描述。每
+组游戏第一行两个数n;m，接下来n 行每行m 个字符，第i 行第j 个字符如
+果是“H” 表示第i 行第j 列的硬币是正面向上，否则是反面向上。第i 行j 列
+的左上方是指行不超过i 并且列不超过j 的区域。</div><h2>Output</h2><div class="content">对于每局游戏，输出一行。如果dongdong 存在必胜策略则输出“- -”(不含
+引号) 否则输出“= =”(不含引号)。(注意输出的都是半角符号，即三个符号
+ASCII 码分别为45,61,95)
+</div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">32<br/>
+3<br/>
+HHH<br/>
+HHH<br/>
+2 3<br/>
+HHH<br/>
+TTH<br/>
+2 1<br/>
+T<br/>
+H<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">= =<br/>
+- -<br/>
+- -<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p>对于40% 的数据，满足1 ≤ n;m ≤ 5。<br/>
+对于100% 的数据，满足1 ≤ n;m ≤ 100，1 ≤ T ≤ 50。<br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1434">Submit</a>][<a href="problemstatus.php?id=1434">Status</a>][<a href="bbs.php?id=1434">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3628. -- [JLOI2014]天天酷跑</title><center><h2>3628: [JLOI2014]天天酷跑</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>87  <span class="green">Solved: </span>25<br/>[<a href="submitpage.php?id=3628">Submit</a>][<a href="problemstatus.php?id=3628">Status</a>][<a href="bbs.php?id=3628">Discuss</a>]</center><h2>Description</h2><div class="content"><div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">在游戏天天酷跑中，最爽的应该是超级奖励模式了吧，没有一切障碍，可以尽情的吃金币，现在请你控制游戏角色来获得尽可能多的分数。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium">游戏界面离散为一个长度为1~n，高度为1~m（初始点为（0，1））的矩阵图。每个格子上都有收益（-1~1000），-1表示该点不能通过。游戏角色从起点一路奔跑向终点，中途可以跳跃来获得更高的分数，在空中还能进行连跳。游戏开始前你可以设定跳跃的高度，以及能连跳的次数，初始跳跃高度为1，连跳数为1（最多为5），升级跳跃高度和连跳都需要一定的花费。跳跃高度设定完后游戏角色每次跳跃高度都将固定，连跳必须在下落过程中可以使用。所有操作都将在整点上完成，需要保证设定完的跳跃高度及连跳数，无法跳出游戏高度上限。</span></div>
+<div style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><img alt="" height="203" src="image/_JudgeOnline_upload_201406_11_jpg" width="464"/></span></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">以下是连跳数为</span><span lang="EN-US">2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">连跳，跳跃高度为</span><span lang="EN-US">2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">的跳跃方案：</span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><font size="3"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma"><img alt="" height="466" src="image/_JudgeOnline_upload_201406_22_jpg" width="611"/></span></font></font></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">第一行四个整数</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">cost1</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">cost2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">。</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">如题意所示，</span><span lang="EN-US">cost1</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，</span><span lang="EN-US">cost2</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">分别表示每升一级跳跃高度，连跳数所需的花费。</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">接下来</span><span lang="EN-US">m</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">行，每行</span><span lang="EN-US">n</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个数。第</span><span lang="EN-US">i</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">行第</span><span lang="EN-US">j</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">个数表示地图中高度为</span><span lang="EN-US">i</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，长度在第</span><span lang="EN-US">j</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">列处的收益。</span></font></span></p>
+<p></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 10pt"> </p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><font face="Tahoma"><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">如果无法跑出终点线，就输出</span><span lang="EN-US">“mission failed”</span><span style="font-family: 微软雅黑; mso-ascii-font-family: Tahoma; mso-hansi-font-family: Tahoma">，否则输出一行三个数，分别表示最大收益；及最大收益时，最小的连跳数；最大收益，最小连跳数时，最小的跳跃高度。</span></font></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 10pt"><span style="font-size: medium"><span lang="EN-US"><o:p></o:p></span></span><span lang="EN-US"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">7 4 6 10<br/>
+<br/>
+9 4 7 7 4 3 2<br/>
+<br/>
+18 8 9 4 15 12 4<br/>
+<br/>
+19 2 4 7 10 18 12<br/>
+<br/>
+8 1 13 14 16 0 14<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">67 1 2<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">提示</span></p><br/>
+<p><span style="font-size: medium">20%数据满足 m=2， n&lt;=100000;</span></p><br/>
+<p><span style="font-size: medium"> </span></p><br/>
+<p><span style="font-size: medium">另有80%数据 n&lt;=10000，2&lt;m&lt;=20，其中20%数据 2&lt;n&lt;=10，m&lt;=10;<br/><br/>
+</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=3628">Submit</a>][<a href="problemstatus.php?id=3628">Status</a>][<a href="bbs.php?id=3628">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

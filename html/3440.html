@@ -1,0 +1,67 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3440. -- 传球游戏</title><center><h2>3440: 传球游戏</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>109  <span class="green">Solved: </span>40<br/>[<a href="submitpage.php?id=3440">Submit</a>][<a href="problemstatus.php?id=3440">Status</a>][<a href="bbs.php?id=3440">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium">【背景】</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">有n个无聊人士围成一圈，有一个球将被他们传来传去。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">当被传到球之后，不同的人会做出不同的动作。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第1类人，顺着传来的方向传给下一个人。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第2类人，逆着传来的方向传给上一个人。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第3类人，顺着传来的方向传给下面第二个人。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第4类人，逆着传来的方向传给上面第二个人。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">现不知是从哪个人开始传，及开始传的方向，求有哪些人无论如何，最多只能碰到一次球（开始传球的人算碰到了一次球）。（第3、4类人发球也是越过和自己相邻的人传给第二个人）。</span></div></div><h2>Input</h2><div class="content"><div style="text-indent: 21pt"><span style="font-size: medium">输入有2行，第一行有一个正整数n。第二行有n个用空格隔开的正整数，第i个数字表示顺指针的第i个人是第几类人。</span></div></div><h2>Output</h2><div class="content"><div style="text-indent: 21pt"><span style="font-size: medium">输出有2行，第一行有一个正整数m，表示最多只能碰到一次球的人的个数。第二行有m个正整数，表示哪些人最多只能碰到一次球，从小到大输出。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5<br/>
+1 2 3 4 1<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1<br/>
+3<br/>
+【数据范围与约定】<br/>
+100%的数据，4＜n≤500000。</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By lll6924 at “冬令营后竞速放松赛”">By lll6924 at “冬令营后竞速放松赛”</a></p></div><center>[<a href="submitpage.php?id=3440">Submit</a>][<a href="problemstatus.php?id=3440">Status</a>][<a href="bbs.php?id=3440">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

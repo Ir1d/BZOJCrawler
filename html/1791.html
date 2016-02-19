@@ -1,0 +1,93 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1791. -- [Ioi2008]Island 岛屿 
+</title><center><h2>1791: [Ioi2008]Island 岛屿 
+</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>1293  <span class="green">Solved: </span>240<br/>[<a href="submitpage.php?id=1791">Submit</a>][<a href="problemstatus.php?id=1791">Status</a>][<a href="bbs.php?id=1791">Discuss</a>]</center><h2>Description</h2><div class="content">你将要游览一个有N个岛屿的公园。从每一个岛i出发，只建造一座桥。桥的长度以Li表示。公园内总共有N座桥。尽管每座桥由一个岛连到另一个岛，但每座桥均可以双向行走。同时，每一对这样的岛屿，都有一艘专用的往来两岛之间的渡船。 
+相对于乘船而言，你更喜欢步行。你希望所经过的桥的总长度尽可能的长，但受到以下的限制。 
+
+• 可以自行挑选一个岛开始游览。 
+• 任何一个岛都不能游览一次以上。 
+• 无论任何时间你都可以由你现在所在的岛S去另一个你从未到过的岛D。由S到D可以有以下方法： 
+o 步行：仅当两个岛之间有一座桥时才有可能。对于这种情况，桥的长度会累加到你步行的总距离；或者 
+o 渡船：你可以选择这种方法，仅当没有任何桥和/或以前使用过的渡船的组合可以由S走到D（当检查是否可到达时，你应该考虑所有的路径，包括经过你曾游览过的那些岛）。 
+
+注意，你不必游览所有的岛，也可能无法走完所有的桥。 
+
+任务 
+编写一个程序，给定N座桥以及它们的长度，按照上述的规则，计算你可以走过的桥的最大长度。 
+
+限制 
+2 <h2>Input</h2><div class="content">• 第一行包含N个整数，即公园内岛屿的数目。岛屿由1到N编号。 
+• 随后的N行每一行用来表示一个岛。第i 行由两个以单空格分隔的整数，表示由岛i筑的桥。第一个整数表示桥另一端的岛，第二个整数表示该桥的长度Li。你可以假设对於每座桥，其端点总是位于不同的岛上。 
+
+</div><h2>Output</h2><div class="content">你的程序必须向标准输出写出包含一个整数的单一行，即可能的最大步行距离。 
+注1：对某些测试，答案可能无法放进32-bit整数，你要取得这道题的满分，可能需要用Pascal的int64或C/C++的long long类型。 
+注2：在比赛环境运行Pascal程序，由标准输入读入64-bit数据比32-bit数据要慢得多，即使被读取的数据可以32-bit表示。我们建议把输入数据读入到32-bit数据类型。 
+
+评分 
+N不会超过4,000。 
+
+
+</div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">7<br/>
+3 8<br/>
+7 2<br/>
+4 2<br/>
+1 4<br/>
+1 9<br/>
+3 4<br/>
+2 3<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">24<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p><img border="0" src="image/images_1791_jpg"/> </p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1791">Submit</a>][<a href="problemstatus.php?id=1791">Status</a>][<a href="bbs.php?id=1791">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</div></body>
+</html>

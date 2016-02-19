@@ -1,0 +1,98 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2844. -- albus就是要第一个出场</title><center><h2>2844: albus就是要第一个出场</h2><span class="green">Time Limit: </span>6 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>698  <span class="green">Solved: </span>289<br/>[<a href="submitpage.php?id=2844">Submit</a>][<a href="problemstatus.php?id=2844">Status</a>][<a href="bbs.php?id=2844">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">已知一个长度为n的正整数序列A（下标从1开始）， 令 S = { x | 1 &lt;= x &lt;= n }, S 的幂集2^S定义为S 所有子集构成的集合。<br/>
+<br/>
+定义映射 f : 2^S -&gt; Z <br/>
+<br/>
+f(空集) = 0<br/>
+f(T) = XOR A[t] , 对于一切t属于T<br/>
+<br/>
+现在albus把2^S中每个集合的f值计算出来， 从小到大排成一行， 记为序列B（下标从1开始）。 给定一个数， 那么这个数在序列B中第1次出现时的下标是多少呢？<br/>
+<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">第一行一个数n, 为序列A的长度。<br/>
+接下来一行n个数， 为序列A， 用空格隔开。<br/>
+最后一个数Q， 为给定的数.<br/>
+<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">共一行， 一个整数， 为Q在序列B中第一次出现时的下标模10086的值.<br/>
+<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3<br/>
+1 2 3<br/>
+1<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">3<br/>
+<br/>
+【Hint】<br/>
+样例解释：<br/>
+N = 3, A = [1 2 3]<br/>
+S = {1, 2, 3}<br/>
+2^S = {空, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}<br/>
+f(空) = 0<br/>
+f({1}) = 1<br/>
+f({2}) = 2<br/>
+f({3}) = 3<br/>
+f({1, 2}) = 1 xor 2 = 3<br/>
+f({1, 3}) = 1 xor 3 = 2<br/>
+f({2, 3}) = 2 xor 3 = 1<br/>
+f({1, 2, 3}) = 0<br/>
+所以<br/>
+B = [0, 0, 1, 1, 2, 2, 3, 3]<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>数据范围：<br/><br/>
+1 &lt;= N &lt;= 10,0000<br/><br/>
+其他所有输入均不超过10^9</p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=湖北省队互测
+
+">湖北省队互测<br/>
+<br/>
+</a></p></div><center>[<a href="submitpage.php?id=2844">Submit</a>][<a href="problemstatus.php?id=2844">Status</a>][<a href="bbs.php?id=2844">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

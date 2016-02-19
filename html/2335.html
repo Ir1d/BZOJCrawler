@@ -1,0 +1,74 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2335. -- [SCOI2011]飞镖</title><center><h2>2335: [SCOI2011]飞镖</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>410  <span class="green">Solved: </span>127<br/>[<a href="submitpage.php?id=2335">Submit</a>][<a href="problemstatus.php?id=2335">Status</a>][<a href="bbs.php?id=2335">Discuss</a>]</center><h2>Description</h2><div class="content"><div class="Section0" style="layout-grid:  15.6pt none"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p>
+<div class="Section0" style="layout-grid:  15.6pt none">
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">飞镖是在欧洲颇为流行的一项运动。它的镖盘上分为<font face="Times New Roman">20</font><font face="宋体">个扇形区域，分别标有</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">20</font><font face="宋体">的分值，每个区域中有单倍、双倍和三倍的区域，打中对应的区域会得到分值乘以倍数所对应的分数。例如打中</font><font face="Times New Roman">18</font><font face="宋体">分里面的三倍区域，就会得到</font><font face="Times New Roman">54</font><font face="宋体">分。另外，在镖盘的中央，还有</font><font face="Times New Roman">“</font><font face="宋体">小红心</font><font face="Times New Roman">”</font><font face="宋体">和</font><font face="Times New Roman">“</font><font face="宋体">大红心</font><font face="Times New Roman">”</font><font face="宋体">，分别是</font><font face="Times New Roman">25</font><font face="宋体">分和</font><font face="Times New Roman">50</font><font face="宋体">分。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">通常的飞镖规则还有一条，那就是在最后一镖的时候，必须以双倍结束战斗，才算获胜。也就是说，当还剩<font face="Times New Roman">12</font><font face="宋体">分的时候，必须打中双倍的</font><font face="Times New Roman">6</font><font face="宋体">才算赢，而打中单倍的</font><font face="Times New Roman">12</font><font face="宋体">或者三倍的</font><font face="Times New Roman">4</font><font face="宋体">则不算。特别的，</font><font face="Times New Roman">“</font><font face="宋体">大红心</font><font face="Times New Roman">”</font><font face="宋体">也算双倍</font><font face="Times New Roman">(</font><font face="宋体">双倍的</font><font face="Times New Roman">25)</font><font face="宋体">。在这样的规则下，</font><font face="Times New Roman">3</font><font face="宋体">镖能解决的最多分数是</font><font face="Times New Roman">170</font><font face="宋体">分</font><font face="Times New Roman">(</font><font face="宋体">两个三倍的</font><font face="Times New Roman">20</font><font face="宋体">，最后用大红心结束</font><font face="Times New Roman">)</font><font face="宋体">。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">现在，<font face="Times New Roman">lxhgww</font><font face="宋体">把原来的</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">20</font><font face="宋体">分的分值变为了</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">K</font><font face="宋体">分，同时把小红心的分数变为了</font><font face="Times New Roman">M</font><font face="宋体">分</font><font face="Times New Roman">(</font><font face="宋体">大红心是其双倍</font><font face="Times New Roman">)</font><font face="宋体">，现在</font><font face="Times New Roman">lxhgww</font><font face="宋体">想知道能否在</font><font face="Times New Roman">3</font><font face="宋体">镖内（可以不一定用满</font><font face="Times New Roman">3</font><font face="宋体">镖）解决</font><font face="Times New Roman">X</font><font face="宋体">分。同样的，最后一镖必须是双倍（包括大红心）。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+</div>
+</o:p></span></div>
+<!--EndFragment--></div><h2>Input</h2><div class="content"><p><img alt="" src="image/_JudgeOnline_upload_201106_1111_jpg"/></p></div><h2>Output</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">一行，包括一个数字，表示这<font face="Times New Roman">T</font><font face="宋体">组数据中，能够被解决的数据数目。</font></span></p>
+<!--EndFragment--></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">	5<br/>
+	1 2 2 10 20<br/>
+	1 3 2 15 25<br/>
+	2 2 5 200 170<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">	4<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">1&lt;=T&lt;=1000000,20&lt;=K1,M1,X1,D1,D2,D3&lt;=10^9</span></p><br/>
+<p><!--EndFragment--><br/>
+</p><p></p><br/>
+<br/>
+<div class="Section0" style="layout-grid:  15.6pt none"><br/>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'">0&lt;=A1,B1,C1,A2,B2,C2,A3,B3,c3&lt;=10^9</span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p><br/>
+</div><br/>
+<!--EndFragment--></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day2">Day2</a></p></div><center>[<a href="submitpage.php?id=2335">Submit</a>][<a href="problemstatus.php?id=2335">Status</a>][<a href="bbs.php?id=2335">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

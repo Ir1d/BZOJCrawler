@@ -1,0 +1,96 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3595. -- [Scoi2014]方伯伯的Oj</title><center><h2>3595: [Scoi2014]方伯伯的Oj</h2><span class="green">Time Limit: </span>6 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>391  <span class="green">Solved: </span>133<br/>[<a href="submitpage.php?id=3595">Submit</a>][<a href="problemstatus.php?id=3595">Status</a>][<a href="bbs.php?id=3595">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">方伯伯正在做他的Oj。现在他在处理Oj上的用户排名问题。<br/>
+Oj上注册了n个用户，编号为1～”，一开始他们按照编号排名。方伯伯会按照心情对这些用户做以下四种操作，修改用户的排名和编号：<br/>
+1．操作格式为1 x y，意味着将编号为z的用户编号改为V，而排名不变，执行完该操作后需要输出该用户在队列中的位置，数据保证x必然出现在队列中，同时1，是一个当前不在排名中的编号。<br/>
+2．操作格式为2 x，意味着将编号为x的用户的排名提升到第一位，执行完该操作后需要输出执行该操作前编号为z用户的排名。<br/>
+3．操作格式为3 x，意味着将编号为z的用户的排名降到最后一位，执行完该操作后需要输出执行该操作前编号为z用户的排名。<br/>
+4．操作格式为4 k，意味着查询当前排名为足的用户编号，执行完该操作后需要输出当前操作用户的编号。<br/>
+但同时为了防止别人监听自己的工作，方伯伯对他的操作进行了加密，即将四种操作的格式分别改为了：<br/>
+1 x+a y+a<br/>
+2 x+a<br/>
+3 x+a<br/>
+4 k+a<br/>
+其中a为上一次操作得到的输出，一开始a=0。<br/>
+例如：<br/>
+上一次操作得到的输出是5<br/>
+这一次操作的输入为：1  13 15<br/>
+因为这个输入是经过加密后的，所以你应该处理的操作是1 8 10<br/>
+现在你截获丁方伯伯的所有操作，希望你能给出结果。<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">输入的第1行包含2个用空格分隔的整数n和m，表示初始用户数和操作数。<br/>
+此后有m行，每行是一个询问，询问格式如上所示。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">输出包含m行。每行包含一个整数，其中第i行的整数表示第i个操作的输出。</font></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">10 10                     <br/>
+1 2 11                     <br/>
+3 13                       <br/>
+25                        <br/>
+37                         <br/>
+28                        <br/>
+2 10                       <br/>
+2 11                       <br/>
+3 14                       <br/>
+2 18                      <br/>
+4 9  </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+2<br/>
+2<br/>
+4<br/>
+3<br/>
+5<br/>
+5<br/>
+7<br/>
+8<br/>
+11</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>对于 100% 的数据，1 ≤ n ≤ 10^8，1 ≤ m ≤ 10^5</div><br/>
+<div>输入保证对于所有的操作 1，2，3，x 必然已经出现在队列中，同时对于所有操作 1，1 ≤ y ≤ 2 × 10^8，并且</div><br/>
+<div>y 没有出现在队列中。</div><br/>
+<div>对于所有操作 4，保证 1 ≤ k ≤ n。</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By 佚名提供">By 佚名提供</a></p></div><center>[<a href="submitpage.php?id=3595">Submit</a>][<a href="problemstatus.php?id=3595">Status</a>][<a href="bbs.php?id=3595">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

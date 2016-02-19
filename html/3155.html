@@ -1,0 +1,64 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3155. -- Preprefix sum</title><center><h2>3155: Preprefix sum</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>944  <span class="green">Solved: </span>415<br/>[<a href="submitpage.php?id=3155">Submit</a>][<a href="problemstatus.php?id=3155">Status</a>][<a href="bbs.php?id=3155">Discuss</a>]</center><h2>Description</h2><div class="content"><p><img alt="" height="0" src="image/_JudgeOnline_upload_201503_111(2)_jpg" width="0"/><img alt="" height="0" src="image/_JudgeOnline_upload_201503_111(3)_jpg" width="0"/><img alt="" height="0" src="image/_JudgeOnline_upload_201503_222(1)_png" width="0"/><img alt="" height="453" src="image/_JudgeOnline_upload_201503_222(2)_png" width="719"/></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 10pt; layout-grid-mode: both; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-layout-grid-align: auto"></p>
+<div>第一行给出两个整数N，M。分别表示序列长度和操作个数</div>
+<div>接下来一行有N个数，即给定的序列a1,a2,....an</div>
+<div>接下来M行，每行对应一个操作，格式见题目描述</div>
+<p></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 10pt; layout-grid-mode: both; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-layout-grid-align: auto"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'">对于每个询问操作，输出一行，表示所询问的</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'; mso-fareast-font-family: 宋体; mso-no-proof: yes">SSi</span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'">的值。</span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'; mso-fareast-font-family: 宋体"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: both; mso-layout-grid-align: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'; mso-fareast-font-family: 宋体"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 3<br/>
+1 2 3 4 5<br/>
+Query 5<br/>
+Modify 3 2<br/>
+Query 5</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">35<br/>
+32</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="MsoNormal" style="margin: 0cm 0cm 10pt; layout-grid-mode: both; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; mso-layout-grid-align: auto; mso-outline-level: 4"><b><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"; mso-fareast-font-family: 宋体; mso-hansi-font-family: 宋体'>1&lt;=N,M&lt;=100000,</span></b><b><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'">且在任意时刻</span></b><b><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"; mso-fareast-font-family: 宋体; mso-hansi-font-family: 宋体'>0&lt;=Ai&lt;=100000</span></b><b><span lang="EN-US" style='font-size: 12pt; font-family: "Times New Roman"; mso-fareast-font-family: 宋体'><o:p></o:p></span></b></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Katharon+#1">Katharon+#1</a></p></div><center>[<a href="submitpage.php?id=3155">Submit</a>][<a href="problemstatus.php?id=3155">Status</a>][<a href="bbs.php?id=3155">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

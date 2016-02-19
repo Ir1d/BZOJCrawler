@@ -1,0 +1,87 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3877. -- [Ahoi2014]保龄球</title><center><h2>3877: [Ahoi2014]保龄球</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>9  <span class="green">Solved: </span>6<br/>[<a href="submitpage.php?id=3877">Submit</a>][<a href="problemstatus.php?id=3877">Status</a>][<a href="bbs.php?id=3877">Discuss</a>]</center><h2>Description</h2><div class="content"><p> 【故事背景】</p>
+<div>JYY很喜欢打保龄球，虽然技术不高，但是还是总想着的高分。这里JYY</div>
+<div>将向你介绍他所参加的特殊保龄球比赛的规则，然后请你帮他得到尽量多的分数。</div>
+<div>【问题描述】</div>
+<div>一场保龄球比赛一共有N个轮次，每一轮都会有10个木瓶放置在木板道的</div>
+<div>另一端。每一轮中，选手都有两次投球的机会来尝试击倒全部的10个木瓶。对于每一次投球机会，选手投球的得分等于这一次投球所击倒的木瓶数量。选手每一轮的得分是他两次机会击倒全部木瓶的数量。</div>
+<div>对于每一个轮次，有如下三种情况：</div>
+<div>1、“全中”：如果选手第一次尝试就击倒了全部10个木瓶，那么这一轮就称</div>
+<div>为“全中”。在一个“全中”轮中，由于所有木瓶在第一次尝试中都已经被击倒，所以选手不需要再进行第二次投球尝试。同时，在计算总分时，选手在下一轮的得分将会被乘2计入总分。</div>
+<div>2、“补中”：如果选手使用两次尝试击倒了10个木瓶，那么这一轮就称为“补中”。同时，在计算总分时，选手在下一轮中的第一次尝试的得分将会被乘以2计入总分。</div>
+<div>3、“失误”：如果选手未能通过两次尝试击倒全部的木瓶，那么这一轮就被称为“失误”。同时，在计算总分时，选手在下一轮的得分会被计入总分，没有分数被翻倍。此外，如果第N轮是“全中”，那么选手可以进行一次附加轮：也就是，如果第N轮是“全中”，那么选手将一共进行N+1轮比赛。显然，在这种情况下，第N+1轮的分数一定会被加倍。</div>
+<div>附加轮的规则只执行一次。也就是说，即使第N+1轮选手又打出了“全中”，也不会进行第N+2轮比赛。因而，附加轮的成绩不会使得其他轮的分数翻番。最后，选手的总得分就是附加轮规则执行过，并且分数按上述规则加倍后的每一轮分数之和。</div>
+<div>JYY刚刚进行了一场N个轮次的保龄球比赛，但是，JYY非常不满意他的</div>
+<div>得分。JYY想出了一个办法：他可以把记分表上，他所打出的所有轮次的顺序重新排列，这样重新排列之后，由于翻倍规则的存在，JYY就可以得到更高的分数了！当然了，JYY不希望做的太假，他希望保证重新排列之后，所需要进行的轮数和重排前所进行的轮数是一致的：比如如果重排前JYY在第N轮打出了“全中”，那么重排之后，第N轮还得是“全中”以保证比赛一共进行N+1轮；同样的，如果JYY第N轮没有打出“全中”，那么重排过后第N轮也不能是全中。请你帮助JYY计算一下，他可以得到的最高的分数。</div>
+<div></div></div><h2>Input</h2><div class="content"><p> 第一行包含一个整数N，表示保龄球比赛所需要进行的轮数。</p>
+<div>接下来包含N或者N+1行，第i行包含两个非负整数Xi和Yi，表示JYY在</div>
+<div>这一轮两次投球尝试所得到的分数，Xi表示第一次尝试，Yi表示第二次尝试。</div>
+<div>我们用表示一个“全中”轮。输入数据保证。</div>
+<div>读入数据存在N+1行，当且仅当Xn=10且Yn=10。</div>
+<div></div></div><h2>Output</h2><div class="content"><p>输出一行一个整数，表示JYY最大可能得到的分数。</p>
+<div>
+<div></div>
+</div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+5 2<br/>
+10 0<br/>
+3 7</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">44<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> 【样例说明】</p><br/>
+<div>按照输入顺序，JYY将得到37分。</div><br/>
+<div>最佳方案是将3个轮次排列成如下顺序：</div><br/>
+<div>3 7</div><br/>
+<div>10 0</div><br/>
+<div>5 2</div><br/>
+<div></div><br/>
+<div>N&lt;=50</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By 佚名上传">By 佚名上传</a></p></div><center>[<a href="submitpage.php?id=3877">Submit</a>][<a href="problemstatus.php?id=3877">Status</a>][<a href="bbs.php?id=3877">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

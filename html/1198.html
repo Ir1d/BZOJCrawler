@@ -1,0 +1,64 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1198. -- [HNOI2006]军机调度</title><center><h2>1198: [HNOI2006]军机调度</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>230  <span class="green">Solved: </span>162<br/>[<a href="submitpage.php?id=1198">Submit</a>][<a href="problemstatus.php?id=1198">Status</a>][<a href="bbs.php?id=1198">Discuss</a>]</center><h2>Description</h2><div class="content"><p>凯萨拥有一支由n个人组成的雇佣军，他们靠在威尼斯商行接任务过活。这支军队的成份比较复杂，不同的人往往具有不同的技能，有的人还拥有多项技能。威尼斯商行的任务也参差不齐，有的需要几个人合作完成，有的只需要一个人独立完成：有的很简单，不需要耗多少时间，因此报酬也较低，有的很有难度，需要多个人长期合作完成，因此报酬就高。完成这些任务的时间不会超过一个月。并且，一个人不能同时执行两项任务，也不能中途加入或者退出任务。但可以不执行任何任务。一项只需要n个人来完成的任务，如果执行该任务的人数p大于n,那么反而会得到更少的报酬，即原报酬的1/(p-n+1)。 <br/>
+　　凯萨是一位英明的领袖，他往往在每个月的月底召开军事会议，总结上个月的成果，发给大家报酬，并指派下个月的任务。 <br/>
+　　请问，凯萨应该怎样指派任务，才能使总报酬最高？总报酬为多少？</p></div><h2>Input</h2><div class="content"><p>一行包含两个正整数n,m。彼此用空格隔开，其中n〈10表示雇佣军的人数，m〈15表示下个月可选的任务数。接下来的n行中，第i行（对应整个文件的第i+1行）的第一个整数小于等于表示编号为i的雇佣军可以执行的任务数，后面的整数是编号为i的雇佣军可以执行的所有任务的编号，这些整数之间用空格隔开。最后的m行中，每行有四个整数b、e、p和r，彼此之间用空格隔开，其中第j行（对应整个文件的第n+j+1行）是编号为j的任务的描述：0 〈 b 〈 32表示该任务的开始日（这一天会被计入任务所需的时间中），0 &lt; e〈32表示该任务的结束日（这一天也会被计入任务所需的时间中），p 〈 10表示该任务所需人数，0 〈 r 〈 100000表示该任务的报酬。</p></div><h2>Output</h2><div class="content"><p>第一行只有一个整数t,表示最多可获得的总报酬</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 5<br/>
+2 1 4<br/>
+2 2 4<br/>
+3 3 4 5<br/>
+2 20 1 100 <br/>
+1 18 1 200 <br/>
+3 28 1 800 <br/>
+21 30 3 1500 <br/>
+19 21 1 400 </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1800</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1198">Submit</a>][<a href="problemstatus.php?id=1198">Status</a>][<a href="bbs.php?id=1198">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

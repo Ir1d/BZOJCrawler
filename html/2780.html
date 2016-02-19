@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2780. -- [Spoj]8093  Sevenk Love Oimaster</title><center><h2>2780: [Spoj]8093  Sevenk Love Oimaster</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>582  <span class="green">Solved: </span>189<br/>[<a href="submitpage.php?id=2780">Submit</a>][<a href="problemstatus.php?id=2780">Status</a>][<a href="bbs.php?id=2780">Discuss</a>]</center><h2>Description</h2><div class="content"><p mce_style="text-align: left;" style="text-align: left"> <span mce_style="font-size: medium;" style="font-size: medium">    Oimaster and sevenk love each other.</span><span mce_style="font-size: medium;" style="font-size: medium"><br/>
+</span></p>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">    But recently,sevenk heard that a girl named ChuYuXun was dating with oimaster.</span><span mce_style="font-size: medium;" style="font-size: medium">As a woman's nature, sevenk felt angry and began to check oimaster's online talk with ChuYuXun.</span><span mce_style="font-size: medium;" style="font-size: medium">    Oimaster talked with ChuYuXun n times, and each online talk actually is a string.</span><span mce_style="font-size: medium;" style="font-size: medium">Sevenk asks q questions like this,</span><span mce_style="font-size: medium;" style="font-size: medium">    "how many strings in oimaster's online talk contain this string as their substrings?"</span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium"><br/>
+</span></address></div><h2>Input</h2><div class="content"><address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium"><br/>
+</span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">There are two integers in the first line,</span><span mce_style="font-style: normal; font-size: small;" style="font-size: small; font-style: normal"> </span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">the number of strings n and the number of questions q.</span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">And n lines follow, each of them is a string describing oimaster's online talk.</span><span mce_style="font-style: normal; font-size: small;" style="font-size: small; font-style: normal"> </span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">And q lines follow, each of them is a question.</span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">n&lt;=10000, q&lt;=60000 </span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">the total length of n strings&lt;=100000, </span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">the total length of q question strings&lt;=360000</span></address>
+<address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium"><br/>
+</span></address></div><h2>Output</h2><div class="content"><address mce_style="text-align: left;" style="text-align: left"><span mce_style="font-size: medium;" style="font-size: medium">For each question, output the answer in one line.</span></address></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3<br/>
+abcabcabc<br/>
+aaa<br/>
+aafe<br/>
+abc<br/>
+a<br/>
+ca<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1<br/>
+3<br/>
+1</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2780">Submit</a>][<a href="problemstatus.php?id=2780">Status</a>][<a href="bbs.php?id=2780">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>
