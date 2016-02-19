@@ -15,6 +15,7 @@ def get_html(url):
             t -= 1
     print "open url failed:%s" % url
 def saveImg(imageURL,fileName):
+    print "start to fetch image on url:%s, name:%s" % (imageURL, fileName)
     u = urllib.urlopen(imageURL)
     data = u.read()
     f = open(fileName, 'wb')
@@ -29,7 +30,7 @@ def get_image(idx, html):
     for img in soup.find_all('img'):
         src = img.get('src')
         link = "http://www.lydsy.com/JudgeOnline/" + src
-        saveImg(link, src)
+        saveImg(link, "html/" + src)
 
 def down_src(idx):
     nsrc = 'src/' + str(idx)
@@ -40,6 +41,7 @@ def down_src(idx):
     # open(workdir+nsrc,"w").write(get_html(url))
     html_path=workdir+'html/'+str(idx)+'.html'
     page = get_html(url)
+    os.system("mkdir html/images/%d" % idx)
     get_image(idx, page)
     if page != None and len(page) != 0:
         open(html_path,'w').write(header+page)
