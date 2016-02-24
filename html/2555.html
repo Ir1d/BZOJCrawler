@@ -1,0 +1,97 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2555. -- SubString</title><center><h2>2555: SubString</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>1146  <span class="green">Solved: </span>353<br/>[<a href="submitpage.php?id=2555">Submit</a>][<a href="problemstatus.php?id=2555">Status</a>][<a href="bbs.php?id=2555">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">  <br/>
+    懒得写背景了，给你一个字符串init，要求你支持两个操作<br/>
+    <br/>
+    (1):在当前字符串的后面插入一个字符串<br/>
+    <br/>
+    (2):询问字符串s在当前字符串中出现了几次？(作为连续子串)<br/>
+    <br/>
+    你必须在线支持这些操作。<br/>
+    <br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">    第一行一个数Q表示操作个数<br/>
+    <br/>
+    第二行一个字符串表示初始字符串init<br/>
+    <br/>
+    接下来Q行，每行2个字符串Type,Str <br/>
+    <br/>
+    Type是ADD的话表示在后面插入字符串。<br/>
+    <br/>
+    Type是QUERY的话表示询问某字符串在当前字符串中出现了几次。<br/>
+    <br/>
+    为了体现在线操作，你需要维护一个变量mask，初始值为0<br/>
+   <br/>
+<img alt="" height="266" src="image/_JudgeOnline_upload_201112_11_JPG" width="568"/>    <br/>
+    读入串Str之后，使用这个过程将之解码成真正询问的串TrueStr。<br/>
+    询问的时候，对TrueStr询问后输出一行答案Result<br/>
+    然后mask = mask xor Result  <br/>
+    插入的时候，将TrueStr插到当前字符串后面即可。</font></p>
+<p></p>
+<p><font size="4">HINT:ADD和QUERY操作的字符串都需要解压<br/>
+   </font></p></div><h2>Output</h2><div class="content"></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">    2<br/>
+<br/>
+    A<br/>
+<br/>
+    QUERY B<br/>
+<br/>
+    ADD BBABBBBAAB<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"> <br/>
+    0<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><font size="4"> 40 % 的数据字符串最终长度 &lt;= 20000，询问次数&lt;= 1000，询问总长度&lt;= 10000<br/><br/>
+    <br/><br/>
+100 % 的数据字符串最终长度 &lt;= 600000，询问次数&lt;= 10000,询问总长度&lt;= 3000000</font></p><br/>
+<p><font size="4">新加数据一组--2015.05.20<br/><br/>
+   <br/><br/>
+</font></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Ctsc模拟赛By 洁妹">Ctsc模拟赛By 洁妹</a></p></div><center>[<a href="submitpage.php?id=2555">Submit</a>][<a href="problemstatus.php?id=2555">Status</a>][<a href="bbs.php?id=2555">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4326. -- NOIP2015 运输计划</title><center><h2>4326: NOIP2015 运输计划</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>303  <span class="green">Solved: </span>203<br/>[<a href="submitpage.php?id=4326">Submit</a>][<a href="problemstatus.php?id=4326">Status</a>][<a href="bbs.php?id=4326">Discuss</a>]</center><h2>Description</h2><div class="content"><p>公元 2044 年，人类进入了宇宙纪元。L 国有 n 个星球，还有 n−1 条双向航道，每条航道建立在两个星球之间，这 n−1 条航道连通了 L 国的所有星球。小 P 掌管一家物流公司， 该公司有很多个运输计划，每个运输计划形如：有一艘物流飞船需要从 ui 号星球沿最快的宇航路径飞行到 vi 号星球去。显然，飞船驶过一条航道是需要时间的，对于航道 j，任意飞船驶过它所花费的时间为 tj，并且任意两艘飞船之间不会产生任何干扰。为了鼓励科技创新， L 国国王同意小 P 的物流公司参与 L 国的航道建设，即允许小P 把某一条航道改造成虫洞，飞船驶过虫洞不消耗时间。在虫洞的建设完成前小 P 的物流公司就预接了 m 个运输计划。在虫洞建设完成后，这 m 个运输计划会同时开始，所有飞船一起出发。当这 m 个运输计划都完成时，小 P 的物流公司的阶段性工作就完成了。如果小 P 可以自由选择将哪一条航道改造成虫洞， 试求出小 P 的物流公司完成阶段性工作所需要的最短时间是多少？</p>
+<div></div></div><h2>Input</h2><div class="content"><p>第一行包括两个正整数 n,m，表示 L 国中星球的数量及小 P 公司预接的运输计划的数量，星球从 1 到 n 编号。接下来 n−1 行描述航道的建设情况，其中第 i 行包含三个整数 ai,bi 和 ti，表示第 i 条双向航道修建在 ai 与 bi 两个星球之间，任意飞船驶过它所花费的时间为 ti。数据保证 1≤ai,bi≤n 且 0≤ti≤1000。接下来 m 行描述运输计划的情况，其中第 j 行包含两个正整数 uj 和 vj，表示第 j 个运输计划是从 uj 号星球飞往 vj号星球。数据保证 1≤ui,vi≤n</p>
+<div></div></div><h2>Output</h2><div class="content"><p>输出文件只包含一个整数，表示小 P 的物流公司完成阶段性工作所需要的最短时间。</p>
+<div></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">6 3<br/>
+1 2 3<br/>
+1 6 4<br/>
+3 1 7<br/>
+4 3 6<br/>
+3 5 5<br/>
+3 6<br/>
+2 5<br/>
+4 5</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">11</span></div><h2>HINT</h2>
+<div class="content"><p></p><div><br/>
+<div>将第 1 条航道改造成虫洞： 则三个计划耗时分别为：11,12,11，故需要花费的时间为 12。</div><br/>
+<div>将第 2 条航道改造成虫洞： 则三个计划耗时分别为：7,15,11，故需要花费的时间为 15。</div><br/>
+<div>将第 3 条航道改造成虫洞： 则三个计划耗时分别为：4,8,11，故需要花费的时间为 11。</div><br/>
+<div>将第 4 条航道改造成虫洞： 则三个计划耗时分别为：11,15,5，故需要花费的时间为 15。</div><br/>
+<div>将第 5 条航道改造成虫洞： 则三个计划耗时分别为：11,10,6，故需要花费的时间为 11。</div><br/>
+<div>故将第 3 条或第 5 条航道改造成虫洞均可使得完成阶段性工作的耗时最短，需要花费的时间为 11。</div><br/>
+</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4326">Submit</a>][<a href="problemstatus.php?id=4326">Status</a>][<a href="bbs.php?id=4326">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

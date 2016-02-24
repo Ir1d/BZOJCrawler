@@ -1,0 +1,80 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4365. -- [IOI2014]gondola缆车</title><center><h2>4365: [IOI2014]gondola缆车</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>5  <span class="green">Solved: </span>0<br/>[<a href="submitpage.php?id=4365">Submit</a>][<a href="problemstatus.php?id=4365">Status</a>][<a href="bbs.php?id=4365">Discuss</a>]</center><h2>Description</h2><div class="content"><p>猫空缆车（Mao-Kong Gondola）是台北市的一个著名景点。这个缆车系统包括一个环形轨道、一个缆车站和n个编号为1到n的缆车。这些缆车以固定的方向在轨道上循环运行。在缆车 经过缆车站之后，下一个经过缆车站的缆车将会是i+1（i&lt;n时），或者是缆车1（i=n时）。<br/>
+缆车可能会发生故障。幸运的是，我们有无限多个后备的空闲缆车，其编号依次为n+1,n+2等等。当某个缆车发生故障时，我们会在轨道上的同一位置用最前一个空闲缆车替换它，也就是说，编号最小的空闲缆车。举个例子，如果当前有五辆缆车而缆车1发生了故障，那么我们将用缆车6来替换它。<br/>
+你喜欢去缆车站上观察缆车过站。一个缆车序列（ gondola sequence ） 是由缆车过站次序形成的n个缆车编号的序列。在你到达缆车站之前，有可能会有一到多个缆车发生故障（并且被替换掉），但是在你观察过程中是不会有缆车发生故障的。<br/>
+注意，在轨道上的相同一组缆车，有可能给出多种缆车序列，这取决于当你到缆车站时哪辆缆车最先过站。举个例子，如果没有任何缆车发生故障，那么(2, 3, 4, 5, 1)和(4, 5, 1, 2, 3)都可能是缆车序列，但是(4, 3, 2, 5, 1)不可能是（因为缆车的次序有误）。<br/>
+如果缆车1发生故障，那么我们可能会观察到缆车序列(4, 5, 6, 2, 3)。如果接着缆车4发生故障而我们用缆车7替换它，就有可能会观察到缆车序列(6, 2, 3, 7, 5)。如果缆车7在此后发生故障而我们用缆车8替换它，那么现在就有可能会观察到缆车序列(3, 8, 5, 6, 2)。<br/>
+ <br/>
+一个 替换序列（ replacement sequence ） 是一个由故障缆车编号组成的序列，其次序与故障发生次序相同。在前面的例子中，替换序列是(1, 4, 7)。如果一个替换序列 对应的故障发生后，我们由此有可能观察到缆车序列 ，就称替换序列 生成缆车序列。<br/>
+缆车序列检查<br/>
+在前三个子任务中，你必须检查某个输入序列是否是一个缆车序列。下表举例说明了哪些序列是缆车序列而哪些不是。<br/>
+输出一行一个整数0或1，当输入序列是一个缆车序列时，输出1，否则输出0。<br/>
+替换序列<br/>
+在接下来的三个子任务中，你必须构造一个能够生成给定缆车序列的可能的替换序列。满足条件的任意替换序列都可以。<br/>
+输出一行，第一个整数l表示替换序列的长度，后面l个整数，第i个表示replacementSeq[i]。<br/>
+replacementSeq: 一个足够大的能存下替换序列的数组；你应当将替换序列中的<br/>
+第i个元素存放到replacementSeq[i]做为返回结果，这里0≤i≤l-1。<br/>
+替换序列计数<br/>
+在接下来的四个子任务中，你必须计算所有能够生成给定序列（有可能是缆车序列，也有可能不是）的可能替换序列的数目，并将其对1,000,000,009取模。 <br/>
+如果输入序列是一个缆车序列，则计算能够生成该缆车序列的可能的替换序列的<br/>
+数目（有可能会非常大）， 然后输出将该数值对 1,000,000,009 取模的结果。如果输入序列不是一个缆车序列，应输出0。如果输入序列是一个缆车序列，<br/>
+但是没有缆车发生故障，应输出1。</p></div><h2>Input</h2><div class="content"><p>第1行: T，你的程序需要解决的子任务编号(1≤T≤10)。<br/>
+第2行: n，输入序列的长度。<br/>
+第3行: 如果T是4、5或者6，此行包含gondolaSeq[0], ..., gondolaSeq[n-1]。否则此行包含inputSeq[0], ..., inputSeq[n-1]。</p></div><h2>Output</h2><div class="content"><p>输出格式见题目描述。<br/>
+ </p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">1<br/>
+30<br/>
+16 26 18 19 20 13 22 21 24 25 17 27 28 29 30 1 2 3 11 5 6 8 7 9 10 12 4 23 14 15<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">0</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" height="1279" src="image/_JudgeOnline_upload_201512_aa_png" width="661"/></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢yts1999上传">鸣谢yts1999上传</a></p></div><center>[<a href="submitpage.php?id=4365">Submit</a>][<a href="problemstatus.php?id=4365">Status</a>][<a href="bbs.php?id=4365">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

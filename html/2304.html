@@ -1,0 +1,90 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2304. -- [Apio2011]寻路</title><center><h2>2304: [Apio2011]寻路</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>393  <span class="green">Solved: </span>124<br/>[<a href="submitpage.php?id=2304">Submit</a>][<a href="problemstatus.php?id=2304">Status</a>][<a href="bbs.php?id=2304">Discuss</a>]</center><h2>Description</h2><div class="content"><p>TooDee是一块二维格子状的土地（就像著名的笛卡尔坐标系那样） ，在这里<br/>
+生活着很多可爱的Dee。Dee是像蜜蜂一样的小动物，它们只在二维活动，而且<br/>
+它们非常的文明开化。TooDee 的蜂窝和正常世界的蜂窝也是很不一样的，它们<br/>
+是矩形的且它们的边平行于TooDee的地理坐标系，就是说矩形的边或者是东西<br/>
+走向，或者是南北走向。 <br/>
+因为 Dees 是很高级的生物，它们有很多固定的飞行轨道，这些轨道由一些<br/>
+平行于坐标轴的线段组成，线段只会在经纬度都是整数的点相交。 Dee在TooDee<br/>
+飞行时必须遵守以下规则（请记住TooDee中所有点的经纬度都是整数）： <br/>
+1  如果当前在点(XS, YS)， 则下步只能飞到四个邻点  (XS, YS – 1), (XS, YS + 1),   <br/>
+(XS – 1, YS ), (XS + 1, YS )； <br/>
+2  不可以进入蜂巢； <br/>
+3  只能在蜂巢的角或者边上改变飞行方向； <br/>
+4  开始的时候可以向任何方向飞； <br/>
+今晚是公共财政大臣Deeficer的女儿的生日，她想尽早回家，请帮她找到最<br/>
+快的回家路径。假设她每秒可以飞行一个单位的距离。</p></div><h2>Input</h2><div class="content"><p>每个测试点包含多组数据。 <br/>
+输入的第一行包含一个整数T，表示测试数据的组数。接下来依次描述这T<br/>
+组数据，相邻的两组之间使用一个空行分隔。测试数据不多于20组。 <br/>
+对于每组数据，第一行包含4个整数 xs, ys, xt, yt，表示Deeficer 的办公室和<br/>
+家的坐标分别为(xs, ys)和(xt, yt)。第二行包含一个整数n，表示蜂巢的个数。接下<br/>
+来的n行描述所有的蜂巢，其中第 i行包含 4 个整数xi1,  yi1,  xi2,  yi2，表示第i个<br/>
+蜂巢两个对角的坐标分别为(xi1, yi1)和(xi2, yi2)。 <br/>
+任何两个蜂巢都不会相交，也不会接触（在角上也不会接触）。办公室和家<br/>
+处在不同的位置。每个蜂巢的面积为正。</p></div><h2>Output</h2><div class="content"><p>对于每一组数据，输出一个整数，表示Deeficer 最快回家的时间（单位为秒），<br/>
+如果她无法按规则回家，则输出“No Path”。</p>
+<p>对于100%的测试数据，1 ≤ n ≤ 1000，所有坐标都是不超过10^9<br/>
+的整数；</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2 <br/>
+<br/>
+1 7 7 8 <br/>
+2 <br/>
+2 5 3 8 <br/>
+4 10 6 7 <br/>
+<br/>
+2 1 5 4 <br/>
+1 <br/>
+3 1 4 3 </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">9 <br/>
+No Path <br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>数据为国际加国内综合版</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2304">Submit</a>][<a href="problemstatus.php?id=2304">Status</a>][<a href="bbs.php?id=2304">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

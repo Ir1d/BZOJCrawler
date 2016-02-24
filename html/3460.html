@@ -1,0 +1,66 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3460. --  Jc的宿舍</title><center><h2>3460:  Jc的宿舍</h2><span class="green">Time Limit: </span>130 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>316  <span class="green">Solved: </span>92<br/>[<a href="submitpage.php?id=3460">Submit</a>][<a href="problemstatus.php?id=3460">Status</a>][<a href="bbs.php?id=3460">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">WC2014后无数人来膜拜jc，但是来膜拜的人实在太多了， 而且很多人是一连膜拜好几天。所以jc给这些人建了一座树 形的宿舍，而根节点（1号节点）住着jc。然而，由于设计 的原因，宿舍中只有一个水龙头。于是晚上打水就成了问题。 所有人都有一个大小不同的水桶，第i个结点住着的人的水 桶灌满要Ti的时间。水龙头一开始在jc的宿舍，但是水龙 头的位置会发生变化。当一个人去打水，他走的一定是到水 龙头的最短距离，而且他路过的所有宿舍中住的人都会和他 一起去打水。现在有n个人入住，发生了m个事件。 </span></p>
+<p><span style="font-size: medium">1.C i 表示水龙头在第i个宿舍 </span></p>
+<p><span style="font-size: medium">2.Q i 表示住在i宿舍的人出发去打水。 </span></p>
+<p><span style="font-size: medium">对于每个Q i，你需要告诉jc这次去打水的所有人最少的 总等待时间。 </span></p>
+<p></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行三个整数n,m,key，接下来一行n个整数 表示Ti（小于等于10^7），接下来一行n个数表示每个节点 的父亲，保证根节点的父亲为0。接下来m行每行表述一个 事件。对于每个Q操作，若输入为Q k，则实际的k=(k+(pre mod 2)*key) mod n+1，pre为上一个询问的答案，若是第一个 询问则pre=0。一开始水龙头在1号节点。 </span></p>
+<p></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">对于每个Q事件输出一行，为答案。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata"> <br/>
+3 2 0<br/>
+2 2 1<br/>
+0 3 1<br/>
+C 3<br/>
+Q 1<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4 <br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By jiry_2 XXY杯省选模拟题">By jiry_2 XXY杯省选模拟题</a></p></div><center>[<a href="submitpage.php?id=3460">Submit</a>][<a href="problemstatus.php?id=3460">Status</a>][<a href="bbs.php?id=3460">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

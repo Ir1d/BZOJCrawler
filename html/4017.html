@@ -1,0 +1,94 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4017. -- 小Q的无敌异或</title><center><h2>4017: 小Q的无敌异或</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>184  <span class="green">Solved: </span>80<br/>[<a href="submitpage.php?id=4017">Submit</a>][<a href="problemstatus.php?id=4017">Status</a>][<a href="bbs.php?id=4017">Discuss</a>]</center><h2>Description</h2><div class="content"><div>背景</div>
+<div></div>
+<div>小Q学习位运算时发现了异或的秘密。</div>
+<div></div>
+<div>描述</div>
+<div></div>
+<div>小Q是一个热爱学习的人，他经常去维基百科（http://en.wikipedia.org/wiki/Main_Page）学习计算机科学。</div>
+<div></div>
+<div>就在刚才，小Q认真地学习了一系列位运算符（http://en.wikipedia.org/wiki/Bitwise_operation），其中按位异或的运算符 xor 对他影响很大。按位异或的运算符是双目运算符。按位异或具有交换律，即i xor j = j xor i。</div>
+<div></div>
+<div>他发现，按位异或可以理解成被运算的数字的二进制位对应位如果相同，则结果的该位置为0，否则为1，例如1(01) xor 2(10) = 3(11)。</div>
+<div></div>
+<div>他还发现，按位异或可以理解成数字的每个二进制位进行了不进位的加法，例如3(11) xor 3(11) = 0(00)。</div>
+<div></div>
+<div>于是他想到了两个关于异或的问题，这两个问题基于一个给定的非负整数序列A1, A2, ..., An，其中n是该序列的长度。</div>
+<div></div>
+<div>第一个问题是，如果用f(i, j)表示Ai xor Ai+1 xor ... xor Aj，则任意的1 &lt;= i &lt;= j &lt;= n的f(i, j)相加是多少。</div>
+<div></div>
+<div>第二个问题是，如果用g(i, j)表示Ai + Ai+1 + ... + Aj，则任意的1 &lt;= i &lt;= j &lt;= n的g(i, j)异或在一起是多少。</div>
+<div></div>
+<div>比如说，对于序列{1, 2}，所有的f是{1, 2, 1 xor 2}，加起来是6；所有的g是{1, 2, 1 + 2}，异或起来是0。</div>
+<div></div>
+<div>他觉得这两个问题都非常的有趣，所以他找到了你，希望你能快速解决这两个问题，其中第一个问题的答案可能很大，你只需要输出它对998244353（一个质数）取模的值即可。</div>
+<div></div>
+<p align="left" class="MsoNormal"></p>
+<p></p></div><h2>Input</h2><div class="content"><div>第一行一个正整数n，表示序列的长度。</div>
+<div>
+<div></div>
+<div>第二行n个非负整数A1, A2, ..., An，表示这个序列。</div>
+<div></div>
+</div>
+<p></p></div><h2>Output</h2><div class="content"><div>两个整数，表示两个问题的答案，空格隔开，其中第一个问题的答案要对998244353（一个质数）取模。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2 <br/>
+1 2</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">6 0<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>100%的数据满足n &lt;= 10^5, Ai &lt;= 10^6。</div><br/>
+<div></div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢佚名上传">鸣谢佚名上传</a></p></div><center>[<a href="submitpage.php?id=4017">Submit</a>][<a href="problemstatus.php?id=4017">Status</a>][<a href="bbs.php?id=4017">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2163. -- 复杂的大门</title><center><h2>2163: 复杂的大门</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>259 MB<br/><span class="green">Submit: </span>167  <span class="green">Solved: </span>125<br/>[<a href="submitpage.php?id=2163">Submit</a>][<a href="problemstatus.php?id=2163">Status</a>][<a href="bbs.php?id=2163">Discuss</a>]</center><h2>Description</h2><div class="content"><p>你去找某bm玩，到了门口才发现要打开他家的大门不是一件容易的事……<br/>
+他家的大门外有n个站台，用1到n的正整数编号。你需要对每个站台访问一定次数以后大门才能开启。站台之间有m个单向的传送门，通过传送门到达另一个站台不需要花费任何代价。而如果不通过传送门，你就需要乘坐公共汽车，并花费1单位的钱。值得庆幸的是，任意两个站台之间都有公共汽车直达。<br/>
+现在给你每个站台必须访问的次数Fi，对于站台i，你必须恰好访问Fi次（不能超过）。<br/>
+我们用u、v、w三个参数描述一个传送门，表示从站台u到站台v有一个最多可以使用w次的传送门（不一定要使用w次）。值得注意的是，对于任意一对传送门(u1,v1)和(u2,v2)，如果有u1&lt;u2，则有v1≤v2；如果有v1&lt;v2，则有u1≤u2；且u1=u2和v1=v2不同时成立。<br/>
+你可以从任意的站台开始，从任意的站台结束。出发去开始的站台需要花费1单位的钱。你需要求出打开大门最少需要花费多少单位的钱。<br/>
+</p></div><h2>Input</h2><div class="content"><p>第一行包含两个正整数n、m，意义见题目描述。第二行包含n个正整数，第i个数表示Fi。接下来有m行，每行有三个正整数u、v、w，表示从u到v有一个可以使用w次的传送门。</p></div><h2>Output</h2><div class="content"><p>输出一行一个整数，表示打开大门最少花费的钱数。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4 3<br/>
+5 5 5 5<br/>
+1 2 1<br/>
+3 2 1<br/>
+3 4 1</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">17</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>有20%的数据满足n≤10，m≤50；对于所有的w、Fi，满足1≤w,Fi≤10。有50%的数据满足n≤1000，m≤10000。100%的数据满足1≤n≤10000，1≤m≤100000；对于所有的u、v，满足1≤u,v≤n，u≠v；对于所有的w、Fi，满足1≤w,Fi≤50000。以上的每类数据中都存在50%的数据满足对于所有的w、Fi，有w=Fi=1。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2163">Submit</a>][<a href="problemstatus.php?id=2163">Status</a>][<a href="bbs.php?id=2163">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

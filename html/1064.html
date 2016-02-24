@@ -1,0 +1,72 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1064. -- [Noi2008]假面舞会</title><center><h2>1064: [Noi2008]假面舞会</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>1404  <span class="green">Solved: </span>687<br/>[<a href="submitpage.php?id=1064">Submit</a>][<a href="problemstatus.php?id=1064">Status</a>][<a href="bbs.php?id=1064">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">一年一度的假面舞会又开始了，栋栋也兴致勃勃的参加了今年的舞会。今年的面具都是主办方特别定制的。每个参加舞会的人都可以在入场时选择一 个自己喜欢的面具。每个面具都有一个编号，主办方会把此编号告诉拿该面具的人。为了使舞会更有神秘感，主办方把面具分为k (k≥3)类，并使用特殊的技术将每个面具的编号标在了面具上，只有戴第i 类面具的人才能看到戴第i+1 类面具的人的编号，戴第k 类面具的人能看到戴第1 类面具的人的编号。 参加舞会的人并不知道有多少类面具，但是栋栋对此却特别好奇，他想自己算出有多少类面具，于是他开始在人群中收集信息。 栋栋收集的信息都是戴第几号面具的人看到了第几号面具的编号。如戴第2号面具的人看到了第5 号面具的编号。栋栋自己也会看到一些编号，他也会根据自己的面具编号把信息补充进去。由于并不是每个人都能记住自己所看到的全部编号，因此，栋栋收集的信 息不能保证其完整性。现在请你计算，按照栋栋目前得到的信息，至多和至少有多少类面具。由于主办方已经声明了k≥3，所以你必须将这条信息也考虑进去。</span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行包含两个整数n, m，用一个空格分隔，n 表示主办方总共准备了多少个面具，m 表示栋栋收集了多少条信息。接下来m 行，每行为两个用空格分开的整数a, b，表示戴第a 号面具的人看到了第b 号面具的编号。相同的数对a, b 在输入文件中可能出现多次。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">包含两个数，第一个数为最大可能的面具类数，第二个数为最小可能的面具类数。如果无法将所有的面具分为至少3 类，使得这些信息都满足，则认为栋栋收集的信息有错误，输出两个-1。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">【输入样例一】<br/>
+<br/>
+6 5<br/>
+1 2<br/>
+2 3<br/>
+3 4<br/>
+4 1<br/>
+3 5<br/>
+<br/>
+【输入样例二】<br/>
+<br/>
+3 3<br/>
+1 2<br/>
+2 1<br/>
+2 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">【输出样例一】<br/>
+4 4<br/>
+<br/>
+【输出样例二】<br/>
+-1 -1</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">100%的数据，满足n ≤ 100000, m ≤ 1000000。 </span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1064">Submit</a>][<a href="problemstatus.php?id=1064">Status</a>][<a href="bbs.php?id=1064">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

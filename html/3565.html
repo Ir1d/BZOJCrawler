@@ -1,0 +1,74 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3565. -- [SHOI2014]超能粒子炮</title><center><h2>3565: [SHOI2014]超能粒子炮</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>49  <span class="green">Solved: </span>21<br/>[<a href="submitpage.php?id=3565">Submit</a>][<a href="problemstatus.php?id=3565">Status</a>][<a href="bbs.php?id=3565">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">邪恶的巨型宇宙怪物 CCM(Crazy Code Monster)即将对美丽的地球发动攻击!<br/>
+在这千钧一发的时刻,地球联合军决定使用地球最先进的能量武器——由发明家 SHTSC 设计的超能粒子炮彻底摧毁 CCM。<br/>
+超能粒子炮由垂直方向从上到下共 n 个超能粒子发射管构成,编号 1~n。所有的发射管都会在开火的一瞬间同时发射出强大的超能粒子流。<br/>
+为了彻底摧毁再生能力极强的邪恶宇宙怪物 CCM,地球联合军将 CCM 从上到下分为 m 个区域, 编号 1~m,分别进行打击。其中超能粒子炮的第 i 号发射管将会对准 f(i)号区域发射。f(i) 的公式如下:<br/>
+f(i) = (a * i + b) mod m + 1<br/>
+其中 a, b 都是给定的常数。<br/>
+然而,出于某种不可告人的目的,N 财团不希望 CCM 被超能粒子炮彻底消灭。于是 N 财团以远程精神控制了超能粒子炮的操作员——你来阻止地球军消灭 CCM。<br/>
+你发现,超能粒子炮的开火模式会使得不同的粒子流的运动轨迹发生交叉, 而在所有这些交叉点处部署一种名为折跃棱镜的能量反射装置就能使得超能粒子炮因过载而自爆。这样,你就可以阻止地球联合军使用超能粒子炮摧毁 CCM 而成为下一代 N 财团金牌的获得者。<br/>
+为了实现这个计划,你需要知道有多少对粒子流 i, j,满足 i&lt;j 且 f(i) &gt; f(j)。<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">第一行四个整数:n, m, a, b。分别为超能粒子炮的发射管数目、CCM 被分成的区域数、以及题目描述中的 f 公式中的常数。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">输出一行一个整数,为运动轨迹交叉的粒子流的对数。<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">样例一：<br/>
+2 3 2 2<br/>
+样例二：<br/>
+5 5 2 0<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">样例一：<br/>
+1<br/>
+样例二：<br/>
+7<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">对于 100%的数据,n≤m≤10^9,存在 a’满足 a*a’=1 (mod m), 且 min{a,a’} ≤1000, a,b&lt;m, m 是质数。<br/><br/>
+</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By 佚名提供">By 佚名提供</a></p></div><center>[<a href="submitpage.php?id=3565">Submit</a>][<a href="problemstatus.php?id=3565">Status</a>][<a href="bbs.php?id=3565">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

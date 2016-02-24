@@ -1,0 +1,81 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4372. -- 烁烁的游戏</title><center><h2>4372: 烁烁的游戏</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>39  <span class="green">Solved: </span>14<br/>[<a href="submitpage.php?id=4372">Submit</a>][<a href="problemstatus.php?id=4372">Status</a>][<a href="bbs.php?id=4372">Discuss</a>]</center><h2>Description</h2><div class="content"><p>背景：烁烁很喜欢爬树，这吓坏了树上的皮皮鼠。<br/>
+题意：<br/>
+给定一颗n个节点的树，边权均为1，初始树上没有皮皮鼠。<br/>
+烁烁他每次会跳到一个节点u，把周围与他距离不超过d的节点各吸引出w只皮皮鼠。皮皮鼠会被烁烁吸引，所以会一直待在节点上不动。<br/>
+烁烁很好奇，在当前时刻，节点u有多少个他的好朋友---皮皮鼠。<br/>
+大意：<br/>
+给一颗n个节点的树，边权均为1，初始点权均为0，m次操作：<br/>
+Q x：询问x的点权。<br/>
+M x d w：将树上与节点x距离不超过d的节点的点权均加上w。</p></div><h2>Input</h2><div class="content"><p>第一行两个正整数：n，m<br/>
+接下来的n-1行，每行三个正整数u，v，代表u，v之间有一条边。<br/>
+接下来的m行，每行给出上述两种操作中的一种。</p></div><h2>Output</h2><div class="content"><p>对于每个Q操作，输出当前x节点的皮皮鼠数量。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">7 6<br/>
+1 2<br/>
+1 4<br/>
+1 5<br/>
+2 3<br/>
+2 7<br/>
+5 6<br/>
+M 1 1 2<br/>
+Q 5<br/>
+M 2 2 3<br/>
+Q 3<br/>
+M 1 2 1<br/>
+Q 2</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2<br/>
+3<br/>
+6<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>数据范围：<br/><br/>
+n，m&lt;=10^5,|w|&lt;=10^4<br/><br/>
+注意：w不一定为正整数，因为烁烁可能把皮皮鼠吓傻了。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4372">Submit</a>][<a href="problemstatus.php?id=4372">Status</a>][<a href="bbs.php?id=4372">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2879. -- [Noi2012]美食节</title><center><h2>2879: [Noi2012]美食节</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>1305  <span class="green">Solved: </span>703<br/>[<a href="submitpage.php?id=2879">Submit</a>][<a href="problemstatus.php?id=2879">Status</a>][<a href="bbs.php?id=2879">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">CZ市为了欢迎全国各地的同学，特地举办了一场盛大的美食节。作为一个喜欢尝鲜的美食客，小M自然不愿意错过这场盛宴。他很快就尝遍了美食节所有的美食。然而，尝鲜的欲望是难以满足的。尽管所有的菜品都很可口，厨师做菜的速度也很快，小M仍然觉得自己桌上没有已经摆在别人餐桌上的美食是一件无法忍受的事情。于是小M开始研究起了做菜顺序的问题，即安排一个做菜的顺序使得同学们的等待时间最短。小M发现，美食节共有n种不同的菜品。每次点餐，每个同学可以选择其中的一个菜品。总共有m个厨师来制作这些菜品。当所有的同学点餐结束后，菜品的制作任务就会分配给每个厨师。然后每个厨师就会同时开始做菜。厨师们会按照要求的顺序进行制作，并且每次只能制作一人份。此外，小M还发现了另一件有意思的事情: 虽然这m个厨师都会制作全部的n种菜品，但对于同一菜品，不同厨师的制作时间未必相同。他将菜品用1, 2, ..., n依次编号，厨师用1, 2, ..., m依次编号，将第j个厨师制作第i种菜品的时间记为 ti,j 。小M认为：每个同学的等待时间为所有厨师开始做菜起，到自己那份菜品完成为止的时间总长度。换句话说，如果一个同学点的菜是某个厨师做的第k道菜，则他的等待时间就是这个厨师制作前k道菜的时间之和。而总等待时间为所有同学的等待时间之和。现在，小M找到了所有同学的点菜信息: 有 pi 个同学点了第i种菜品（i=1, 2, ..., n）。他想知道的是最小的总等待时间是多少。<br/>
+<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><br/>
+<font size="4"> 输入文件的第1行包含两个正整数n和m，表示菜品的种数和厨师的数量。 第2行包含n个正整数，其中第i个数为pi，表示点第i种菜品的人数。 接下来有n行，每行包含m个非负整数，这n行中的第i行的第j个数为ti,j，表示第j个厨师制作第i种菜品所需的时间。 输入文件中每行相邻的两个数之间均由一个空格隔开，行末均没有多余空格。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><br/>
+<font size="4"> 输出仅一行包含一个整数，为总等待时间的最小值。<br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata"><br/>
+3 2 <br/>
+3 1 1 <br/>
+5 7 <br/>
+3 6 <br/>
+8 9<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+47<br/>
+<br/>
+【样例说明】<br/>
+厨师1先制作1份菜品2，再制作2份菜品1。点这3道菜的3个同学的等待时间分别为3，3+5=8，3+5+5=13。<br/>
+厨师2先制作1份菜品1，再制作1份菜品3。点这2道菜的2个同学的等待时间分别为7，7+9=16。<br/>
+总等待时间为3+8+13+7+16=47。<br/>
+虽然菜品1和菜品3由厨师1制作更快，如果这些菜品都由厨师1制作，总等待时间反而更长。如果按上述的做法，将1份菜品1和1份菜品3调整到厨师2制作，这样厨师2不会闲着，总等待时间更短。<br/>
+可以证明，没有更优的点餐方案。<br/>
+<br/>
+<br/>
+【数据规模及约定】<br/>
+对于100%的数据，n 
+每组数据的n、m和p值如下：<br/>
+测试点编号 n m p <br/>
+1 n = 5 m = 5 p = 10 <br/>
+2 n = 40 m = 1 p = 400 <br/>
+3 n = 40 m = 2 p = 300 <br/>
+4 n = 40 m = 40 p = 40 <br/>
+5 n = 5 m = 40 p = 100 <br/>
+6 n = 10 m = 50 p = 200 <br/>
+7 n = 20 m = 60 p = 400 <br/>
+8 n = 40 m = 80 p = 600 <br/>
+9 n = 40 m = 100 p = 800 <br/>
+10 n = 40 m = 100 p = 800 <br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2879">Submit</a>][<a href="problemstatus.php?id=2879">Status</a>][<a href="bbs.php?id=2879">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

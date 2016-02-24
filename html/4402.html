@@ -1,0 +1,74 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4402. -- Claris的剑</title><center><h2>4402: Claris的剑</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>78  <span class="green">Solved: </span>43<br/>[<a href="submitpage.php?id=4402">Submit</a>][<a href="problemstatus.php?id=4402">Status</a>][<a href="bbs.php?id=4402">Discuss</a>]</center><h2>Description</h2><div class="content"><p>Claris想要铸一把剑，这把剑必须符合他的审美，具体来说，我们可以把这把剑的不同地方的宽度看成一个序列，这个序列要满足以下条件：<br/>
+1.每个元素都是正整数（你的宽度不可能是负数吧）<br/>
+2.每个元素不能超过M，太宽了如果比Claris身高还高怎么办（你可以认为Claris的身高就是M）<br/>
+3.相邻两个元素的差的绝对值必须是1（如果是0，则这个地方不是锯齿，杀伤力不够，如果太大，又太丑了）<br/>
+4.第一个元素的值必须是1（剑尖必须是最窄的地方）<br/>
+他想知道有多少把长度不超过N（即宽度的序列长度不超过N）的合法的本质不同的剑。<br/>
+我们认为两把剑本质不同，当且仅当存在至少一个宽度，在两把剑的宽度序列里面出现次数不一样。<br/>
+比如{1,2,3}和{1,3,2}是本质相同的<br/>
+{1,2,3}和{1,2,1}则是本质不同的</p></div><h2>Input</h2><div class="content"><p>只有两个整数，表示N,M (数据保证$N,M \leq 2000000$)</p></div><h2>Output</h2><div class="content"><p>只有一个整数，表示答案对$10^9+7$取模的结果</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">9</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>样例解释<br/><br/>
+<br/><br/>
+所有本质不同的合法的剑有如下：<br/><br/>
+<br/><br/>
+{1}<br/><br/>
+{1,2}<br/><br/>
+{1,2,3}<br/><br/>
+{1,2,1}<br/><br/>
+{1,2,3,2}<br/><br/>
+{1,2,1,2}<br/><br/>
+{1,2,3,2,3}<br/><br/>
+{1,2,3,2,1}<br/><br/>
+{1,2,1,2,1}</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By lyzy">By lyzy</a></p></div><center>[<a href="submitpage.php?id=4402">Submit</a>][<a href="problemstatus.php?id=4402">Status</a>][<a href="bbs.php?id=4402">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

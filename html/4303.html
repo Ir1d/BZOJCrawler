@@ -1,0 +1,71 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4303. -- 数列</title><center><h2>4303: 数列</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>93  <span class="green">Solved: </span>16<br/>[<a href="submitpage.php?id=4303">Submit</a>][<a href="problemstatus.php?id=4303">Status</a>][<a href="bbs.php?id=4303">Discuss</a>]</center><h2>Description</h2><div class="content"><div>有一列元素，每一个元素有三个属性:标号、标识符、数值。这些元素按照标号从1~n排列，标识符也是1~n的一个排列，初始时数值为0。当然我们可以把每个元素看成一个多维数字，那么这列元素就是一个数列。 </div>
+<div>现在请你维护这个数列，使其能支持以下两种操作：1.将标号为l~r的所有元素的数值先乘上x，再加上y；2.将标识符为l~r的所有元素的数值先乘上x，再加上y。当然你还得回答某些询问：1.标号为l~r的所有元素的数值的和；2.标识符为l~r的所有元素的数值的和。 </div>
+<div></div>
+<div></div>
+<p></p></div><h2>Input</h2><div class="content"><div>第一行有两个正整数n、m，分别表示数列长度和操作与询问个数的总和。第二行有n个正整数，表示每个元素的标识符，保证这n个数是1~n的一个排列。接下来m行，每行的第一个数字为op。若op为0，则表示要进行第一个操作，接下去四个数字表示l,r,x,y;若op为1，则表示要进行第二个操作，接下去四个数字表示l,r,x,y;若op为2，则表示要回答第一个询问，接下去两个数字表示l,r;若op为3，则表示要回答第二个询问，接下去两个数字表示l,r。 </div>
+<div></div>
+<p></p></div><h2>Output</h2><div class="content"><div>包含若干行，每行表示一个询问的答案。由于答案可能很大，只要请你输出答案对536870912取模后的值即可。 </div>
+<div></div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4 4 <br/>
+2 1 4 3 <br/>
+0 2 3 4 5 <br/>
+1 1 3 4 7 <br/>
+2 1 1 <br/>
+3 1 1 </span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">7 <br/>
+27 </span></div><h2>HINT</h2>
+<div class="content"><p></p><div>第一次操作后，数列变为0 5 5 0 </div><br/>
+<div>第二次操作后，数列变为7 27 5 7 </div><br/>
+<div>N,M&lt;=50000, 1&lt;=L&lt;=R&lt;=N 0&lt;=X,Y&lt;=2^31-1</div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4303">Submit</a>][<a href="problemstatus.php?id=4303">Status</a>][<a href="bbs.php?id=4303">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1187. -- [HNOI2007]神奇游乐园</title><center><h2>1187: [HNOI2007]神奇游乐园</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>879  <span class="green">Solved: </span>467<br/>[<a href="submitpage.php?id=1187">Submit</a>][<a href="problemstatus.php?id=1187">Status</a>][<a href="bbs.php?id=1187">Discuss</a>]</center><h2>Description</h2><div class="content"><p>经历了一段艰辛的旅程后，主人公小P乘坐飞艇返回。在返回的途中，小P发现在漫无边际的沙漠中，有一块狭长的绿地特别显眼。往下仔细一看，才发现这是一个游乐场，专为旅途中疲惫的人设计。娱乐场可以看成是一块大小为n×m的区域，且这个n×m的区域被分成n×m个小格子，每个小格子中就有一个娱乐项目。然而，小P并不喜欢其中的所有娱乐项目，于是，他给每个项目一个满意度。满意度为正时表示小P喜欢这个项目，值越大表示越喜欢。为负时表示他不喜欢，这个负数的绝对值越大表示他越不喜欢。为0时表示他对这个项目没有喜恶。小P决定将飞艇停在某个小格中，然后每步他可以移动到相邻的上下左右四个格子的某个格子中。小P希望找一条路径，从飞艇所在格出发，最后又回到这个格子。小P有一个习惯，从不喜欢浪费时间。因此，他希望经过每个格子都是有意义的：他到一个地方后，就一定要感受以下那里的惊险和刺激，不管自己是不是喜欢那里的娱乐项目。而且，除了飞艇所在格，其他的格子他不愿意经过两次。小P希望自己至少要经过四个格子。在满足这些条件的情况下，小P希望自己玩过的娱乐项目的满意度之和最高。你能帮他找到这个最高的满意度之和吗？</p></div><h2>Input</h2><div class="content"><p>输入文件中的第一行为两个正整数n和m，表示游乐场的大小为n×m。因为这个娱乐场很狭窄，所以n和m满足：2&lt;=n&lt;=100，2&lt;=m&lt;=6。接下来的n行，每行有m个整数，第i行第j列表示游乐场的第i行第j列的小格子中的娱乐项目的满意度，这个满意度的范围是[-1000，1000]。同一行的两个整数之间用空格隔开。</p></div><h2>Output</h2><div class="content"><p>输出文件中仅一行为一个整数，表示最高的满意度之和。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4 4<br/>
+100 300 -400 400<br/>
+-100 1000 1000 1000<br/>
+-100 -100 -100 -100<br/>
+-100 -100 -100 1000</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4000</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>大家测下这个数据 5 5 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 1 1 -100 3 3 结果是30?</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1187">Submit</a>][<a href="problemstatus.php?id=1187">Status</a>][<a href="bbs.php?id=1187">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

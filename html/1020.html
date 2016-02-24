@@ -1,0 +1,60 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1020. -- [SHOI2008]安全的航线flight</title><center><h2>1020: [SHOI2008]安全的航线flight</h2><span class="green">Time Limit: </span>1 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>917  <span class="green">Solved: </span>308<br/>[<a href="submitpage.php?id=1020">Submit</a>][<a href="problemstatus.php?id=1020">Status</a>][<a href="bbs.php?id=1020">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">在设计航线的时候，安全是一个很重要的问题。首先，最重要的是应采取一切措施确保飞行不会发生任何事故，但同时也需要做好最坏的打算，一旦事故发生，就要确保乘客有尽量高的生还几率。当飞机迫降到海上的时候，最近的陆地就是一个关键的因素。航线中最危险的地方就是距离最近的陆地最远的地方，我们称这种点为这条航线“孤地点”。孤地点到最近陆地的距离被称为“孤地距离”。作为航空公司的高级顾问，你接受的第一个任务就是尽量找出一条航线的孤地点，并计算这条航线的孤地距离。为了简化问题，我们认为地图是一个二维平面，陆地可以用多边形近似，飞行线路为一条折线。航线的起点和终点都在陆地上，但中间的转折点是可能在海上（如下图所示，方格标示出了孤地点）。 <img alt="" border="0" src="image/images_1020_1_jpg"/> </span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">输入的第一行包括两个整数C和N（1≤C≤20，2≤N≤20），分别代表陆地的数目的航线的转折点的数目。接下来有N行，每行有两个整数x,y。(x,y)表示一个航线转折点的坐标，第一个转折点为航线的起点，最后一个转折点为航线的终点。接下来的输入将用来描述C块大陆。每块输入由一个正整数M开始（M≤30），M表示多边形的顶点个数，接下来的M行，每行会包含两个整数x,y，(x,y)表示多边形的一个顶点坐标，我们保证这些顶点以顺时针或逆时针给出了该多边形的闭包，不会出现某些边相交的情况。此外我们也保证输入数据中任何两块大陆不会相交。输入的所有坐标将保证在-10000到10000的范围之间。 </span></p></div><h2>Output</h2><div class="content"><p>输出一个浮点数，表示航线的孤地距离，数据保留2位小数。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">1 2<br/>
+-9 -6<br/>
+5 1<br/>
+3<br/>
+0 16<br/>
+-16 -12<br/>
+17 -6	</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">0.00</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=NWERC 2007">NWERC 2007</a></p></div><center>[<a href="submitpage.php?id=1020">Submit</a>][<a href="problemstatus.php?id=1020">Status</a>][<a href="bbs.php?id=1020">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4035. -- [HAOI2015]T3</title><center><h2>4035: [HAOI2015]T3</h2><span class="green">Time Limit: </span>15 Sec  <span class="green">Memory Limit: </span>32 MB<br/><span class="green">Submit: </span>72  <span class="green">Solved: </span>44<br/>[<a href="submitpage.php?id=4035">Submit</a>][<a href="problemstatus.php?id=4035">Status</a>][<a href="bbs.php?id=4035">Discuss</a>]</center><h2>Description</h2><div class="content"><div>有一个长度为N的数组，甲乙两人在上面进行这样一个游戏：</div>
+<div>首先，数组上有一些格子是白的，有一些是黑的。然后两人轮流进</div>
+<div>行操作。每次操作选择一个白色的格子，假设它的下标为x。接着，</div>
+<div>选择一个大小在1~n/x之间的整数k，然后将下标为x、2x、...、kx</div>
+<div>的格子都进行颜色翻转。不能操作的人输。</div>
+<div>现在甲（先手）有一些询问。每次他会给你一个数组的初始状态，</div>
+<div>你要求出对于这种初始状态他是否有必胜策略。</div>
+<div></div></div><h2>Input</h2><div class="content"><div>
+<div>第一行包含一个整数N，表示数组的长度。</div>
+<div>第二行包含一个整数K，表示询问的个数。</div>
+<div>接下来2*K行，每两行表示一次询问。在这两行中，第一行一个正</div>
+<div>整数W，表示数组中有多少个格子是白色的，第二行则有W个1~N</div>
+<div>之间的正整数，表示白色格子的对应下标。</div>
+</div></div><h2>Output</h2><div class="content"><p> 对于每个询问，若先手必胜输出"Yes"，否则输出"No"。答案之间用换行隔开</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3<br/>
+2<br/>
+2<br/>
+1 2<br/>
+2<br/>
+2 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">Yes<br/>
+No<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> 【样例解释】</p><br/>
+<div>在第一个询问中，甲选择点1，然后将格子1*1和2*1翻过来即可。</div><br/>
+<div>第二个询问中，无论甲选择哪个点，都只能翻掉一个格子。乙只需</div><br/>
+<div>翻掉另一个格子就行了。</div><br/>
+<div></div><br/>
+<div>N&lt;=1000000000 ， K,W&lt;=100 ， 不会有格子在同</div><br/>
+<div>一次询问中多次出现。</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢bhiaibogf提供">鸣谢bhiaibogf提供</a></p></div><center>[<a href="submitpage.php?id=4035">Submit</a>][<a href="problemstatus.php?id=4035">Status</a>][<a href="bbs.php?id=4035">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

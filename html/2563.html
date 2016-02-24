@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2563. -- 阿狸和桃子的游戏</title><center><h2>2563: 阿狸和桃子的游戏</h2><span class="green">Time Limit: </span>3 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>500  <span class="green">Solved: </span>356<br/>[<a href="submitpage.php?id=2563">Submit</a>][<a href="problemstatus.php?id=2563">Status</a>][<a href="bbs.php?id=2563">Discuss</a>]</center><h2>Description</h2><div class="content"><div align="left" style="background: white"><span style="font-size: 12pt; color: #200000">　　阿狸和桃子正在玩一个游戏，游戏是在一个带权图</span><span style="font-size: 12pt; color: #200000">G=(V, E)</span><span style="font-size: 12pt; color: #200000">上进行的，设节点权值为</span><span style="font-size: 12pt; color: #200000">w(v)</span><span style="font-size: 12pt; color: #200000">，边权为</span><span style="font-size: 12pt; color: #200000">c(e)</span><span style="font-size: 12pt; color: #200000">。游戏规则是这样的：</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　</span><span style="font-size: 12pt; color: #200000">1. </span><span style="font-size: 12pt; color: #200000">阿狸和桃子轮流将图中的顶点染色，阿狸会将顶点染成红色，桃子会将顶点染成粉色。已经被染过色的点不能再染了，而且每一轮都必须给一个且仅一个顶点染色。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　</span><span style="font-size: 12pt; color: #200000">2. </span><span style="font-size: 12pt; color: #200000">为了保证公平性，节点的个数</span><span style="font-size: 12pt; color: #200000">N</span><span style="font-size: 12pt; color: #200000">为偶数。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　</span><span style="font-size: 12pt; color: #200000">3. </span><span style="font-size: 12pt; color: #200000">经过</span><span style="font-size: 12pt; color: #200000">N/2</span><span style="font-size: 12pt; color: #200000">轮游戏之后，两人都得到了一个顶点集合。对于顶点集合</span><span style="font-size: 12pt; color: #200000">S</span><span style="font-size: 12pt; color: #200000">，得分计算方式为<img alt="" height="71" src="image/_JudgeOnline_upload_201203_111_jpg" width="266"/></span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　</span><span style="font-size: 12pt; color: #200000">。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　由于阿狸石头剪子布输给了桃子，所以桃子先染色。两人都想要使自己的分数比对方多，且多得越多越好。如果两人都是采用最优策略的，求最终桃子的分数减去阿狸的分数。</span></div>
+<div align="left" style="background: white"><span style="font-size: 12pt; color: #200000">　</span></div></div><h2>Input</h2><div class="content"><p><font size="3"><font color="#200000">　输入第一行包含两个正整数<span style="font-size: 12pt; color: #200000">N</span></font></font><span style="font-size: 12pt; color: #200000">和</span><span style="font-size: 12pt; color: #200000">M</span><span style="font-size: 12pt; color: #200000">，分别表示图</span><span style="font-size: 12pt; color: #200000">G</span><span style="font-size: 12pt; color: #200000">的节点数和边数，保证</span><span style="font-size: 12pt; color: #200000">N</span><span style="font-size: 12pt; color: #200000">一定是偶数。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　接下来</span><span style="font-size: 12pt; color: #200000">N+M</span><span style="font-size: 12pt; color: #200000">行。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　前</span><span style="font-size: 12pt; color: #200000">N</span><span style="font-size: 12pt; color: #200000">行，每行一个整数</span><span style="font-size: 12pt; color: #200000">w</span><span style="font-size: 12pt; color: #200000">，其中第</span><span style="font-size: 12pt; color: #200000">k</span><span style="font-size: 12pt; color: #200000">行为节点</span><span style="font-size: 12pt; color: #200000">k</span><span style="font-size: 12pt; color: #200000">的权值。</span><span style="font-size: 12pt; color: #200000"><br/>
+</span><span style="font-size: 12pt; color: #200000">　　后</span><span style="font-size: 12pt; color: #200000">M</span><span style="font-size: 12pt; color: #200000">行，每行三个用空格隔开的整数</span><span style="font-size: 12pt; color: #200000">a b c</span><span style="font-size: 12pt; color: #200000">，表示一条连接节点</span><span style="font-size: 12pt; color: #200000">a</span><span style="font-size: 12pt; color: #200000">和节点</span><span style="font-size: 12pt; color: #200000">b</span><span style="font-size: 12pt; color: #200000">的边，权值为</span><span style="font-size: 12pt; color: #200000">c</span><span style="font-size: 12pt; color: #200000">。</span></p>
+<div align="left" style="background: white"><span style="font-size: 12pt; color: #200000">　</span></div></div><h2>Output</h2><div class="content"><p><font color="#200000" size="3">　输出仅包含一个整数，为桃子的得分减去阿狸的得分。</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4 4<br/>
+6<br/>
+4<br/>
+-1<br/>
+-2<br/>
+1 2 1<br/>
+2 3 6<br/>
+3 4 3<br/>
+1 4 5<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">3<br/>
+数据规模和约定<br/>
+　　对于40%的数据，1 ≤ N ≤ 16。<br/>
+　　对于100%的数据，1 ≤ N ≤ 10000，1 ≤ M ≤ 100000，-10000 ≤ w , c ≤ 10000。<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=2012国家集训队Round 1 day2">2012国家集训队Round 1 day2</a></p></div><center>[<a href="submitpage.php?id=2563">Submit</a>][<a href="problemstatus.php?id=2563">Status</a>][<a href="bbs.php?id=2563">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3568. -- DZY Loves Math VII</title><center><h2>3568: DZY Loves Math VII</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>512 MB<br/><span class="green">Submit: </span>27  <span class="green">Solved: </span>9<br/>[<a href="submitpage.php?id=3568">Submit</a>][<a href="problemstatus.php?id=3568">Status</a>][<a href="bbs.php?id=3568">Discuss</a>]</center><h2>Description</h2><div class="content"><p class="a" style="margin: 0cm 0cm 0pt; line-height: 150%"><span style="font-size: medium"><font color="#00000a"><font face="Times New Roman"><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">     已知</span><span lang="EN-US" style="line-height: 150%; font-family: &quot;Microsoft YaHei Greek&quot;; mso-bidi-font-family: 'Courier New'; mso-fareast-font-family: 微软雅黑">μ</span></font><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)</span><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">，求第</font></span><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>K</span><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">小的</font></span><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>N</span><font face="Times New Roman"><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">。</span></font></font></span><font color="#00000a"><font face="Times New Roman"><span lang="EN-US" style="font-size: 9pt; line-height: 150%"><o:p></o:p></span></font></font></p>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt; line-height: 150%"><span style="font-size: medium"><font color="#00000a"><font face="Times New Roman"><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">已知</span><span lang="EN-US" style="line-height: 150%; font-family: &quot;Microsoft YaHei Greek&quot;; mso-bidi-font-family: 'Courier New'; mso-fareast-font-family: 微软雅黑">Φ</span></font><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)</span><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">，求</font></span></font></span><font color="#00000a"><span style="font-size: 9pt; line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><a name="__DdeLink__91_2126345570"><span style="font-size: medium"><font face="Times New Roman">第</font></span></a></span><span style="font-size: medium"><span style="mso-bookmark: __DdeLink__91_2126345570"><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>K</span></span><font face="Times New Roman"><span style="mso-bookmark: __DdeLink__91_2126345570"><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">小的</span></span></font><span lang="EN-US" style='line-height: 150%; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>N</span><font face="Times New Roman"><span style="line-height: 150%; font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">。</span></font></span><font face="Times New Roman"><span lang="EN-US" style="font-size: 9pt; line-height: 150%"><o:p></o:p></span></font></font></p>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font color="#00000a" face="Times New Roman">已知</font></span></span><a name="OLE_LINK12"></a><a name="OLE_LINK11"></a><span style="font-size: medium"><a name="OLE_LINK11"><span style="mso-bookmark: OLE_LINK12"><span lang="EN-US" style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-hansi-font-family: 微软雅黑"><font color="#00000a" face="Times New Roman">d</font></span></span></a><font color="#00000a"><span style="mso-bookmark: OLE_LINK11"><span style="mso-bookmark: OLE_LINK12"><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)</span></span></span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">，求第</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>K</span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">小的</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>N</span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">。</font></span></font></span><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class="content"><div style="text-indent: 21pt"><span style="font-size: medium"><font color="#00000a">共三行，分别表示三个子问题的输入。</font></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium"><font color="#00000a">每行两个正整数，分别表示某个函数值和K。</font></span></div></div><h2>Output</h2><div class="content"><p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><font face="Times New Roman"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">共三行，分别表示三个子问题的答案。</span></font></font></span><font color="#00000a"><font face="Times New Roman"><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></font></font></p>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">每行一个整数，表示满足条件的第</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>K</span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">小的</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>N</span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">。</font></span></font></span><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">【样例输入1】	<br/>
+1 1<br/>
+1 1<br/>
+1 1<br/>
+<br/>
+【样例输入2】	<br/>
+1 70926127<br/>
+219104256 14<br/>
+123 4<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">【样例输出1】<br/>
+1<br/>
+1<br/>
+1<br/>
+【样例输出2】<br/>
+233333333<br/>
+233333333<br/>
+133040906960896<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="a" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font color="#00000a"><font face="Times New Roman"><b style="mso-bidi-font-weight: normal"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'">【数据范围】</span></b></font></font></span><font color="#00000a"><font face="Times New Roman"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style='font-size: 9pt; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><o:p></o:p></span></b></font></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><font color="#00000a"><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><span style="mso-tab-count: 1">    </span>I.|</span><span lang="EN-US" style="font-family: &quot;Microsoft YaHei Greek&quot;; mso-bidi-font-family: 'Courier New'; mso-fareast-font-family: 微软雅黑"><font face="Times New Roman">μ</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)|&lt;=1,K&lt;=10^8</span></font></span><font color="#00000a"><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>II.</span><span lang="EN-US" style="font-family: &quot;Microsoft YaHei Greek&quot;; mso-bidi-font-family: 'Courier New'; mso-fareast-font-family: 微软雅黑"><font face="Times New Roman">Φ</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)&lt;=10^10,K&lt;=1000</span></font></span><font color="#00000a"><span lang="EN-US" style='font-size: 9pt; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><o:p></o:p></span></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt 21pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">满足答案不超过</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>10^12</span></font></span><font color="#00000a"><span lang="EN-US" style='font-size: 9pt; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><a name="_GoBack"></a><o:p></o:p></span></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>III.</span><span lang="EN-US" style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-hansi-font-family: 微软雅黑"><font face="Times New Roman"> d</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>(N)&lt;=10^7,K&lt;=50</span></font></span><font color="#00000a"><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><font color="#00000a"><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><span style="mso-tab-count: 1">    </span></span><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font face="Times New Roman">满足答案不超过</font></span><span lang="EN-US" style='font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'>10^100</span></font></span><font color="#00000a"><span lang="EN-US" style="font-size: 9pt"><o:p></o:p></span></font></p><br/>
+<p class="a" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><span style="font-size: medium"><span style="font-family: 微软雅黑; mso-bidi-font-family: 'Courier New'; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'"><font color="#00000a" face="Times New Roman">共五组数据。所有输入保证合法。</font></span></span><span lang="EN-US" style='font-size: 9pt; font-family: "Courier New"; mso-fareast-font-family: 微软雅黑'><o:p></o:p></span></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By FancyCoder0">By FancyCoder0</a></p></div><center>[<a href="submitpage.php?id=3568">Submit</a>][<a href="problemstatus.php?id=3568">Status</a>][<a href="bbs.php?id=3568">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

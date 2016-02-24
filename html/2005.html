@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2005. -- [Noi2010]能量采集</title><center><h2>2005: [Noi2010]能量采集</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>552 MB<br/><span class="green">Submit: </span>2710  <span class="green">Solved: </span>1609<br/>[<a href="submitpage.php?id=2005">Submit</a>][<a href="problemstatus.php?id=2005">Status</a>][<a href="bbs.php?id=2005">Discuss</a>]</center><h2>Description</h2><div class="content"><p>栋栋有一块长方形的地，他在地上种了一种能量植物，这种植物可以采集太阳光的能量。在这些植物采集能量后，栋栋再使用一个能量汇集机器把这些植物采集到的能量汇集到一起。 栋栋的植物种得非常整齐，一共有n列，每列有m棵，植物的横竖间距都一样，因此对于每一棵植物，栋栋可以用一个坐标(x, y)来表示，其中x的范围是1至n，表示是在第x列，y的范围是1至m，表示是在第x列的第y棵。 由于能量汇集机器较大，不便移动，栋栋将它放在了一个角上，坐标正好是(0, 0)。 能量汇集机器在汇集的过程中有一定的能量损失。如果一棵植物与能量汇集机器连接而成的线段上有k棵植物，则能量的损失为2k + 1。例如，当能量汇集机器收集坐标为(2, 4)的植物时，由于连接线段上存在一棵植物(1, 2)，会产生3的能量损失。注意，如果一棵植物与能量汇集机器连接的线段上没有植物，则能量损失为1。现在要计算总的能量损失。 下面给出了一个能量采集的例子，其中n = 5，m = 4，一共有20棵植物，在每棵植物上标明了能量汇集机器收集它的能量时产生的能量损失。 在这个例子中，总共产生了36的能量损失。</p></div><h2>Input</h2><div class="content"><p>仅包含一行，为两个整数n和m。</p></div><h2>Output</h2><div class="content"><p>仅包含一个整数，表示总共产生的能量损失。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">【样例输入1】<br/>
+5 4<br/>
+<br/>
+<br/>
+【样例输入2】<br/>
+3 4<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">【样例输出1】<br/>
+36<br/>
+<br/>
+【样例输出2】<br/>
+20<br/>
+<br/>
+【数据规模和约定】<br/>
+对于10%的数据：1 ≤ n, m ≤ 10；<br/>
+<br/>
+对于50%的数据：1 ≤ n, m ≤ 100；<br/>
+<br/>
+对于80%的数据：1 ≤ n, m ≤ 1000；<br/>
+<br/>
+对于90%的数据：1 ≤ n, m ≤ 10,000；<br/>
+<br/>
+对于100%的数据：1 ≤ n, m ≤ 100,000。<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2005">Submit</a>][<a href="problemstatus.php?id=2005">Status</a>][<a href="bbs.php?id=2005">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

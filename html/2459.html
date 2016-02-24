@@ -1,0 +1,111 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2459. -- [BeiJing2011]神秘好人</title><center><h2>2459: [BeiJing2011]神秘好人</h2><span class="green">Time Limit: </span>50 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>182  <span class="green">Solved: </span>79<br/>[<a href="submitpage.php?id=2459">Submit</a>][<a href="problemstatus.php?id=2459">Status</a>][<a href="bbs.php?id=2459">Discuss</a>]</center><h2>Description</h2><div class="content"><div style="text-indent: 21pt"><span style="font-size: 12pt">有一个神秘好人跟</span><span style="font-size: 12pt">Bdcxq</span><span style="font-size: 12pt">玩一个游戏，如果</span><span style="font-size: 12pt">Bdcxq</span><span style="font-size: 12pt">成功完成了这个游戏，那么他将会得到一件礼物。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">这个游戏是这样的：</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt">有一个梯子形的图如下，每条边都有一个权值。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: 12pt"><img alt="" height="175" src="image/_JudgeOnline_upload_201109_1111_jpg" width="617"/></span></div>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21pt"><v:shapetype coordsize="21600,21600" filled="f" id="_x0000_t75" o:preferrelative="t" o:spt="75" path="m@4@5l@4@11@9@11@9@5xe" stroked="f"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path gradientshapeok="t" o:connecttype="rect" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape id="_x0000_s1026" style="margin-top: 9.75pt; z-index: 1; left: 0px; margin-left: -18pt; width: 473.4pt; position: absolute; height: 132.9pt; text-align: left" type="#_x0000_t75"><v:imagedata o:title="" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image001.png"></v:imagedata><w:wrap type="square"></w:wrap></v:shape><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">神秘好人一开始会告诉</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">Bdcxq</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">每条边的权值。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><span style="mso-tab-count: 1"><font face="Times New Roman">       </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">然后神秘好人会做这样的事情：</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt; tab-stops: list 39.0pt; mso-list: l0 level1 lfo1"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore"><font face="Times New Roman">1．</font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">神秘好人会修改某条边的权值；</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt; tab-stops: list 39.0pt; mso-list: l0 level1 lfo1"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman'"><span style="mso-list: Ignore"><font face="Times New Roman">2．</font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">神秘老人会问你从一个点走到另一个点所需经过边权和最小的权值和。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">如果</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">Bdcxq</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">一直能答对问题，那么他就完成了游戏，也能得到礼物。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">现在他请你编一个程序来帮他完成游戏。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">输入文件的第一行包含一个整数</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">N</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示梯子总共含有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2N</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个点，第一行从左至右分别标号为</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">1</font></span></i><i style="mso-bidi-font-style: normal"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span></i><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">3</font></span></i><i style="mso-bidi-font-style: normal"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，……，</span></i><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2N-1</font></span></i><i style="mso-bidi-font-style: normal"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第二行从左至右分别标号为</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2</font></span></i><i style="mso-bidi-font-style: normal"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span></i><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">4</font></span></i><i style="mso-bidi-font-style: normal"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，……，</span></i><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2N</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来有三行。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第一行有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">N-1</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，依次表示上层相邻两点间的初始权值。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第二行有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">N</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，依次表示两层之间的边的初始权值。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">第三行有</span><i style="mso-bidi-font-style: normal"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">N-1</font></span></i><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数，依次表示下层相邻两点间的初始权值。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来一行包含一个整数</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">M</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示神秘好人在游戏开始后的操作。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">接下来</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">M</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行：</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">每行第一个整数若是</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">0</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示这是一个修改操作，接下来会有</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">3</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">A<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">B<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">C<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">A<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">为</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">0</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">分别代表这条边属于上层边，中间边和下层边，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">B<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">表示这条边是这一层从左向右数的第</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">B<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">条边，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">C<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">表示要修改成的边权。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">每行第一个整数若是</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">1</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，表示这是一个询问操作，接下来会有</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">2</font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">个整数</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">A<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">B<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">，询问</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">A<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">到</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><font face="Times New Roman">B<sub>i</sub></font></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的经过边的最小权值和。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 24pt"><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p><font face="Times New Roman"> </font></o:p></span></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="margin: 0cm 0cm 0pt; text-indent: 21.75pt"><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于每次询问操作你需要输出一行包含一个整数，为最小的边权值和。</span><span lang="EN-US" style="font-size: 12pt; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4<br/>
+<br/>
+1 2 7<br/>
+<br/>
+1 3 4 8<br/>
+<br/>
+4 5 6<br/>
+<br/>
+5<br/>
+<br/>
+1 1 2<br/>
+<br/>
+1 2 6<br/>
+<br/>
+1 1 8<br/>
+<br/>
+0 1 3 1<br/>
+<br/>
+1 1 8<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1<br/>
+<br/>
+8<br/>
+<br/>
+13<br/>
+<br/>
+10<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><br/><br/>
+100%的数据满足N，M≤ 100000。<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day1">Day1</a></p></div><center>[<a href="submitpage.php?id=2459">Submit</a>][<a href="problemstatus.php?id=2459">Status</a>][<a href="bbs.php?id=2459">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

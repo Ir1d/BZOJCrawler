@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3192. -- [JLOI2013]删除物品</title><center><h2>3192: [JLOI2013]删除物品</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>680  <span class="green">Solved: </span>408<br/>[<a href="submitpage.php?id=3192">Submit</a>][<a href="problemstatus.php?id=3192">Status</a>][<a href="bbs.php?id=3192">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium"> </span></div>
+<div><span style="font-size: medium">箱子再分配问题需要解决如下问题：</span></div>
+<div><span style="font-size: medium"> （1）一共有N个物品，堆成M堆。</span></div>
+<div><span style="font-size: medium"> （2）所有物品都是一样的，但是它们有不同的优先级。</span></div>
+<div><span style="font-size: medium"> （3）你只能够移动某堆中位于顶端的物品。</span></div>
+<div><span style="font-size: medium"> （4）你可以把任意一堆中位于顶端的物品移动到其它某堆的顶端。若此物品是当前所有物品中优先级最高的，可以直接将之删除而不用移动。</span></div>
+<div><span style="font-size: medium"> </span></div>
+<div><span style="font-size: medium">（5）求出将所有物品删除所需的最小步数。删除操作不计入步数之中。</span></div>
+<div><span style="font-size: medium"> （6）只是一个比较难解决的问题，这里你只需要解决一个比较简单的版本：</span></div>
+<div><span style="font-size: medium">         不会有两个物品有着相同的优先级，且M=2</span></div>
+<div><span style="font-size: medium"> </span></div></div><h2>Input</h2><div class="content"><div><span style="font-size: medium">第一行是包含两个整数N1,N2分别表示两堆物品的个数。</span></div>
+<div><span style="font-size: medium">接下来有N1行整数按照从顶到底的顺序分别给出了第一堆物品中的优先级，数字越大，优先级越高。</span></div>
+<div><span style="font-size: medium">再接下来的N2行按照同样的格式给出了第二堆物品的优先级。</span></div>
+<div><span style="font-size: medium"> </span></div></div><h2>Output</h2><div class="content"><div><span style="font-size: medium">对于每个数据，请输出一个整数，即最小移动步数。</span></div>
+<div><span style="font-size: medium"> </span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3<br/>
+1<br/>
+4<br/>
+5<br/>
+2<br/>
+7<br/>
+3<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">6<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">1&lt;=N1+N2&lt;=100000</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=3192">Submit</a>][<a href="problemstatus.php?id=3192">Status</a>][<a href="bbs.php?id=3192">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

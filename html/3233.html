@@ -1,0 +1,79 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3233. -- [Ahoi2013]找硬币</title><center><h2>3233: [Ahoi2013]找硬币</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>64 MB<br/><span class="green">Submit: </span>617  <span class="green">Solved: </span>275<br/>[<a href="submitpage.php?id=3233">Submit</a>][<a href="problemstatus.php?id=3233">Status</a>][<a href="bbs.php?id=3233">Discuss</a>]</center><h2>Description</h2><div class="content"><div>
+<div align="left" style="margin: 5pt 44.9pt 0pt 18pt; line-height: 19.5pt"><span style="font-size: medium"><span style="color: black">小蛇是金融部部长。最近她决定制造一系列新的货币。假设她要制造的货币</span><span style="color: black">的面值为</span><span style="color: black">x1,x2,x3… </span><span style="color: black">那么</span><span style="color: black">x1</span><span style="color: black">必须为</span><span style="color: black">1</span><span style="color: black">，</span><span style="color: black">xb</span><span style="color: black">必须为</span><span style="color: black">xa</span><span style="color: black">的正整数倍（</span><span style="color: black">b&gt;a</span><span style="color: black">）。例如</span><span style="color: black"> 1</span><span style="color: black">，</span><span style="color: black">5</span><span style="color: black">，</span><span style="color: black">125</span><span style="color: black">，</span><span style="color: black">250</span><span style="color: black">就是一组合法的硬币序列，而</span><span style="color: black">1</span><span style="color: black">，</span><span style="color: black">5</span><span style="color: black">，</span><span style="color: black">100</span><span style="color: black">，</span><span style="color: black">125</span><span style="color: black">就不是。</span><span style="color: black">不知从哪一天开始，可爱的蛇爱上了一种萌物</span><span style="color: black">——</span><span style="color: black">兔纸！从此，小蛇便走上</span><span style="color: black">了遇上兔纸娃娃就买的不归路。某天，小蛇看到了</span><span style="color: black">N</span><span style="color: black">只可爱的兔纸，假设这</span><span style="color: black">N </span><span style="color: black">只兔纸的价钱分别是</span><span style="color: black">a1,a2…aN</span><span style="color: black">。现在小蛇想知道，在哪一组合法的硬币序列下，</span><span style="color: black">买这</span><span style="color: black">N</span><span style="color: black">只兔纸所需要的硬币数最少。买兔纸时不能找零。</span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 6pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+</div></div><h2>Input</h2><div class="content"><div align="left" style="margin: 6pt -3pt 0pt 18pt; line-height: 12pt"><span style="font-size: medium"><span style="color: black">第一行，一个整数</span><span style="color: black">N</span><span style="color: black">，表示兔纸的个数</span></span></div>
+<div align="left" style="margin: 5pt -3pt 0pt 18pt; line-height: 12pt"><span style="font-size: medium"><span style="color: black">第二行，</span><span style="color: black">N</span><span style="color: black">个用空格隔开的整数，分别为</span><span style="color: black">N</span><span style="color: black">只兔纸的价钱</span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 6pt"><span style="font-size: medium"><span style="color: black"> </span></span></div></div><h2>Output</h2><div class="content"><p><span style="font-size: medium"><span style="color: black">一行，一个整数，表示最少付的钱币数。</span></span></p>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 6pt"><span style="font-size: medium"><span style="color: black"> </span></span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2 <br/>
+25 102 <br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4 <br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium"><br/><br/>
+ <br/><br/>
+样例解释：共有两只兔纸，价钱分别为25和102。现在小蛇构造1，25，100这样一组硬币序列，那么付第一只兔纸只需要一个面值为25的硬币，第二只兔纸需要一个面值为100的硬币和两个面值为1的硬币，总共两只兔纸需要付4个硬币。这也是所有方案中最少所需要付的硬币数。<br/><br/>
+ <br/><br/>
+ <br/><br/>
+ </span></p><br/>
+<p><span style="font-size: medium">   1&lt;=N&lt;=50, 1&lt;=ai&lt;=100,000 </span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=3233">Submit</a>][<a href="problemstatus.php?id=3233">Status</a>][<a href="bbs.php?id=3233">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4027. -- [HEOI2015]兔子与樱花</title><center><h2>4027: [HEOI2015]兔子与樱花</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>536  <span class="green">Solved: </span>306<br/>[<a href="submitpage.php?id=4027">Submit</a>][<a href="problemstatus.php?id=4027">Status</a>][<a href="bbs.php?id=4027">Discuss</a>]</center><h2>Description</h2><div class="content"><p>很久很久之前，森林里住着一群兔子。有一天，兔子们突然决定要去看樱花。兔子们所在森林里的樱花树很特殊。樱花树由n个树枝分叉点组成，编号从0到n-1，这n个分叉点由n-1个树枝连接，我们可以把它看成一个有根树结构，其中0号节点是根节点。这个树的每个节点上都会有一些樱花，其中第i个节点有c_i朵樱花。樱花树的每一个节点都有最大的载重m，对于每一个节点i，它的儿子节点的个数和i节点上樱花个数之和不能超过m，即son(i) + c_i &lt;= m，其中son(i)表示i的儿子的个数，如果i为叶子节点，则son(i) = 0</p>
+<div>现在兔子们觉得樱花树上节点太多，希望去掉一些节点。当一个节点被去掉之后，这个节点上的樱花和它的儿子节点都被连到删掉节点的父节点上。如果父节点也被删除，那么就会继续向上连接，直到第一个没有被删除的节点为止。</div>
+<div>现在兔子们希望计算在不违背最大载重的情况下，最多能删除多少节点。</div>
+<div>注意根节点不能被删除，被删除的节点不被计入载重。</div></div><h2>Input</h2><div class="content"><p>第一行输入两个正整数，n和m分别表示节点个数和最大载重</p>
+<div>
+<div>第二行n个整数c_i，表示第i个节点上的樱花个数</div>
+<div>接下来n行，每行第一个数k_i表示这个节点的儿子个数，接下来k_i个整数表示这个节点儿子的编号</div>
+</div></div><h2>Output</h2><div class="content"><p> 一行一个整数，表示最多能删除多少节点。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">10 4<br/>
+0 2 2 2 4 1 0 4 1 1<br/>
+3 6 2 3<br/>
+1 9<br/>
+1 8<br/>
+1 1<br/>
+0<br/>
+0<br/>
+2 7 4<br/>
+0<br/>
+1 5<br/>
+0</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>对于100%的数据，1 &lt;= n &lt;= 2000000, 1 &lt;= m &lt;= 100000, 0 &lt;= c_i &lt;= 1000</p><br/>
+<div>数据保证初始时，每个节点樱花数与儿子节点个数之和大于0且不超过m</div><br/>
+<div></div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4027">Submit</a>][<a href="problemstatus.php?id=4027">Status</a>][<a href="bbs.php?id=4027">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

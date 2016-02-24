@@ -1,0 +1,75 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2743. -- [HEOI2012]采花</title><center><h2>2743: [HEOI2012]采花</h2><span class="green">Time Limit: </span>15 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>1491  <span class="green">Solved: </span>768<br/>[<a href="submitpage.php?id=2743">Submit</a>][<a href="problemstatus.php?id=2743">Status</a>][<a href="bbs.php?id=2743">Discuss</a>]</center><h2>Description</h2><div class="content"><div>
+<div align="left" style="margin: 0cm -1.5pt 0pt 39.2pt; line-height: 14.5pt"><span style="font-size: medium"><span style="color: black">萧芸斓是</span><span style="color: black">Z</span><span style="color: black">国的公主，平时的一大爱好是采花。</span></span></div>
+<div style="margin: 0cm 52.35pt 0pt 18pt; line-height: 15.55pt"><span style="font-size: medium"><span style="color: black">今天天气晴朗，阳光明媚，公主清晨便去了皇宫中新建的花园采花。花园足够大，容纳</span><span style="color: black">了</span><span style="color: black">n</span><span style="color: black">朵花，花有</span><span style="color: black">c</span><span style="color: black">种颜色（用整数</span><span style="color: black">1-c</span><span style="color: black">表示），且花是排成一排的，以便于公主采花。</span><span style="color: black">公主每次采花后会统计采到的花的颜色数，颜色数越多她会越高兴！同时，她有一癖好，</span><span style="color: black">她不允许最后自己采到的花中，某一颜色的花只有一朵。为此，公主每采一朵花，要么此前</span><span style="color: black">已采到此颜色的花，要么有相当正确的直觉告诉她，她必能再次采到此颜色的花。</span><span style="color: black">由于时间关系，公主只能走过花园连续的一段进行采花，便让女仆福涵洁安排行程。福</span><span style="color: black">涵洁综合各种因素拟定了</span><span style="color: black">m</span><span style="color: black">个行程，然后一一向你询问公主能采到多少朵花（她知道你是编</span><span style="color: black">程高手，定能快速给出答案！），最后会选择令公主最高兴的行程（为了拿到更多奖金！）。</span></span></div>
+</div></div><h2>Input</h2><div class="content"><p><span style="font-size: medium"><br clear="all"/>
+</span></p>
+<div align="left" style="margin: 0cm 47.15pt 0pt 18pt; line-height: 15.35pt"><span style="font-size: medium"> <span style="color: black">第一行四个空格隔开的整数</span><span style="color: black">n</span><span style="color: black">、</span><span style="color: black">c</span><span style="color: black">以及</span><span style="color: black">m</span><span style="color: black">。</span><span style="color: black">接下来一行</span><span style="color: black">n</span><span style="color: black">个空格隔开的整数，每个数在</span><span style="color: black">[1, c]</span><span style="color: black">间，第</span><span style="color: black">i</span><span style="color: black">个数表示第</span><span style="color: black">i</span><span style="color: black">朵花的颜色。</span><span style="color: black">接下来</span><span style="color: black">m</span><span style="color: black">行每行两个空格隔开的整数</span><span style="color: black">l</span><span style="color: black">和</span><span style="color: black">r</span><span style="color: black">（</span><span style="color: black">l </span><span style="color: black">≤</span><span style="color: black"> r</span><span style="color: black">），表示女仆安排的行程为公主经</span><span style="color: black">过第</span><span style="color: black">l</span><span style="color: black">到第</span><span style="color: black">r</span><span style="color: black">朵花进行采花。</span></span></div></div><h2>Output</h2><div class="content"><div align="left" style="margin: 0cm -1.5pt 0pt 18pt; line-height: 15.75pt"> </div>
+<div align="left" style="margin: 0cm -1.5pt 0pt 39pt; line-height: 14.5pt"><span style="font-size: medium"><span style="color: black; letter-spacing: 0.2pt">共</span><span style="color: black; letter-spacing: 0.2pt">m</span><span style="color: black; letter-spacing: 0.2pt">行，每行一个整数，第</span><span style="color: black; letter-spacing: 0.2pt">i</span><span style="color: black; letter-spacing: 0.2pt">个数表示公主在女仆的第</span><span style="color: black; letter-spacing: 0.2pt">i</span><span style="color: black; letter-spacing: 0.2pt">个行程中能采到的花的颜色数。</span></span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5  3 5<br/>
+1  2 2 3 1<br/>
+1  5<br/>
+1  2<br/>
+2  2<br/>
+2  3<br/>
+3  5<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">2 <br/>
+0 0 1 0 <br/>
+【样例说明】<br/>
+询问[1, 5]：公主采颜色为1和2的花，由于颜色3的花只有一朵，公主不采；询问[1, 2]：颜色1和颜色2的花均只有一朵，公主不采；<br/>
+询问[2, 2]：颜色2的花只有一朵，公主不采；<br/>
+询问[2, 3]：由于颜色2的花有两朵，公主采颜色2的花；<br/>
+询问[3, 5]：颜色1、2、3的花各一朵，公主不采。<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>【数据范围】<br/><br/>
+对于100%的数据，1 ≤ n ≤    10^6，c ≤ n，m ≤10^6。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2743">Submit</a>][<a href="problemstatus.php?id=2743">Status</a>][<a href="bbs.php?id=2743">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

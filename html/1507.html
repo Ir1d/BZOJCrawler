@@ -1,0 +1,78 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1507. -- [NOI2003]Editor</title><center><h2>1507: [NOI2003]Editor</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>2840  <span class="green">Solved: </span>1151<br/>[<a href="submitpage.php?id=1507">Submit</a>][<a href="problemstatus.php?id=1507">Status</a>][<a href="bbs.php?id=1507">Discuss</a>]</center><h2>Description</h2><div class="content"><p><img alt="" border="0" src="image/images_1507_1_jpg"/></p></div><h2>Input</h2><div class="content"><p>输入文件editor.in的第一行是指令条数t，以下是需要执行的t个操作。其中： 为了使输入文件便于阅读，Insert操作的字符串中可能会插入一些回车符，请忽略掉它们（如果难以理解这句话，可以参考样例）。 除了回车符之外，输入文件的所有字符的ASCII码都在闭区间[32, 126]内。且行尾没有空格。  这里我们有如下假定： 	MOVE操作不超过50000个，INSERT和DELETE操作的总个数不超过4000，PREV和NEXT操作的总个数不超过200000。 	所有INSERT插入的字符数之和不超过2M（1M=1024*1024），正确的输出文件长度不超过3M字节。 	DELETE操作和GET操作执行时光标后必然有足够的字符。MOVE、PREV、NEXT操作必然不会试图把光标移动到非法位置。 	输入文件没有错误。  对C++选手的提示：经测试，最大的测试数据使用fstream进行输入有可能会比使用stdio慢约1秒。</p></div><h2>Output</h2><div class="content"><p>输出文件editor.out的每行依次对应输入文件中每条GET指令的输出。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">15<br/>
+Insert 26<br/>
+abcdefghijklmnop<br/>
+qrstuv wxy<br/>
+Move 15<br/>
+Delete 11<br/>
+Move 5<br/>
+Insert 1<br/>
+^<br/>
+Next<br/>
+Insert 1<br/>
+_<br/>
+Next<br/>
+Next<br/>
+Insert 4<br/>
+.\/.<br/>
+Get 4<br/>
+Prev<br/>
+Insert 1<br/>
+^<br/>
+Move 0<br/>
+Get 22<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">.\/.<br/>
+abcde^_^f.\/.ghijklmno<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1507">Submit</a>][<a href="problemstatus.php?id=1507">Status</a>][<a href="bbs.php?id=1507">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

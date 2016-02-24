@@ -1,0 +1,198 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4364. -- [IOI2014]wall砖墙</title><center><h2>4364: [IOI2014]wall砖墙</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>92  <span class="green">Solved: </span>38<br/>[<a href="submitpage.php?id=4364">Submit</a>][<a href="problemstatus.php?id=4364">Status</a>][<a href="bbs.php?id=4364">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size:12.0pt;font-family:宋体">健佳正在用大小相同的砖块来砌起一面墙。这面墙由 列砖块所组成，它们从左到右的编号<span lang="EN-US">0</span>至<span lang="EN-US">n-1</span>。各列的高度可以不同。各列的高度就是该列砖块的数量。</span><span style="font-size:12.0pt;font-family:宋体">健佳用如下方式来建造这面墙。最开始每列都没有砖块。此后，健佳通过<span lang="EN-US">k</span>个阶段的增加<span lang="EN-US">(adding)</span>或移除<span lang="EN-US">(removing)</span>砖块操作来砌墙。当所有<span lang="EN-US">k</span>个阶段完成后，这面墙就砌好了。在每个阶段中，健佳都会被告知一个连续的砖块列的范围，以及一个高度值<span lang="EN-US">h</span>，然后他就完成如下过程：</span><span style="font-size:12.0pt;font-family:宋体">在增加砖块<span lang="EN-US">(adding)</span>阶段，对于给定的列范围中高度小于<span lang="EN-US">h</span>的列，健佳会增加砖块使它们的高度都恰好等于<span lang="EN-US">h</span>。此时他不会改变那些高度大于或等于<span lang="EN-US">h</span>的列。</span><span style="font-size:12.0pt;font-family:宋体">在移除砖块<span lang="EN-US">(removing)</span>阶段，对于给定的列范围中高度大于 的列，健佳会移除砖块使它们的高度都恰好等于<span lang="EN-US">h</span>。此时他不会改变那些高度小于或等于<span lang="EN-US">h</span>的列。</span><span style="font-size:12.0pt;font-family:宋体">你的任务就是计算出这面墙的最后形状。</span><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--></p></div><h2>Input</h2><div class="content"><p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria"><br/>
+</span><span style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+Cambria">第<span lang="EN-US">1</span>行：<span lang="EN-US">n, k</span>。</span></p>
+<p class="MsoNormal"><span style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+Cambria">第<span lang="EN-US">2+i </span>行<span lang="EN-US">(0</span>≤<span lang="EN-US">i</span>≤<span lang="EN-US">k-1)</span>：<span lang="EN-US">op[i], left[i], right[i], height[i]</span>。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">n: </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">这面墙中的列数。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">k: </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">阶段数。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">op: </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">大小为<span lang="EN-US">k</span>的数组；<span lang="EN-US">op[i]</span>是第<span lang="EN-US">i</span>个阶段的类型：<span lang="EN-US">1 </span>表示增加阶段<span lang="EN-US">(adding) </span>而<span lang="EN-US"> 2</span>表示移除阶段<span lang="EN-US">(removing) </span>，其中<span lang="EN-US">0</span>≤<span lang="EN-US">i</span>≤<span lang="EN-US">k-1</span>。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">left </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">和<span lang="EN-US"> right: </span>大小为<span lang="EN-US">k</span>的数组；在第<span lang="EN-US">i</span>个阶段中，列的范围从第<span lang="EN-US">left[i] </span>列开始到第<span lang="EN-US">right[i]</span>列结束（包括两端<span lang="EN-US"> left[i] </span>和<span lang="EN-US"> right[i]</span>），其中<span lang="EN-US">0</span>≤<span lang="EN-US">i</span>≤<span lang="EN-US">k-1</span>。这里保证满足<span lang="EN-US">left[i]</span>≤<span lang="EN-US">right[i]</span>。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">height: </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">大小为<span lang="EN-US">k</span>的数组；<span lang="EN-US">height[i] </span>表示在阶段<span lang="EN-US">i</span>的高度参数，其中<span lang="EN-US">0</span>≤<span lang="EN-US">i</span>≤<span lang="EN-US">k-1</span>。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size:12.0pt;font-family:宋体;mso-bidi-font-family:
+Cambria">共<span lang="EN-US">n</span>行，第<span lang="EN-US">i</span>行包含一个整数表示<span lang="EN-US">finalHeight[i]</span>。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria">finalHeight: </span><span style="font-size:12.0pt;
+font-family:宋体;mso-bidi-font-family:Cambria">大小为<span lang="EN-US">n</span>的数组；你需要把第<span lang="EN-US">i</span>列砖块的最终数量存放到<span lang="EN-US">finalHeight[i]</span>中做为返回结果，其中<span lang="EN-US">0</span>≤<span lang="EN-US">i</span>≤<span lang="EN-US">n-1</span>。</span><span lang="EN-US" style="font-size:12.0pt;font-family:宋体;
+mso-bidi-font-family:Cambria"><br/>
+</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">输入样例1<br/>
+10 3<br/>
+1 3 4 91220<br/>
+1 5 9 48623<br/>
+2 3 5 39412<br/>
+<br/>
+输入样例2<br/>
+<br/>
+10 6<br/>
+1 1 8 4<br/>
+2 4 9 1<br/>
+2 3 6 5<br/>
+1 0 5 3<br/>
+1 2 2 5<br/>
+2 6 7 0</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">输出样例1<br/>
+<br/>
+0<br/>
+0<br/>
+0<br/>
+39412<br/>
+39412<br/>
+39412<br/>
+48623<br/>
+48623<br/>
+48623<br/>
+48623<br/>
+<br/>
+输出样例2<br/>
+<br/>
+3<br/>
+4<br/>
+5<br/>
+4<br/>
+3<br/>
+3<br/>
+0<br/>
+0<br/>
+1<br/>
+0</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" height="371" src="image/_JudgeOnline_upload_201512_11_GIF" width="572"/></p><br/>
+<p><img alt="" height="550" src="image/_JudgeOnline_upload_201512_33_gif" width="277"/></p><br/>
+<p><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";&lt;br /&gt;
+mso-hansi-font-family:"Times New Roman"'>对于</span><span lang="EN-US">100%</span><span style='font-family:宋体;mso-ascii-font-family:"Times New Roman";mso-hansi-font-family:&lt;br /&gt;
+"Times New Roman"'>的数据，</span><span lang="EN-US">1</span><span style="font-size:&lt;br /&gt;
+12.0pt;font-family:宋体;mso-bidi-font-family:Cambria">≤<span lang="EN-US">n</span>≤<span lang="EN-US">2,000,000</span>，<span lang="EN-US">1</span>≤<span lang="EN-US">k</span>≤<span lang="EN-US">500,000</span>。</span></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢yts1999上传">鸣谢yts1999上传</a></p></div><center>[<a href="submitpage.php?id=4364">Submit</a>][<a href="problemstatus.php?id=4364">Status</a>][<a href="bbs.php?id=4364">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

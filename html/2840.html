@@ -1,0 +1,93 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2840. -- 小强的逃跑</title><center><h2>2840: 小强的逃跑</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>4  <span class="green">Solved: </span>0<br/>[<a href="submitpage.php?id=2840">Submit</a>][<a href="problemstatus.php?id=2840">Status</a>][<a href="bbs.php?id=2840">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium">    小强建立了一个洞穴，洞穴由N个点、M条有向边组成，可能有自环、重边。每个边有一个体力消耗值。当小强感觉到危险的时候，它会进行低智商的逃跑行为，具体说，是从一个点开始跑，每一步：</span></div>
+<div><span style="font-size: medium">    它有P的概率从这个点钻出洞穴终止逃跑；</span></div>
+<div><span style="font-size: medium">    1-P的概率沿着从当前点连出的体力消耗值最小的边移动到另一个点（此时，如果有多个连出的边的消耗值一样且都是最小的，小强会选择到达的点的编号比较小的边。如果当前点没有连出的边，它会以相等的概率穿越到一个随机的点，穿越不用体力，具体请见样例解释）。</span></div>
+<div><span style="font-size: medium">    小强想知道，从一个点开始逃跑直到终止，它消耗的体力的期望是多少？</span></div>
+<div><span style="font-size: medium">    还有，洞穴是在动态变化的。每次，某条边的权值可能由原来的数变成另一个数。你要不停地接受修改，同时回答小强的询问。    </span></div></div><h2>Input</h2><div class="content"><div><span style="font-size: medium">    第一行有三个数：两个正整数N，M，表示点的个数和边的个数，还有一个实数P，表示小强终止逃跑的概率。接下来M行，每行三个正整数a,b,c，表示从点a到点b有一条权值为c的有向边。点从1编号到N。</span></div>
+<div><span style="font-size: medium">    接下来一个非负整数Q，表示操作的个数。接下来Q行，每行一个操作，是下面的格式之一：</span></div>
+<div><span style="font-size: medium">    0 x y 表示把输入文件中输入的第x条边的权值变成y</span></div>
+<div><span style="font-size: medium">    1 x 表示查询当前状态下，从点x开始逃跑，小强消耗的体力的期望是多少。</span></div></div><h2>Output</h2><div class="content"><div><span style="font-size: medium">    对于输入的每个询问操作，输出一行一个数表示小强从某个点开始逃跑的体力消耗的期望。四舍五入到整数。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3 0.1<br/>
+1 2 1<br/>
+1 3 1<br/>
+3 1 1<br/>
+4<br/>
+1 1<br/>
+0 1 2<br/>
+1 1<br/>
+1 2<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">5<br/>
+9<br/>
+8<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>【样例解释】<br/><br/>
+    这张图开始的时候有3个点，3条边。<br/><br/>
+    在开始状态下：<br/><br/>
+    如果小强在点1，它会以0.9的概率跑向点2（消耗体力值1），0.1的概率停止；<br/><br/>
+    如果小强在点2，这个点没有连出的边，所以它会以0.3的概率穿越到点1，0.3的概率穿越到点2（也就是不动），0.3的概率穿越到点3，0.1的概率停止；<br/><br/>
+如果小强在点3，它会以0.9的概率跑向点1（消耗体力值1），0.1的概率停止。   <br/><br/>
+为了计算这种情况下小强从点1出发的体力消耗期望，我们设x、y、z 分别表示小强从点1、2、3出发的体力消耗值，那么有：<br/><br/>
+x=0.9*(y+1)<br/><br/>
+y=0.3x+0.3y+0.3z<br/><br/>
+z=0.9*(x+1)<br/><br/>
+解这个方程得到x=873/187，y=783/187，z=954/187。所以，从点1 出发的体力消耗的期望是4.6684492，四舍五入之后就是5。<br/><br/>
+    后来，从点1到点2的边的体力值变成了2。这样，小强从点1出发，它就会以0.9的概率跑向点3，0.1的概率停止。此时方程变成：<br/><br/>
+x=0.9*(z+1)<br/><br/>
+y=0.3x+0.3y+0.3z<br/><br/>
+z=0.9*(x+1) <br/><br/>
+这个方程的解是x=z=9，y=54/7。所以，从点1 出发的体力消耗的期望是9，从点2出发的体力消耗的期望是7.7142857142，四舍五入之后就是8。<br/><br/>
+ <br/><br/>
+    <br/><br/>
+【数据说明】<br/><br/>
+     对于100%的数据，N&lt;=50000，Q&lt;=100000，1&lt;=M&lt;=1000000，每条边的体<br/><br/>
+力消耗值为介于1到1000的一个正整数。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2840">Submit</a>][<a href="problemstatus.php?id=2840">Status</a>][<a href="bbs.php?id=2840">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

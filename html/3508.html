@@ -1,0 +1,80 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3508. -- 开灯</title><center><h2>3508: 开灯</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>18  <span class="green">Solved: </span>11<br/>[<a href="submitpage.php?id=3508">Submit</a>][<a href="problemstatus.php?id=3508">Status</a>][<a href="bbs.php?id=3508">Discuss</a>]</center><h2>Description</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 36pt"><span style="font-size: medium"><span style="font-family: '宋体'; mso-spacerun: 'yes'">xx<font face="宋体">作为信息学界的大神，拥有众多的粉丝。为了感谢众粉丝的爱戴，</font><font face="Times New Roman">xx</font><font face="宋体">决定举办一场晚会。为了气派，</font><font face="Times New Roman">xx</font><font face="宋体">租了一个巨大的灯屏，这个灯屏有</font><font face="Times New Roman">m</font><font face="宋体">行，每行有</font><font face="Times New Roman">n</font><font face="宋体">个小灯泡。对于每一行灯，有</font><font face="Times New Roman">L</font><font face="宋体">种操作方法，</font></span><span style="font-family: '宋体'; mso-spacerun: 'yes'">第i种表示你能将任意长度恰为Ai的连续一段灯泡的状态取反（灭变亮，亮变灭）。</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">现</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">对于每一行</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">给定K个点，要求这K个点发光，其余点必须保持熄灭状态</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">。求每一行达到目标状态的最小操作数。</span></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div><h2>Input</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">第一行一个数m，表示LED屏的行数。</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">对于LED屏的每一行：</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">第一行为n,k,</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">L</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">，意义见上。</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">第二行为k个数，表示要求发光的k个点。</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">第三行为</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">L</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">个数，表示</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">L</span><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">种操作方式。</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Output</h2><div class="content"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '微软雅黑'; mso-spacerun: 'yes'">对于LED屏的每一行：如果无法达到目标状态，输出-1，否则输出最少次数。</span></span><span style="font-size: 10.5pt; font-family: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: medium"><span style="font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></span><span style="font-size: 10.5pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+10 8 2<br/>
+1 2 3 5 6 7 8 9<br/>
+3 5<br/>
+3 2 1<br/>
+1 2<br/>
+3<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+2<br/>
+-1<br/>
+<br/>
+<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><br/><br/>
+对于100%的数据，T≤10，N≤10000，K≤10,L≤100,1≤A_i≤N。<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By zjwst960422">By zjwst960422</a></p></div><center>[<a href="submitpage.php?id=3508">Submit</a>][<a href="problemstatus.php?id=3508">Status</a>][<a href="bbs.php?id=3508">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4067. -- [Ctsc2015]gender</title><center><h2>4067: [Ctsc2015]gender</h2><span class="green">Time Limit: </span>50 Sec  <span class="green">Memory Limit: </span>20480 MB<br/><span class="green">Submit: </span>82  <span class="green">Solved: </span>27<br/>[<a href="submitpage.php?id=4067">Submit</a>][<a href="problemstatus.php?id=4067">Status</a>][<a href="bbs.php?id=4067">Discuss</a>]</center><h2>Description</h2><div class="content"><p> 21世纪是生命科学的世纪。人类投入了大量人力物力研究生命科学，旨在对各类生物的生存机理产生更加深入的理解，</p>
+<div>以更好地了解人类自身，提高生活质量。Q国政府首先在绵羊中开展了性别改造研究，希望通过基因重组改变性别的方式</div>
+<div>增强整个绵羊种群的生存能力。若此计划能够顺利研究成功，人类将掌握随意改变动物性别的黑科技，这将是生命科学</div>
+<div>研究史上一个重要的里程碑。 </div>
+<div>Q国政府从绵羊群中挑出M只绵羊作为实验样本，这M只绵羊中存在K条长度为N的单一性别的血缘链。所谓“血缘链”</div>
+<div>是指的一条由父（母）子（女）关系组成的链，比如爷爷-爸爸-儿子就是一条血缘链。“单一性别”的意思是每条血缘链</div>
+<div>中所有个体的性别均一致，同为雄性或同为雌性。血缘链长度指的是一条血缘链中个体的数量，比如爷爷-爸爸-儿子是一</div>
+<div>条长度为3的血缘链。这K条血缘链并不相交。 </div>
+<div>注意并不是每只绵羊都必须属于一条血缘链，有些绵羊可能不属于任何血缘链，因此N*K&lt;=M。除去血缘链外，同辈绵羊还</div>
+<div>会有“繁衍关系”的存在。两只异性绵羊如果曾经繁殖过后代，那么它们之间就会产生“繁衍关系”。注意繁衍关系只会</div>
+<div>出现在同辈异性绵羊个体之间，这里“同辈”表示两只绵羊的辈份相同，即绵羊只会与它的兄弟姐妹辈产生“繁衍关系”，</div>
+<div>而不会与父母或子女或其他更远的辈份之间产生“繁衍关系”。 </div>
+<div>对绵羊进行性别修改需要花费巨大的实验开销，修改绵羊i的性别需要花费ci的修改代价。除此以外，修改绵羊性别还会对</div>
+<div>繁衍关系的稳定度产生影响：每对繁衍关系j有初始稳定度bj和衰减系数dj，当所有的性别修改操作完成后，若双方性别均</div>
+<div>未改变，则此关系稳定度sj=bj，若双方性别互换，则稳定度sj=floor(bjdj)，其他情况下稳定度sj=0。 </div>
+<div>给定每只绵羊的性别、性别修改代价、所有血缘链关系很繁衍关系，Q国政府希望你来设计一套性别搞糟方案，使总收益最大。</div>
+<div>收益计算方式如下： </div>
+<div> <img alt="" height="39" src="image/_JudgeOnline_upload_201505_1_bmp" width="294"/></div>
+<div>其中A为改造后血缘链相邻两者为异性的情况数量，S为改造后繁衍关系稳定度之和，即S=∑jsj，C为修改绵羊性别带来的代价</div>
+<div>之和，即C=∑ici。 </div></div><h2>Input</h2><div class="content"><p> 第一行包含四个非负整数N,K,M,P，分别为血缘链的长度，血缘链的数量，实验样本中的总绵羊数和繁衍关系的数量。 </p>
+<div>第二行为一个M个字符的字符串，每个字符为'M'或'F'，描述了这M只绵羊的初始性别。'M'表示雄性，'F'表示雌性。 </div>
+<div>第三行M个正整数ci，表示修改每只绵羊性别的代价。 </div>
+<div>下面K行每行N个整数，分别描述这K个血缘链中绵羊编号（所有绵羊用1到M的整数编号），保证每条链中的绵羊均为同性，</div>
+<div>且链互补交叠。 </div>
+<div>下面P行每行三个整数x,y,b和一个实属d，表示绵羊x与绵羊y存在繁衍关系，且初始关系稳定度为b，衰减系数为d。</div>
+<div>保证x与y的初始性别不同，x和y为同辈，同一条关系只会在数据中描述一次。 </div></div><h2>Output</h2><div class="content"><p>仅包含一行一个整数，表示改造计划的最大收益。 </p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 2 6 2<br/>
+MMMFFF<br/>
+10000 200 10 10000 200 10<br/>
+1 2 3 <br/>
+4 5 6 <br/>
+2 5 20 0.1<br/>
+3 6 20 0.9</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">360</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> 样例解释1： </p><br/>
+<div>改性别为MMFFFM。收益为<img alt="" height="39" src="image/_JudgeOnline_upload_201505_2_bmp" width="398"/>。 </div><br/>
+<div>A=2是因为血缘链1-2-3中2与3性别的不同，血缘链4-5-6中5与6的性别不同。 </div><br/>
+<div></div><br/>
+<div></div><br/>
+<div>数据范围 </div><br/>
+<div>对于10%的数据，满足M&lt;=20； </div><br/>
+<div>对于10%的数据，满足dj=0； </div><br/>
+<div>对于10%的数据，满足dj=0.5； </div><br/>
+<div>上述三类数据两两没有交集。 </div><br/>
+<div>对于100%的数据，N&lt;=50，K&lt;=4，M&lt;=1000，P&lt;=10000，0.0&lt;=dj&lt;=1.0，bj和ci均不大于10000，dj的小数位数不超过6。 <img alt="" height="39" src="image/_JudgeOnline_upload_201505_3_bmp" width="294"/></div><br/>
+<div></div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=4067">Submit</a>][<a href="problemstatus.php?id=4067">Status</a>][<a href="bbs.php?id=4067">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

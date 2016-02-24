@@ -1,0 +1,63 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1001. -- [BeiJing2006]狼抓兔子</title><center><h2>1001: [BeiJing2006]狼抓兔子</h2><span class="green">Time Limit: </span>15 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>15538  <span class="green">Solved: </span>3742<br/>[<a href="submitpage.php?id=1001">Submit</a>][<a href="problemstatus.php?id=1001">Status</a>][<a href="bbs.php?id=1001">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">现在小朋友们最喜欢的"喜羊羊与灰太狼",话说灰太狼抓羊不到，但抓兔子还是比较在行的，而且现在的兔子还比较笨，它们只有两个窝，现在你做为狼王，面对下面这样一个网格的地形：</span></p>
+<p><span style="font-size: medium"> <img alt="" border="0" src="image/images_1001_jpg"/> </span></p>
+<p><span style="font-size: medium">左上角点为(1,1),右下角点为(N,M)(上图中N=4,M=5).有以下三种类型的道路 1:(x,y)&lt;==&gt;(x+1,y) 2:(x,y)&lt;==&gt;(x,y+1) 3:(x,y)&lt;==&gt;(x+1,y+1) 道路上的权值表示这条路上最多能够通过的兔子数，道路是无向的. 左上角和右下角为兔子的两个窝，开始时所有的兔子都聚集在左上角(1,1)的窝里，现在它们要跑到右下解(N,M)的窝中去，狼王开始伏击这些兔子.当然为了保险起见，如果一条道路上最多通过的兔子数为K，狼王需要安排同样数量的K只狼，才能完全封锁这条道路，你需要帮助狼王安排一个伏击方案，使得在将兔子一网打尽的前提下，参与的狼的数量要最小。因为狼还要去找喜羊羊麻烦. </span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">第一行为N,M.表示网格的大小，N,M均小于等于1000.接下来分三部分第一部分共N行，每行M-1个数，表示横向道路的权值. 第二部分共N-1行，每行M个数，表示纵向道路的权值. 第三部分共N-1行，每行M-1个数，表示斜向道路的权值. 输入文件保证不超过10M </span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">输出一个整数，表示参与伏击的狼的最小数量. </span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 4<br/>
+5 6 4<br/>
+4 3 1<br/>
+7 5 3<br/>
+5 6 7 8<br/>
+8 7 6 5<br/>
+5 5 5<br/>
+6 6 6</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">14</span></div><h2>HINT</h2>
+<div class="content"><p></p><p> 2015.4.16新加数据一组，可能会卡掉从前可以过的程序。</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1001">Submit</a>][<a href="problemstatus.php?id=1001">Status</a>][<a href="bbs.php?id=1001">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1032. -- [JSOI2007]祖码Zuma</title><center><h2>1032: [JSOI2007]祖码Zuma</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>760  <span class="green">Solved: </span>381<br/>[<a href="submitpage.php?id=1032">Submit</a>][<a href="problemstatus.php?id=1032">Status</a>][<a href="bbs.php?id=1032">Discuss</a>]</center><h2>Description</h2><div class="content"><p>这是一个流行在Jsoi的游戏，名称为祖玛。精致细腻的背景，外加神秘的印加音乐衬托，彷佛置身在古老的国度里面，进行一个神秘的游戏——这就是著名的祖玛游戏。祖玛游戏的主角是一只石青蛙，石青蛙会吐出各种颜色的珠子，珠子造型美丽，并且有着神秘的色彩，环绕着石青蛙的是载着珠子的轨道，各种颜色的珠子会沿着轨道往前滑动，石青蛙必需遏止珠子们滚进去轨道终点的洞里头，如何减少珠子呢？就得要靠石青蛙吐出的珠子与轨道上的珠子相结合，颜色相同者即可以消失得分！直到轨道上的珠子通通都被清干净为止。 或许你并不了解祖玛游戏。没关系。这里我们介绍一个简单版本的祖玛游戏规则。一条通道中有一些玻璃珠，每个珠子有各自的颜色，如图1所示。玩家可以做的是选择一种颜色的珠子（注意：颜色可以任选，这与真实游戏是不同的）射入某个位置。 <img alt="" border="0" src="image/images_1032_1_jpg"/> 图1 图2中玩家选择一颗蓝色珠子，射入图示的位置，于是得到一个图3的局面。 <img alt="" border="0" src="image/images_1032_2_jpg"/> 图2 <img alt="" border="0" src="image/images_1032_3_jpg"/> 图3 当玩家射入一颗珠子后，如果射入的珠子与其他珠子组成了三颗以上连续相同颜色的珠子，这些珠子就会消失。例如，将一颗白色珠子射入图4中的位置，就会产生三颗颜色相同的白色珠子。这三颗珠子就会消失，于是得到图5的局面。 <img alt="" border="0" src="image/images_1032_4_jpg"/> 图4 <img alt="" border="0" src="image/images_1032_5_jpg"/> 图5 需要注意的一点是，图4中的三颗连续的黄色珠子不会消失，因为并没有珠子射入其中。珠子的消失还会产生连锁反应。当一串连续相同颜色的珠子消失后，如果消失位置左右的珠子颜色相同，并且长度大于2，则可以继续消失。例如，图6中，射入一颗红色珠子后，产生了三颗连续的红色珠子。当红色珠子消失后，它左右都是白色的珠子，并且一共有四颗，于是白色珠子也消失了。之后，消失位置的左右都是蓝色珠子，共有三颗，于是蓝色珠子也消失。最终得到图7的状态。注意，图7中的三颗黄色珠子不会消失，因为蓝色珠子消失的位置一边是紫色珠子，另一边是黄色珠子，颜色不同。 <img alt="" border="0" src="image/images_1032_6_jpg"/> 图6 <img alt="" border="0" src="image/images_1032_7_jpg"/> 图7 除了上述的情况，没有其他的方法可以消去珠子。现在，我们有一排珠子，需要你去消除。对于每一轮，你可以自由选择不同颜色的珠子，射入任意的位置。你的任务是射出最少的珠子，将全部珠子消去。</p></div><h2>Input</h2><div class="content"><p>第一行一个整数n（n ≤ 500），表示珠子的个数第二行n个整数（32位整数范围内），用空格分割，每个整数表示一种颜色的珠子。</p></div><h2>Output</h2><div class="content"><p>一个整数，表示最少需要射出的珠子个数。</p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">9<br/>
+1 1 2 2 3 3 2 1 1</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">1 </span></div><h2>HINT</h2>
+<div class="content"><p></p><p>据说此题标程有误，致使数据全错....</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1032">Submit</a>][<a href="problemstatus.php?id=1032">Status</a>][<a href="bbs.php?id=1032">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

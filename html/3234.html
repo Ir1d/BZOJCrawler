@@ -1,0 +1,84 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3234. -- [Ahoi2013]立方体</title><center><h2>3234: [Ahoi2013]立方体</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>64 MB<br/><span class="green">Submit: </span>176  <span class="green">Solved: </span>73<br/>[<a href="submitpage.php?id=3234">Submit</a>][<a href="problemstatus.php?id=3234">Status</a>][<a href="bbs.php?id=3234">Discuss</a>]</center><h2>Description</h2><div class="content"><div align="left" style="margin: 6pt 44.9pt 0pt 18pt; line-height: 19.5pt"><span style="font-size: medium"><span style="color: black">在一个三维空间中有</span><span style="color: black">N</span><span style="color: black">个立方体，第</span><span style="color: black">i</span><span style="color: black">个立方体占据</span><span style="color: black">x_i1</span><span style="color: black">，</span><span style="color: black">y_i1, z_i1 --- x_i2, y_i2, z_i2</span><span style="color: black">的位置。这</span><span style="color: black">N</span><span style="color: black">个立方体可能有相交，也可能重叠。这</span><span style="color: black">N</span><span style="color: black">个立方体构</span><span style="color: black">成一个大的几何图形。现在求这个几何图形的外表面积</span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div></div><h2>Input</h2><div class="content"><div align="left" style="margin: 5pt -3pt 0pt 18pt; line-height: 12pt"><span style="font-size: medium"><span style="color: black">第一行，一个整数</span><span style="color: black">N</span><span style="color: black">，表示立方体的个数。</span></span></div>
+<div style="margin: 6pt 44.9pt 0pt 18pt; line-height: 39pt"><span style="font-size: medium"><span style="color: black">第二行至第</span><span style="color: black">N+1</span><span style="color: black">行，每行</span><span style="color: black">6</span><span style="color: black">个用空格隔开的整数，分别表示</span><span style="color: black">x1,y1,z1,x2,y2,z2. </span></span></div></div><h2>Output</h2><div class="content"><p> </p>
+<div align="left" style="margin: 5pt -3pt 0pt 18pt; line-height: 12pt"><span style="font-size: medium"><span style="color: black">一行，一个整数，表示外表面积的大小。</span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt"><span style="font-size: medium"><span style="color: black"> </span></span></div>
+<div align="left" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 6pt"><span style="font-size: medium"><span style="color: black"> </span></span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">input 1<br/>
+1 <br/>
+0  0 0 1 1 1<br/>
+<br/>
+<br/>
+<br/>
+input 2<br/>
+2 <br/>
+0  1 0 3 2 1<br/>
+1  0 0 2 3 1<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">output 1<br/>
+6 <br/>
+<br/>
+<br/>
+output 2<br/>
+22</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style='font-size: 12pt; color: black; font-family: "Arial Unicode MS"; mso-font-kerning: 0pt'><font face="Times New Roman">对于第一个样例</font></span></p><br/>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style='font-size: 12pt; color: black; font-family: "Arial Unicode MS"; mso-font-kerning: 0pt'><font face="Times New Roman"><img alt="" height="156" src="image/_JudgeOnline_upload_201306_1(5)_jpg" width="134"/></font></span></p><br/>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style='font-size: 12pt; color: black; font-family: "Arial Unicode MS"; mso-font-kerning: 0pt'><font face="Times New Roman">对于第二个样例</font></span></p><br/>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style='font-size: 12pt; color: black; font-family: "Arial Unicode MS"; mso-font-kerning: 0pt'><font face="Times New Roman"><img alt="" height="207" src="image/_JudgeOnline_upload_201306_2(2)_jpg" width="193"/></font></span></p><br/>
+<p class="MsoNormal" style="margin: 6pt 52.2pt 0pt 18pt; line-height: 19pt; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style='font-size: 12pt; color: black; font-family: "Arial Unicode MS"; mso-font-kerning: 0pt'><font face="Times New Roman">1&lt;=N&lt;=200,0&lt;=x_i1,y_i1,z_i1,x_i2,y_i2,z_i2&lt;=200,x_i1&lt;x_i2,y_i1&lt;y_i2,z _i1&lt;z_i2 <o:p></o:p></font></span></p><br/>
+<p align="left" class="MsoNormal" style="margin: 0cm -1.1pt 0pt 0cm; line-height: 10pt; text-align: left; mso-line-height-rule: exactly; mso-layout-grid-align: none"><span lang="EN-US" style="font-size: 10pt; color: black; mso-font-kerning: 0pt; mso-bidi-font-size: 12.0pt"><span style="mso-spacerun: yes"><font face="Times New Roman"> </font></span><o:p></o:p></span></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=鸣谢zhonghaoxi提供数据，原数据似有误">鸣谢zhonghaoxi提供数据，原数据似有误</a></p></div><center>[<a href="submitpage.php?id=3234">Submit</a>][<a href="problemstatus.php?id=3234">Status</a>][<a href="bbs.php?id=3234">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

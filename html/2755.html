@@ -1,0 +1,82 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2755. -- [SCOI2012]喵星人入侵</title><center><h2>2755: [SCOI2012]喵星人入侵</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>63  <span class="green">Solved: </span>24<br/>[<a href="submitpage.php?id=2755">Submit</a>][<a href="problemstatus.php?id=2755">Status</a>][<a href="bbs.php?id=2755">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">a180285幸运地被选作了地球到喵星球的留学生，其实是作为特工去调查喵星人是否有侵略地球的企图。喵星人果然打算入侵地球！从a180285口中得到确切消息之后，地球防御小组成员决定制定反侵略计划。喵星到地球的一段必经之路可以看作n*m的格点，喵星人将会从地图上的S位置出发，目的地是地球的入口T。为了抵抗喵星人的入侵，地球防御小组打算在地图的格点上放置一些炮塔（最多放置K个），炮塔攻击周围的8个方向（8个方向分别是：东，南，西，北，东北，西北，东南，西南）（如下左图所示，中间格子的炮塔可以攻击周围的八个格子）。此外地球防御小组还可以在地图上放置无限多个障碍，使得喵星人无法从有障碍的格子经过。 <br/>
+                     <br/>
+ <br/>
+右图是3*3地图的一个示例，其中X表示炮塔，#表示障碍，有炮塔或障碍的格子喵星人都无法经过，在这张地图中喵星人从S走到T受到的伤害如下:在S(1,0)处受到伤害为2（炮塔(0,0)和(2,1)能攻击到S）,在空地(1,1)处受到伤害为3（同时被炮塔(0,0)和(0,2)和(2,1)攻击），在T(1,2)处受到伤害为2（炮塔(0,2)和(2,1)能攻击到T），于是受到的总伤害为<br/>
+2+3+2=7。作为地球防御小组的一员，请你为喵星人布阵，使得喵星人受到的伤害最大。注意如果有多条从S到T的路径，喵星人会选择伤害最小的一条。   <br/>
+</span></p>
+<p><span style="font-size: medium"><img alt="" height="310" src="image/_JudgeOnline_upload_201204_11(3)_jpg" width="656"/></span></p></div><h2>Input</h2><div class="content"><p><br/>
+<font size="4">第一行为三个整数n，m，K，分别表示地图的长和宽，以及最多能放置的炮塔数量。 <br/>
+接下来的n行，每行包含m个字符，‘#’表示地图上原有的障碍，‘.’表示该处为空地，<br/>
+数据保证在原地图上存在S到T的路径。 <br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">输出在合理布阵下，喵星人采取最优策略后，会受到的最大伤害。 <br/>
+注意必须保证在布阵结束后喵星人仍然可以沿一条或以上的路径从起点S到达终点T，<br/>
+否则他们组织更大规模的侵略。 <br/>
+</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3 1<br/>
+S.T<br/>
+...<br/>
+...<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">7 <br/>
+【提示】 <br/>
+样例的一种最优布局方案如下 <br/>
+S#T <br/>
+.X. <br/>
+... <br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p>【数据范围】 <br/><br/>
+对于30%的数据，保证：<br/><br/>
+1&lt;=N,M&lt;=6<br/><br/>
+对于100%的数据，保证：<br/><br/>
+1&lt;=N&lt;=6，1&lt;=M&lt;=20，1&lt;=K&lt;=15，且从S到T的路径必定存在。<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2755">Submit</a>][<a href="problemstatus.php?id=2755">Status</a>][<a href="bbs.php?id=2755">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

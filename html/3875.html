@@ -1,0 +1,80 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3875. -- [Ahoi2014]骑士游戏</title><center><h2>3875: [Ahoi2014]骑士游戏</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>277  <span class="green">Solved: </span>149<br/>[<a href="submitpage.php?id=3875">Submit</a>][<a href="problemstatus.php?id=3875">Status</a>][<a href="bbs.php?id=3875">Discuss</a>]</center><h2>Description</h2><div class="content"><div> 【故事背景】</div>
+<div>长期的宅男生活中，JYY又挖掘出了一款RPG游戏。在这个游戏中JYY会</div>
+<div>扮演一个英勇的骑士，用他手中的长剑去杀死入侵村庄的怪兽。</div>
+<div>【问题描述】</div>
+<div>在这个游戏中，JYY一共有两种攻击方式，一种是普通攻击，一种是法术攻</div>
+<div>击。两种攻击方式都会消耗JYY一些体力。采用普通攻击进攻怪兽并不能把怪兽彻底杀死，怪兽的尸体可以变出其他一些新的怪兽，注意一个怪兽可能经过若干次普通攻击后变回一个或更多同样的怪兽；而采用法术攻击则可以彻底将一个怪兽杀死。当然了，一般来说，相比普通攻击，法术攻击会消耗更多的体力值（但由于游戏系统bug，并不保证这一点）。</div>
+<div>游戏世界中一共有N种不同的怪兽，分别由1到N编号，现在1号怪兽入</div>
+<div>侵村庄了，JYY想知道，最少花费多少体力值才能将所有村庄中的怪兽全部杀死呢？</div>
+<div></div></div><h2>Input</h2><div class="content"><p></p>
+<div>第一行包含一个整数N。</div>
+<div>接下来N行，每行描述一个怪兽的信息；</div>
+<div>其中第i行包含若干个整数，前三个整数为Si，Ki和Ri，表示对于i号怪兽，</div>
+<div>普通攻击需要消耗Si的体力，法术攻击需要消耗Ki的体力，同时i号怪兽死亡后会产生Ri个新的怪兽。表示一个新出现的怪兽编号。同一编号的怪兽可以出现多个。</div>
+<div>
+<div></div>
+</div></div><h2>Output</h2><div class="content"><p> 输出一行一个整数，表示最少需要的体力值。</p>
+<div></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4<br/>
+4 27 3 2 3 2<br/>
+3 5 1 2<br/>
+1 13 2 4 2<br/>
+5 6 1 2</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">26</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>【样例说明】</div><br/>
+<div>首先用消耗4点体力用普通攻击，然后出现的怪兽编号是2，2和3。花费</div><br/>
+<div>10点体力用法术攻击杀死两个编号为2的怪兽。剩下3号怪兽花费1点体力进</div><br/>
+<div>行普通攻击。此时村庄里的怪兽编号是2和4。最后花费11点体力用法术攻击</div><br/>
+<div>将这两只怪兽彻底杀死。一共花费的体力是4+5+5+1+5+6=26。</div><br/>
+<div>【数据范围】</div><br/>
+<div>2&lt;=N&lt;=2*10^5,1&lt;=Ri,Sigma(Ri)&lt;=10^6,1&lt;=Ki,Si&lt;=5*10^14</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By 佚名上传">By 佚名上传</a></p></div><center>[<a href="submitpage.php?id=3875">Submit</a>][<a href="problemstatus.php?id=3875">Status</a>][<a href="bbs.php?id=3875">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

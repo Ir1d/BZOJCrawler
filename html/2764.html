@@ -1,0 +1,75 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2764. -- [JLOI2011]基因补全</title><center><h2>2764: [JLOI2011]基因补全</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>634  <span class="green">Solved: </span>216<br/>[<a href="submitpage.php?id=2764">Submit</a>][<a href="problemstatus.php?id=2764">Status</a>][<a href="bbs.php?id=2764">Discuss</a>]</center><h2>Description</h2><div class="content"><div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">在生物课中我们学过，碱基组成了DNA（脱氧核糖核酸），他们分别可以用大写字母A,C,T,G表示，其中A总与T配对，C总与G配对。两个碱基序列能相互匹配，当且仅当它们等长，并且任意相同位置的碱基都是能相互配对的。例如ACGTC能且仅能与TGCAG配对。一个相对短的碱基序列能通过往该序列中任意位置补足碱基来与一个相对长的碱基序列配对。补全碱基的位置、数量不同，都将视为不同的补全方案。现在有两串碱基序列S和T，分别有n和m个碱基(n&gt;=m)，问一共有多少种补全方案。</span></div>
+<div style="layout-grid-mode: char; text-indent: 23.65pt"><span style="font-size: medium"> </span></div></div><h2>Input</h2><div class="content"><div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">数据包括三行。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">第一行有两个整数n，m，表示碱基序列的长度。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">第二行包含n个字符，表示碱基序列S。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">第三行包含m个字符，表示碱基序列T。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">两个碱基序列的字符种类只有A,C,G,T这4个大写字母。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium"> </span></div></div><h2>Output</h2><div class="content"><div style="layout-grid-mode: char"> </div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">答案只包含一行，表示补全方案的个数。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">10 3<br/>
+CTAGTAGAAG<br/>
+TCC<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char"><font size="3"><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">样例解释</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">:<o:p></o:p></span></b></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span lang="EN-US"><font face="Times New Roman">TCC</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的</span><span lang="EN-US"><font face="Times New Roman">4</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">种补全方案（括号中字符为补全的碱基）</span></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><span lang="EN-US"><font face="Times New Roman" size="3">(GA)TC(AT)C(TTC)</font></span></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><span lang="EN-US"><font face="Times New Roman" size="3">(GA)TC(ATCTT)C</font></span></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><span lang="EN-US"><font face="Times New Roman" size="3">(GA)T(CAT)C(TT)C</font></span></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><span lang="EN-US"><font face="Times New Roman" size="3">(GATCA)TC(TT)C</font></span></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US"><o:p><font face="Times New Roman" size="3"> </font></o:p></span></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt; layout-grid-mode: char"><font size="3"><b style="mso-bidi-font-weight: normal"><span style="font-family: 宋体; mso-ascii-font-family: 'Courier New'; mso-hansi-font-family: 'Courier New'; mso-bidi-font-size: 10.5pt">数据范围</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-family: &quot;Courier New&quot;; mso-bidi-font-family: 'Times New Roman'; mso-bidi-font-size: 10.5pt">:<o:p></o:p></span></b></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span lang="EN-US"><font face="Times New Roman">30%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">数据</span><span lang="EN-US"><font face="Times New Roman">n&lt;=1000,m&lt;=2</font></span></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span lang="EN-US"><font face="Times New Roman">50%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">数据</span><span lang="EN-US"><font face="Times New Roman">n&lt;=1000,m&lt;=4</font></span></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span lang="EN-US"><font face="Times New Roman">100%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">数据</span><span lang="EN-US"><font face="Times New Roman">n&lt;=2000,m&lt;=n</font></span></font></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2764">Submit</a>][<a href="problemstatus.php?id=2764">Status</a>][<a href="bbs.php?id=2764">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

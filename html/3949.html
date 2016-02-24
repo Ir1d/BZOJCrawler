@@ -1,0 +1,72 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3949. -- 买置换</title><center><h2>3949: 买置换</h2><span class="green">Time Limit: </span>30 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>1  <span class="green">Solved: </span>0<br/>[<a href="submitpage.php?id=3949">Submit</a>][<a href="problemstatus.php?id=3949">Status</a>][<a href="bbs.php?id=3949">Discuss</a>]</center><h2>Description</h2><div class="content"><div>买菜否开了一家店，号称“一切皆可买”，生意红火。这天crx看到店里面有一个很长的置换A，它的形式非常优美，如果把它表示成排列(a1, a2, ..., an)，对于所有i都满足ai=i%n+1。crx被深深地吸引了，但他买不起这个置换。好在仁慈的买菜否表示，只要crx能求出A的特征值，就让crx低价买下这个置换。买菜否把置换A的特征值定义为置换A能生成的所有不同置换的循环数之和。由于特征值可能很大，只需要求出它模10^9+7的余数。crx知道，置换A能生成的置换是若干个A合成的置换，置换A的循环数是将置换A分解为循环的乘积后循环的个数，如果有多种分解方法则选择最小的循环个数。于是crx马上算了起来，过了半小时终于求出了答案。但是买菜否说：“刚才我等你算答案等得太无聊了，就交换了置换中的两个数，现在你要算新的置换的特征值。”crx只好重新算了起来，但是他算了没多久就发现买菜否又无聊地交换了置换中的两个数。crx明白自己计算的速度根本赶不上买菜否交换的速度，他只能记录下买菜否的q次操作，请你来求出每次操作后置换的特征值。</div>
+<div></div>
+<p></p></div><h2>Input</h2><div class="content"><div>输入的第一行包含两个整数n, q，分别表示置换的长度和操作次数。</div>
+<div>接下来q行，第i+1行包含两个整数x，y(x!=y)，表示第i次交换了数x和数y。</div>
+<div></div>
+<p></p></div><h2>Output</h2><div class="content"><div>输出q行，第i行包含一个整数，表示第i次操作后置换的特征值。</div>
+<div>
+<div></div>
+</div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">4 2<br/>
+4 3<br/>
+1 3</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">8<br/>
+8<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>样例说明</div><br/>
+<div>第一次交换后，置换变为2431。它能生成的置换有2431,4132和1234。</div><br/>
+<div>2431可以分解为循环124和3，循环数为2。4132可以分解为循环142和3，循环数为2。1234可以分解为循环1,2,3和4，循环数为4。它们的循环数之和为8。</div><br/>
+<div>N&lt;=10^8,Q&lt;=10^5</div><br/>
+<div>尚无数据，请不要提交！求此题数据。</div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=2014年国家集训队十五人互测">2014年国家集训队十五人互测</a></p></div><center>[<a href="submitpage.php?id=3949">Submit</a>][<a href="problemstatus.php?id=3949">Status</a>][<a href="bbs.php?id=3949">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

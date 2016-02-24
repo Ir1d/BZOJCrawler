@@ -1,0 +1,89 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 1805. -- [Ioi2007]Sail 船帆
+</title><center><h2>1805: [Ioi2007]Sail 船帆
+</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>64 MB<br/><span class="green">Submit: </span>213  <span class="green">Solved: </span>91<br/>[<a href="submitpage.php?id=1805">Submit</a>][<a href="problemstatus.php?id=1805">Status</a>][<a href="bbs.php?id=1805">Discuss</a>]</center><h2>Description</h2><div class="content">让我们来建造一艘新的海盗船。船上有 N个旗杆，每根旗杆被分成单位长度的小节。旗杆的长度等于它被分成的小节的数目。每根旗杆上会挂一些帆，每张帆正好占据旗杆上的一个小节。在一根旗杆上的帆可以任意排布在不同的小节中，但是每个小节上至多能挂一张帆。
+
+在风中，帆的不同排布方式会产生不同的推动力。靠近船头的帆比它后面的相同高度上的帆获得的推动力少，换句话说，靠近船头的帆的推动力由于受它后面相同高度的帆的影响而打了折扣。对于任意一张帆，它的推动力折扣等于在它后面并且和它在同一高度的帆的数目。
+
+所有帆的任意一种位置组合的推动力折扣总和等于在该位置下所有帆的推动力折扣的总和。
+  
+<img border="0" src="image/images_1805_jpg"/> 
+前                                                                                               后
+这条船上有6个旗杆，从前（图上的左边）到后的高度分别是3，5，4，2，4和3。图中所示的帆的位置组合的总推动力折扣是10。上图给出了每张帆自己的推动力折扣。
+
+任务
+
+给定N个旗杆的高度和每个旗杆上挂的帆的数目，写一个程序求出所有位置组合中的可能达到的最小的总推动力折扣。
+</div><h2>Input</h2><div class="content">第一行包含一个整数N（2 ≤ N ≤ 100 000），表示旗杆的数目。
+接下来的N行每行包含两个整数H和K（1 ≤ H ≤ 100 000, 1 ≤ K ≤ H），分别表示对应旗杆的高度及其上的帆的数目。旗杆按照从船头到船尾的顺序给出。
+
+</div><h2>Output</h2><div class="content">输出包含一个整数，表示可以达到的最小的总推动力折扣。
+注意：计算和输出结果时使用64位整数类型（在C/C++中用long long, 在Pascal中用int64）。
+
+评分
+
+在25分的测试数据中，帆的不同位置组合的总数目不超过1 000 000。
+
+</div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">6<br/>
+3 2<br/>
+5 3<br/>
+4 1<br/>
+2 1<br/>
+4 3<br/>
+3 2<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">10<br/>
+<br/>
+这个样例数据和上页中图示的样例相同。<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1805">Submit</a>][<a href="problemstatus.php?id=1805">Status</a>][<a href="bbs.php?id=1805">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

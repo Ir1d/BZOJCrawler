@@ -1,0 +1,91 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2431. -- [HAOI2009]逆序对数列</title><center><h2>2431: [HAOI2009]逆序对数列</h2><span class="green">Time Limit: </span>5 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>1345  <span class="green">Solved: </span>784<br/>[<a href="submitpage.php?id=2431">Submit</a>][<a href="problemstatus.php?id=2431">Status</a>][<a href="bbs.php?id=2431">Discuss</a>]</center><h2>Description</h2><div class="content"><p class="MsoNormal" style="text-indent:21.75pt"><span style='font-size:12.0pt;
+mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+mso-hansi-font-family:"Times New Roman"'>对于一个数列</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">{a<sub>i</sub>}</span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>，如果有</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">i&lt;j</span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>且</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">a<sub>i</sub>&gt;a<sub>j</sub></span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>，那么我们称</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">a<sub>i</sub></span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>与</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">a<sub>j</sub></span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>为一对逆序对数。若对于任意一个由</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">1~n</span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>自然数组成的数列，可以很容易求出有多少个逆序对数。那么逆序对数为</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt">k</span><span style='font-size:12.0pt;mso-bidi-font-size:10.0pt;font-family:宋体;mso-ascii-font-family:
+"Times New Roman";mso-hansi-font-family:"Times New Roman"'>的这样自然数数列到底有多少个？</span><span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:10.0pt"><o:p></o:p></span></p>
+<p></p></div><h2>Input</h2><div class="content"><p class="MsoNormal" style="text-indent: 21.75pt; "><span lang="EN-US" style="font-size: 12pt; "><o:p> </o:p></span><span style="font-size: 12pt; font-family: 宋体; ">第一行为两个整数</span><span lang="EN-US" style="font-size: 12pt; ">n</span><span style="font-size: 12pt; font-family: 宋体; ">，</span><span lang="EN-US" style="font-size: 12pt; ">k</span><span style="font-size: 12pt; font-family: 宋体; ">。</span><span lang="EN-US" style="font-size: 12pt; "><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent: 24pt; "></p>
+<p class="MsoNormal" style="text-indent: 24pt; "></p>
+<p></p></div><h2>Output</h2><div class="content"><p class="MsoNormal" style="text-indent: 24pt; "><span style="font-size: 12pt; font-family: 宋体; ">写入一个整数，表示符合条件的数列个数，</span><span style="font-size: 12pt; font-family: 宋体; ">由于这个数可能很大，你只需输出该数对</span><span lang="EN-US" style="font-size: 12pt; ">10000</span><span style="font-size: 12pt; font-family: 宋体; ">求余数后的结果。</span></p>
+<p class="MsoNormal" style="text-indent: 24pt; "><span lang="EN-US" style="font-size: 12pt; "><o:p> </o:p></span></p>
+<p class="MsoNormal"><b><br/>
+</b></p>
+<p class="MsoNormal" style="text-indent: 24pt; "></p>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">样例输入<br/>
+<br/>
+   4 1<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">样例输出<br/>
+<br/>
+3<br/>
+<br/>
+样例说明：<br/>
+<br/>
+下列3个数列逆序对数都为1；分别是1 2 4 3 ；1 3 2 4 ；2 1 3 4；<br/>
+<br/>
+<br/>
+<br/>
+测试数据范围<br/>
+<br/>
+30%的数据  n
+<br/>
+100%的数据  n</span></div><h2>HINT</h2>
+<div class="content"><p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=Day1">Day1</a></p></div><center>[<a href="submitpage.php?id=2431">Submit</a>][<a href="problemstatus.php?id=2431">Status</a>][<a href="bbs.php?id=2431">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2763. -- [JLOI2011]飞行路线</title><center><h2>2763: [JLOI2011]飞行路线</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>128 MB<br/><span class="green">Submit: </span>1630  <span class="green">Solved: </span>609<br/>[<a href="submitpage.php?id=2763">Submit</a>][<a href="problemstatus.php?id=2763">Status</a>][<a href="bbs.php?id=2763">Discuss</a>]</center><h2>Description</h2><div class="content"><div style="layout-grid-mode: char; text-indent: 23.65pt"><span style="font-size: medium">Alice和Bob现在要乘飞机旅行，他们选择了一家相对便宜的航空公司。该航空公司一共在n个城市设有业务，设这些城市分别标记为0到n-1，一共有m种航线，每种航线连接两个城市，并且航线有一定的价格。Alice和Bob现在要从一个城市沿着航线到达另一个城市，途中可以进行转机。航空公司对他们这次旅行也推出优惠，他们可以免费在最多k种航线上搭乘飞机。那么Alice和Bob这次出行最少花费多少？</span></div></div><h2>Input</h2><div class="content"><div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">数据的第一行有三个整数，n,m,k，分别表示城市数，航线数和免费乘坐次数。</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">第二行有两个整数，s,t，分别表示他们出行的起点城市编号和终点城市编号。(0&lt;=s,t&lt;n)</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">接下来有m行，每行三个整数，a,b,c，表示存在一种航线，能从城市a到达城市b，或从城市b到达城市a，价格为c。(0&lt;=a,b&lt;n,a与b不相等，0&lt;=c&lt;=1000)</span></div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium"> </span></div></div><h2>Output</h2><div class="content"><div style="layout-grid-mode: char"> </div>
+<div style="layout-grid-mode: char; text-indent: 21pt"><span style="font-size: medium">只有一行，包含一个整数，为最少花费。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 6 1<br/>
+0 4<br/>
+0 1 5<br/>
+1 2 5<br/>
+2 3 5<br/>
+3 4 5<br/>
+2 3 3<br/>
+0 2 100<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">8</span></div><h2>HINT</h2>
+<div class="content"><p></p><p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于</span><span lang="EN-US"><font face="Times New Roman">30%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据</span><span lang="EN-US"><font face="Times New Roman">,2&lt;=n&lt;=50,1&lt;=m&lt;=300,k=0;</font></span></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于</span><span lang="EN-US"><font face="Times New Roman">50%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据</span><span lang="EN-US"><font face="Times New Roman">,2&lt;=n&lt;=600,1&lt;=m&lt;=6000,0&lt;=k&lt;=1;</font></span></font></p><br/>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 21pt; mso-para-margin-left: 2.0gd"><font size="3"><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">对于</span><span lang="EN-US"><font face="Times New Roman">100%</font></span><span style="font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的数据</span><span lang="EN-US"><font face="Times New Roman">,2&lt;=n&lt;=10000,1&lt;=m&lt;=50000,0&lt;=k&lt;=10.</font></span></font></p><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=2763">Submit</a>][<a href="problemstatus.php?id=2763">Status</a>][<a href="bbs.php?id=2763">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

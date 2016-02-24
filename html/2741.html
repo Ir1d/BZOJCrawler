@@ -1,0 +1,79 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 2741. -- 【FOTILE模拟赛】L</title><center><h2>2741: 【FOTILE模拟赛】L</h2><span class="green">Time Limit: </span>15 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>1941  <span class="green">Solved: </span>524<br/>[<a href="submitpage.php?id=2741">Submit</a>][<a href="problemstatus.php?id=2741">Status</a>][<a href="bbs.php?id=2741">Discuss</a>]</center><h2>Description</h2><div class="content"><div><span style="font-size: medium">FOTILE得到了一个长为N的序列A，为了拯救地球，他希望知道某些区间内的最大的连续XOR和。</span></div>
+<div><span style="font-size: medium">即对于一个询问，你需要求出max(Ai xor Ai+1 xor Ai+2 ... xor Aj)，其中l&lt;=i&lt;=j&lt;=r。</span></div>
+<div><span style="font-size: medium">为了体现在线操作，对于一个询问(x,y)：</span></div>
+<div><span style="font-size: medium"><span style="color: rgb(0,0,32); line-height: normal; font-family: monospace; background-color: rgb(246,249,224); text-align: justify">l = min ( </span><span style="color: rgb(0,0,32); line-height: normal; font-family: monospace; background-color: rgb(246,249,224); text-align: justify">((x+lastans) mod N)+1 , ((y+lastans) mod N)+1 </span><span style="color: rgb(0,0,32); line-height: normal; font-family: monospace; background-color: rgb(246,249,224); text-align: justify">).<br/>
+r = max ( ((x+lastans) mod N)+1 , ((y+lastans) mod N)+1 ).</span></span></div>
+<div style="text-align: justify"><span style="font-size: medium"><font color="#000020" face="monospace"><span style="line-height: normal">其中lastans是上次询问的答案，一开始为0。</span></font></span></div></div><h2>Input</h2><div class="content"><div><span style="font-size: medium">第一行两个整数N和M。</span></div>
+<div><span style="font-size: medium">第二行有N个正整数，其中第i个数为Ai，有多余空格。</span></div>
+<div><span style="font-size: medium">后M行每行两个数x,y表示一对询问。</span></div>
+<div><span style="font-size: medium"><br/>
+</span></div>
+<div></div></div><h2>Output</h2><div class="content"><div>
+<h2 style="color: blue; line-height: normal; font-family: arial, verdana, helvetica, sans-serif"> </h2>
+</div>
+<div><span style="font-size: medium">共M行，第i行一个正整数表示第i个询问的结果。</span></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">3 3<br/>
+1 4 3<br/>
+0 1<br/>
+0 1<br/>
+4 3<br/>
+<br/>
+<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">5<br/>
+7<br/>
+7</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><br/><br/>
+HINT<br/><br/>
+N=12000，M=6000，x,y,Ai在signed longint范围内。<br/><br/>
+</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=By seter">By seter</a></p></div><center>[<a href="submitpage.php?id=2741">Submit</a>][<a href="problemstatus.php?id=2741">Status</a>][<a href="bbs.php?id=2741">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

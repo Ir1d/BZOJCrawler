@@ -1,0 +1,77 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4243. -- 交朋友</title><center><h2>4243: 交朋友</h2><span class="green">Time Limit: </span>10 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>90  <span class="green">Solved: </span>41<br/>[<a href="submitpage.php?id=4243">Submit</a>][<a href="problemstatus.php?id=4243">Status</a>][<a href="bbs.php?id=4243">Discuss</a>]</center><h2>Description</h2><div class="content"><div>你是活跃在历史的幕后的一名特工，为了世界的和平而日以继夜地努力着。</div>
+<div>这个世界有N个国家，编号为1...N，你的目的是在这N个国家之间建立尽可能多的友好关系。你为了制定一个特工工作的计划，作出了一张当今国际关系的示意图。</div>
+<div>你准备了一张非常大的画纸，先画下了代表每个国家的N个点。接下来，为了表示现在的国际关系，画下了M个连接两个国家的有向边，其中从国家a连向国家b的有向边(下面称作“边(a,b)”)表示“现在国家a向国家b派遣了大使”。这样就做出了N个点M条边的当今国际关系示意图。</div>
+<div>作为两国友好关系的开端，两国之间需要进行“友好条约缔结会议”(以下简称会议)。如果某两个国家p和q要进行会议，那么需要一个向两国都派遣了大使的国家x作为中介。会议结束后，会议的双方相互向对方的国家派遣大使。换句话说，为了让国p和国q进行会议，必须存在一个国家x满足边(x,p)和边(x,q)都存在，并且在会议后添加两条边(p,q)和(q,p)(如果需要添加的某条边已经存在则不添加)。</div>
+<div>你的工作是对于可以进行会议的两国，选择会议的中介并促使会议进行。使用这张图进行工作的模拟的话，世界距离和平还有多远的一个重要的基准就是这张图上的边数。也就是说，你想知道反复进行【选择两个国家使其进行会议】的工作后，图上的边数最多会到达多少。</div>
+<div>现在给出国家的个数以及当今国际关系的情报，请你求出反复进行【选择两个国家使其进行会议】的工作后，图上的边数最多会到达多少。</div>
+<p></p></div><h2>Input</h2><div class="content"><div>第一行两个空格分隔的整数N和M，分别表示世界上国家的个数和图中的边数</div>
+<div>接下来M行描述画纸上的有向边的信息，其中第i行(1&lt;=i&lt;=M)有两个空格分隔的整数Ai和Bi，表示图中有一条从Ai到Bi的有向边(即Ai国向Bi国派遣了大使)。</div>
+<p></p></div><h2>Output</h2><div class="content"><div>输出一行一个整数，表示能实现的边数的最大值。注意这个边数包括原有的边数和新连接的边数。</div>
+<p></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">5 4<br/>
+1 2<br/>
+1 3<br/>
+4 3<br/>
+4 5</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">10</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>按照下面的顺序实现10条边：</div><br/>
+<div>以国1为中介，国2与国3进行会议；</div><br/>
+<div>以国4为中介，国3与国5进行会议；</div><br/>
+<div>以国3为中介，国2与国5进行会议。</div><br/>
+<div>1&lt;=N&lt;=10^5</div><br/>
+<div>1&lt;=M&lt;=2*10^5</div><br/>
+<div>1&lt;=Ai&lt;=N(1&lt;=i&lt;=M)</div><br/>
+<div>1&lt;=Bi&lt;=N(1&lt;=i&lt;=M)</div><br/>
+<div>Ai≠Bi(1&lt;=i&lt;=M)</div><br/>
+<div>(Ai,Bi)≠(Aj,Bj)(1&lt;=i&lt;j&lt;=M)</div><br/>
+<p></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=JOI 2013~2014 春季training合宿 竞技2 By PoPoQQQ">JOI 2013~2014 春季training合宿 竞技2 By PoPoQQQ</a></p></div><center>[<a href="submitpage.php?id=4243">Submit</a>][<a href="problemstatus.php?id=4243">Status</a>][<a href="bbs.php?id=4243">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

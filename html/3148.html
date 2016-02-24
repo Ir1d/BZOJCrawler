@@ -1,0 +1,76 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 3148. -- [Ctsc2013]没头脑和不高兴</title><center><h2>3148: [Ctsc2013]没头脑和不高兴</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>36  <span class="green">Solved: </span>20<br/>[<a href="submitpage.php?id=3148">Submit</a>][<a href="problemstatus.php?id=3148">Status</a>][<a href="bbs.php?id=3148">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">没头脑 和不高兴 是一对形影不离的好朋友，他们一起上学也一起玩耍。<br/>
+这天，这对好朋友聚在一起玩纸牌游戏。他们所玩的纸牌总共有N张，每一张上面都有一个1N 的数组，任意两张纸牌上的数字都不相同。根据他们制定的游戏规则，在每局游戏的开始，所有的牌需要按照从1N 的顺序排好。在开心地完了一局牌之后，他们发现牌的顺序被弄得乱七八遭，将它们排好序是 一件挺麻烦的事情。他们讲凌乱的纸牌在桌面上排成一排，然后开始了排序工作。不高兴 由于在上一局游戏中输了牌，非常不高兴。他只将其中((奇数位置)) 的牌排成了升序，然后把剩下的任务推给了没头脑。没头脑 非常没头脑，他采取了一个有些 笨的排序方式。每次，他找到两张相邻并且顺序不对的牌交换他们，直到整个 序列被排好序为止。乐于探究的你，想要研究在初始排列随机的情况下没头脑 花在交换纸牌上的时间。假设没头脑 每交换一对纸牌花费的时间为 1，你希望求出他排序时间的期望。此外，为了更好地分析这个问题，你还希望能够计算出所花时间的方差。更进一步地，如果((被不高兴排好序的位置发生了变化))，你是否还能求出没头脑 用来排序的时间期望呢？<br/>
+</span></p></div><h2>Input</h2><div class="content"><p><font size="4">输入文件共 M+1 行。<br/>
+第一行包含两个正整数 N,M。<br/>
+接下来M行，每行包含三个整数l,r,v。其中 1 &lt;=_l&lt;= r&lt;= N,�v属于{1,N}<br/>
+若v=0则表示不高兴不再对l 到r之间的位置排序；反之若v=1则表示被不高兴 排序的位置将涵盖 l到r。<br/>
+输出文件共M+2行。每行输出一个形如p/q的有理数，其中gcd(p;q )=1, �q&gt;=1,�<br/>
+p,q为整数。<br/>
+</font></p></div><h2>Output</h2><div class="content"><p><font size="4">第一行输出在初始条件下没头脑 排序时间的期望。 <br/>
+第二行输出在初始条件下没头脑 排序时间的方差。<br/>
+接下来Ｍ行，每行分别输出在对不高兴 排序的位置进行了前若干次修改之 后没头脑 排序时间的期望。</font></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">33<br/>
+230 221 131<br/>
+2.5 <br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata"><br/>
+<br/>
+2/3<br/>
+2/9<br/>
+3/2<br/>
+1/1<br/>
+0/1<br/>
+<br/>
+</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><img alt="" height="215" src="image/_JudgeOnline_upload_201304_1(8)_jpg" width="668"/></p><br/>
+<p>N&lt;=100000, M=10^5</p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=3148">Submit</a>][<a href="problemstatus.php?id=3148">Status</a>][<a href="bbs.php?id=3148">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

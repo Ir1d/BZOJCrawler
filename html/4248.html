@@ -1,0 +1,90 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+	</div>
+</div>
+</center>
+<title>Problem 4248. -- AAQQZ</title><center><h2>4248: AAQQZ</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>256 MB<br/><span class="green">Submit: </span>11  <span class="green">Solved: </span>6<br/>[<a href="submitpage.php?id=4248">Submit</a>][<a href="problemstatus.php?id=4248">Status</a>][<a href="bbs.php?id=4248">Discuss</a>]</center><h2>Description</h2><div class="content"><div>IOI2015将要在哈萨克斯坦举行。哈萨克斯坦的“哈萨克”是用字母的“QAZAQ”拼写的。这个“QAZQA”是回文——知晓这一点的JOI君出于对回文的喜爱，准备用眼前的字符串制作一个回文。</div>
+<div></div>
+<div>JOI君找到了一个长为N的字符串S=(S1,S2,...,SN)，每个字符可以用1...C之间的一个整数来表示。从这个字符串第i个位置到第j个位置的字符串(Si,Si+1,...,Sj)称作子串(i,j)。如果子串(i,j)翻转后和原来相等，即(Si,Si+1,...,Sj)=(Sj,Sj-1,...,Si)，则称子串(i,j)是回文的。</div>
+<div></div>
+<div>JOI君进行如下操作来制造回文：</div>
+<div></div>
+<div>1.        首先，选择S的一个子串。不妨设选择的子串为T。</div>
+<div></div>
+<div>2.        将子串T按照升序排序，得到T’</div>
+<div></div>
+<div>3.        在S中，用T’替换T，得到S’。我们可以这样描述这三项操作：JOI君选择一个子串(i,j)，将Si,Si+1,...,Sj按升序排序得到T’i,T’i+1,...,T’j，最终得到S’=(S1,S2,...,Si-1,T’i,T’i+1,...,T’j,Sj+1,...,SN)</div>
+<div></div>
+<div>4.        在这之后，寻找S’中的回文子串</div>
+<div></div>
+<div>JOI进行如上操作后，想要得到最长的回文子串</div>
+<div></div>
+<div>现在JOI君将字符串S交给了你，请你输出JOI君进行如上操作后能得到的最长回文子串的长度。</div>
+<div></div></div><h2>Input</h2><div class="content"><p>第一行两个空格分隔的正整数N和C，分别表示字符串的长度和字符集大小</p>
+<div>接下来N行，第i行一个正整数Si，表示字符串S中第i个位置的字符</div>
+<div></div></div><h2>Output</h2><div class="content"><p>输出一行一个正整数，表示JOI君进行操作后能得到的最长回文子串的长度。</p>
+<div></div></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">12 26<br/>
+26<br/>
+17<br/>
+17<br/>
+17<br/>
+1<br/>
+26<br/>
+1<br/>
+17<br/>
+19<br/>
+20<br/>
+1<br/>
+14<br/>
+</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">8</span></div><h2>HINT</h2>
+<div class="content"><p></p><div>样例输入中，N=12,C=26,S=(26,17,17,17,1,26,1,17,19,20,1,14)。JOI君可以选择子串(4,8)，将其按照升序排列，得到S’=(26,17,17,1,1,17,17,26,19,20,1,14)，这样子串(1,8)就是回文了。这个回文长度为8，是最长可能得到的回文子串。</div><br/>
+<div>1&lt;=N&lt;=3000</div><br/>
+<div>1&lt;=C&lt;=3000</div><br/>
+<div>1&lt;=Si&lt;=C</div></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search=JOI 2014~2015 春季training合宿 竞技3 By PoPoQQQ">JOI 2014~2015 春季training合宿 竞技3 By PoPoQQQ</a></p></div><center>[<a href="submitpage.php?id=4248">Submit</a>][<a href="problemstatus.php?id=4248">Status</a>][<a href="bbs.php?id=4248">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>

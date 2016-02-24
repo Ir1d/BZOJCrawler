@@ -1,0 +1,72 @@
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<link href="include/hoj.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<center>
+<div style="width:90%; text-align:left">
+<img src="image/image_logo_png"/>
+</div>
+<table width="96%">
+<tr align="center" class="hd" valign="top">
+<th><a href="faqs.php">F.A.Qs</a></th>
+<th><a href="./">Home</a></th>
+<th><a href="./bbs.php">Discuss</a></th>
+<th><a href="./problemset.php">ProblemSet</a></th>
+<th><a href="./status.php">Status</a></th>
+<th><a href="./ranklist.php">Ranklist</a></th>
+<th><a href="./contest.php">Contest</a></th>
+<th><a href="./modifypage.php"><b>ModifyUser</b></a>  <a href="userinfo.php?user=free_bzoj">
+<font color="red">free_bzoj</font></a></th><th><a href="logout.php">Logout</a></th> <th><a href="./donation.php"><font color="red">捐赠本站</font></a></th>
+</tr>
+</table>
+</center>
+<center>
+<div class="notice">
+<div>
+<b>Notice:</b>1:由于本OJ建立在Linux平台下，而许多题的数据在Windows下制作，请注意输入、输出语句及数据类型及范围，避免无谓的RE出现。
+2:本站即将推出针对初学者的试题系统(与目前OJ是分开的，互不影响)，内容覆盖从语法入门到NOI的所有知识点，敬请关注。
+3:请用户JeremyGuo,mynameisxiaohao不要恶意卡测评!	</div>
+</div>
+</center>
+<title>Problem 1074. -- [SCOI2007]折纸origami</title><center><h2>1074: [SCOI2007]折纸origami</h2><span class="green">Time Limit: </span>20 Sec  <span class="green">Memory Limit: </span>162 MB<br/><span class="green">Submit: </span>266  <span class="green">Solved: </span>148<br/>[<a href="submitpage.php?id=1074">Submit</a>][<a href="problemstatus.php?id=1074">Status</a>][<a href="bbs.php?id=1074">Discuss</a>]</center><h2>Description</h2><div class="content"><p><span style="font-size: medium">桌上有一张边界平行于坐标轴的正方形纸片，左下角的坐标为(0,0)，右上角的坐标为(100,100)。接下来执行n条折纸命令。每条命令用两个不同点P1(x1,y1)和P2(x2,y2)来表示，执行时把当前的折纸作品沿着P1P2所在直线折叠，并把有向线段P1P2的右边折向左边（左边的部分保持不变）。折叠结束后，需要在作品上打一个孔，然后用绳子穿起来挂在墙上。孔的位置是相当重要的：若需要穿过太多层的纸，打孔本身比较困难；若穿过的层数太少，悬挂起来以后作品可能会被撕破。为了选择一个比较合适的打孔位置，你需要计算在每个候选位置打孔时穿过的层数。如果恰好穿过某一层的边界（误差0.000001内），则该层不统计在结果中。本题考虑一个简化的模型：纸的厚度不计，因此折纸操作总能完美执行。</span></p></div><h2>Input</h2><div class="content"><p><span style="font-size: medium">输入第一行为一个整数n，即折纸的次数。以下n行每行四个实数x1,y1,x2,y2，表示每次折纸时对应的有向线段。下一行包含一个正整数m，即候选位置的个数，以下每行包含两个实数x,y，表示一个候选位置。</span></p></div><h2>Output</h2><div class="content"><p><span style="font-size: medium">每个候选位置输出一行，包含一个整数，即该位置打孔时穿过的层数。</span></p></div><h2>Sample Input</h2>
+<div class="content"><span class="sampledata">2<br/>
+-0.5 -0.5 1 1<br/>
+1 75 0 75<br/>
+6<br/>
+10 60<br/>
+80 60<br/>
+30 40<br/>
+10 10<br/>
+50 50<br/>
+20 50</span></div><h2>Sample Output</h2>
+<div class="content"><span class="sampledata">4<br/>
+2<br/>
+2<br/>
+0<br/>
+0<br/>
+2</span></div><h2>HINT</h2>
+<div class="content"><p></p><p><span style="font-size: medium">样例说明 </span></p><br/>
+<p><span style="font-size: medium"><img alt="" border="0" src="image/images_1074_1_jpg"/> </span></p><br/>
+<p><span style="font-size: medium">【限制】<br/><br/>
+100%的数据满足：0&lt;=n&lt;=8, 1&lt;=m&lt;=50<br/><br/>
+</span></p></div><h2>Source</h2>
+<div class="content"><p><a href="problemset.php?search="></a></p></div><center>[<a href="submitpage.php?id=1074">Submit</a>][<a href="problemstatus.php?id=1074">Status</a>][<a href="bbs.php?id=1074">Discuss</a>]</center>﻿<br/>
+<a href="./"><span class="red">HOME</span></a>
+<a href="javascript:history.go(-1)"><span class="red">Back</span></a>
+<hr/>
+<center>
+<div class="footer">
+<a href="setlang.php?lang=ko">한국어</a> 
+		<a href="setlang.php?lang=cn">中文</a> 
+		<a href="setlang.php?lang=fa">فارسی</a> 
+		<a href="setlang.php?lang=en">English</a> 
+		<a href="setlang.php?lang=th">ไทย</a>
+<br/> <div>版权所有 ©2008-2012 大视野在线测评 | <a href="http://www.miitbeian.gov.cn">湘ICP备13009380号</a> | <script language="JavaScript" src="http://s21.cnzz.com/stat.php?id=2982771&amp;web_id=2982771"></script>
+</div>
+<div>Based on opensource project <a href="http://hustoj.googlecode.com">hustoj</a>.</div>
+</div>
+</center>
+</body>
+</html>
