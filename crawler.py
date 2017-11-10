@@ -127,7 +127,7 @@ class crawl_contest(threading.Thread):
             begin += 1
             lock.release()
             down_src(curid)
-            print "Done progress %d / %d" % (begin,size)
+            print "Done progress %d / %d" % (begin,end)
 arglen=len(sys.argv)
 if arglen<4 or arglen>5:
     print "Usage:\n\t%s begin end threads [workdir]"%sys.argv[0]
