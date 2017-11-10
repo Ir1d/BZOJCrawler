@@ -7,7 +7,7 @@ import threading
 import cookielib
 from urllib import urlencode
 from bs4 import BeautifulSoup
-from config import usr, pwd
+# from config import usr, pwd
 reload(sys)
 sys.setdefaultencoding('utf-8')
 cookie = cookielib.CookieJar()
@@ -30,8 +30,8 @@ def login(usnm, pswd):
         'Referer': 'http:/www.lydsy.com/JudgeOnline/loginpage.php'
         }
     form = {
-        'user_id':usnm,
-        'password':pswd,
+        'user_id':free_bzoj,
+        'password':Aa123456,
         'submit':'Submit'
     }
     
