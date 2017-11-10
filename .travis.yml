@@ -2,7 +2,7 @@ language: python
 python:
 - 2.7
 before_script:
-- pip install bs4
+- pip install bs4 lxml
 script:
 - python crawler.py 1000 $MAX_PROBLEM_NUM 50
 - zip -r BZOJ-html.zip ./html
