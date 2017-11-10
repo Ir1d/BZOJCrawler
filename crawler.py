@@ -7,7 +7,7 @@ import threading
 import cookielib
 from urllib import urlencode
 from bs4 import BeautifulSoup
-# from config import usr, pwd
+from config import usr, pwd
 reload(sys)
 sys.setdefaultencoding('utf-8')
 cookie = cookielib.CookieJar()
@@ -30,8 +30,8 @@ def login(usnm, pswd):
         'Referer': 'http:/www.lydsy.com/JudgeOnline/loginpage.php'
         }
     form = {
-        'user_id':free_bzoj,
-        'password':Aa123456,
+        'user_id':usnm,
+        'password':pswd,
         'submit':'Submit'
     }
     
@@ -64,7 +64,7 @@ def get_image(idx, html):
     # print html
     # <img src="image/logo.png"/>
     pattern = re.compile('')
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "lxml")
     # print soup
     for img in soup.find_all('img'):
         src = img.get('src')
@@ -85,7 +85,7 @@ def down_src(idx):
         if (s.find('Please contact lydsy2012@163.com!') != -1):
             qxt.write('%d\n'%idx)
         s = s.replace('user='+usr, 'user=free_bzoj').replace('>%s<'%usr, '>free_bzoj<')
-        page = BeautifulSoup(s)
+        page = BeautifulSoup(s, "lxml")
         
         lst = page.find_all('img')
         for i in lst:
@@ -133,7 +133,7 @@ if arglen<4 or arglen>5:
     print "Usage:\n\t%s begin end threads [workdir]"%sys.argv[0]
     exit()
 if arglen==5:
-    workdirsys.argv[4]
+    workdir=sys.argv[4]
 else:
     workdir="./"
 begin=int(sys.argv[1])
