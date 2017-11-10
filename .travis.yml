@@ -4,7 +4,8 @@ python:
 before_script:
 - pip install bs4 lxml
 script:
-- python crawler.py 1000 $MAX_PROBLEM_NUM 50
+- python crawler.py 1000 $MAX_PROBLEM_NUM 20
+after_script:
 - zip -r BZOJ-html.zip ./html
 
 deploy:
