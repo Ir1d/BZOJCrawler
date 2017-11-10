@@ -74,6 +74,7 @@ def get_image(idx, html):
             link = "http://www.lydsy.com/JudgeOnline/" + src
         saveImg(link, "html/" + src)
 qxt = open('qxt.txt', 'w')
+h_list=open("html_list.txt","wb")
 def down_src(idx):
     url = "http://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
@@ -104,6 +105,7 @@ def down_src(idx):
                 print 'Got Exception while parsing img, src=' + i['src']
         page = str(page)
         f = open('html/%d.html'%idx, 'w')
+        h_list.write('html/%d.html'%idx)
         f.write(header + page)
         f.close()
     # nsrc = 'src/' + str(idx)
@@ -147,7 +149,6 @@ for d in ['src','html']:
         os.makedirs(d)
 lock = threading.RLock()
 header=open("header.html").read()
-h_list=open(workdir+"html_list.txt","wb")
 print "crawl contest %d to %d\n%d threads used,save in %s"%(begin,end,threads,workdir)
 for i in range(threads):
     crawl_contest().start()
