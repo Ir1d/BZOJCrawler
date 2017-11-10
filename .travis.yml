@@ -1,0 +1,15 @@
+language: python
+python:
+- 2.7
+script:
+- python crawler.py 1000 $MAX_PROBLEM_NUM 50
+- zip -r BZOJ-html.zip ./html
+
+deploy:
+  provider: releases
+  api_key:
+    secure: NHiwhlOTVQPdKuGSEN9x+7oPW2ukDu4aqpVInyOzWBBC7B6yK6JCUOjmd23Ka5UrXXEc80zRfYt4NwdOPommJ/4YdswTyfu2brRDc91T45yQpbQ0niL0Jc4JVbVrql56lJeTOBHUn/5TZv1PV1QMB8BcKHMBKs56yJpk772sua2RHpK3U6iAzmcC/YQLrcEcnHhoQeMqgeeHtaia0NMnA1l/pD2w0FB038aimLnAM4c/IVYXxc9hbmRYtduGzQ43hlPngsmpRVwFcYCm7iZDcODWpeulZe3NakEel5mdVT7f/Amx7I8Yqh1MLWPMYSelApaSNpIWPmw0qVSEWDV7FWyyalStuJb57XU4rYYZNd/qpkwk21XZRRnkEtP7i0/kS/f+Vvxq0f0zoj9FqLtd5So6U7zXzScp6NevBsXeGjfrL3wq8MNegfH4Meg6D4Shukd2llwxAQE9zRfa/4Wg7qUeKZNoUwrZuTQEdKJWxf5nwSRQC3u7NRwPhPfsn6XrlG+jBbv5vJjHpyQIyrTz0KL7rK9TOX6xxNETYSU/MagEUW70Af8I3ilAplzL8DyBbcoz0DICztBxWRSBbj304HZpqK/rLjccuWgOkUdo55EEytXyj6a9FvSohIGSES9TIQJ1bdqS2RxUFcUokfXtf9A4V3UvwzN4Jry3eQWVpvg=
+  file: BZOJ-html.zip
+  skip_cleanup: true
+  on:
+    repo: Ir1d/BZOJCrawler
