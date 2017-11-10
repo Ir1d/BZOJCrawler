@@ -95,7 +95,7 @@ def down_src(idx):
             try:
                 if i['src'][0] == '/':
                     picurl = 'http://www.lydsy.com' + i['src']
-                else if i['src'][0:5] == 'http:':
+                elif i['src'][0:5] == 'http:':
                     pass
                 else:
                     picurl = 'http://www.lydsy.com/JudgeOnline/' + i['src']
