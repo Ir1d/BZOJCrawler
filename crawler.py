@@ -17,13 +17,12 @@ handler = urllib2.HTTPCookieProcessor(cookie)
 opener = urllib2.build_opener(handler)
 urllib2.install_opener(opener)
 def login(usnm, pswd):
-    urllib2.urlopen('https://www.lydsy.com/JudgeOnline')
+    h1={'Connection':'keep-alive', 'Accept-Language':'zh-CN,zh;q=0.9', 'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Cache-Control':'max-age=0', 'Upgrade-Insecure-Requests':'1', 'Host':'www.lydsy.com', 'DNT':'1', 'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36', 'Accept-Encoding':'gzip, deflate, br'}
     # global cookie
     # print str(cookie)
     headers = {
         'Host': 'www.lydsy.com',
         'Connection': 'keep-alive',
-        'Content-Length': '45',
         'Cache-Control': 'max-age=0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         # 'Origin': 'https://www.lydsy.com',
