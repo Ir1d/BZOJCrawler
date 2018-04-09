@@ -112,7 +112,7 @@ def down_src(idx):
         }
     url = "https://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
-      req = urllib2.Request(url, headers)
+        req = urllib2.Request(url, headers)
         s = urllib2.urlopen(req).read()
     except BaseException:
         s = None
