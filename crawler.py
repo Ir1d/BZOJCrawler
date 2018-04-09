@@ -17,7 +17,7 @@ handler = urllib2.HTTPCookieProcessor(cookie)
 opener = urllib2.build_opener(handler)
 urllib2.install_opener(opener)
 def login(usnm, pswd):
-    urllib2.urlopen('http://www.lydsy.com/JudgeOnline')
+    urllib2.urlopen('https://www.lydsy.com/JudgeOnline')
     # global cookie
     # print str(cookie)
     headers = {
@@ -26,10 +26,10 @@ def login(usnm, pswd):
         'Content-Length': '45',
         'Cache-Control': 'max-age=0',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        # 'Origin': 'http://www.lydsy.com',
+        # 'Origin': 'https://www.lydsy.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37',
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Referer': 'http:/www.lydsy.com/JudgeOnline/loginpage.php'
+        'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
         }
     form = {
         'user_id':usnm,
@@ -38,7 +38,7 @@ def login(usnm, pswd):
     }
     
     postdata = urlencode(form)
-    req = urllib2.Request('http://www.lydsy.com/JudgeOnline/login.php', postdata, headers)
+    req = urllib2.Request('https://www.lydsy.com/JudgeOnline/login.php', postdata, headers)
     resp = urllib2.urlopen(req)
     # r = urllib2.urlopen('http://www.lydsy.com/Judgenline/modifypage.php')
     # print r.read()
@@ -71,14 +71,14 @@ def get_image(idx, html):
     for img in soup.find_all('img'):
         src = img.get('src')
         if src[0] == '/':
-            link = "http://www.lydsy.com"
+            link = "https://www.lydsy.com"
         else:
-            link = "http://www.lydsy.com/JudgeOnline/" + src
+            link = "https://www.lydsy.com/JudgeOnline/" + src
         saveImg(link, "html/" + src)
 qxt = open('qxt.txt', 'w')
 h_list=open("html_list.txt","wb")
 def down_src(idx):
-    url = "http://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
+    url = "https://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
         s = urllib2.urlopen(url).read()
     except BaseException:
@@ -94,11 +94,11 @@ def down_src(idx):
         for i in lst:
             try:
                 if i['src'][0] == '/':
-                    picurl = 'http://www.lydsy.com' + i['src']
-                elif i['src'][0:5] == 'http:':
+                    picurl = 'https://www.lydsy.com' + i['src']
+                elif i['src'][0:5] == 'https:':
                     pass
                 else:
-                    picurl = 'http://www.lydsy.com/JudgeOnline/' + i['src']
+                    picurl = 'https://www.lydsy.com/JudgeOnline/' + i['src']
                 if i['src'] != 'image/logo.png':
                     temppic = urllib2.urlopen(picurl).read()
                     f = open('html/image/%s'%str(i['src']).replace('.', '_').replace('/', '_'), 'wb')
@@ -113,7 +113,7 @@ def down_src(idx):
         f.write(header + page)
         f.close()
     # nsrc = 'src/' + str(idx)
-    # # http://www.lydsy.com/JudgeOnline/problem.php?id=1503
+    # # https://www.lydsy.com/JudgeOnline/problem.php?id=1503
     # # open(workdir+nsrc,"w").write(get_html(url))
     # html_path=workdir+'html/'+str(idx)+'.html'
     # lst = page.find_all('img')
