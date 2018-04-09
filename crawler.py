@@ -47,16 +47,39 @@ login(usr, pwd)
 # import sys
 # sys.exit()
 def get_html(url):
+    headers = {
+        'Host': 'www.lydsy.com',
+        'Connection': 'keep-alive',
+        'Cache-Control': 'max-age=0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        # 'Origin': 'https://www.lydsy.com',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
+        }
+
     t = 50
     while t > 0:
         try:
-            return urllib2.urlopen(url).read();
+            req = urllib2.Request(url, headers)
+            return urllib2.urlopen(req).read();
         except:
             t -= 1
     print "open url failed:%s" % url
 def saveImg(imageURL,fileName):
+    headers = {
+        'Host': 'www.lydsy.com',
+        'Connection': 'keep-alive',
+        'Cache-Control': 'max-age=0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        # 'Origin': 'https://www.lydsy.com',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
+        }
     print "start to fetch image on url:%s, name:%s" % (imageURL, fileName)
-    u = urllib2.urlopen(imageURL)
+    req = urllib2.Request(imageURL, headers)
+    u = urllib2.urlopen(req)
     data = u.read()
     f = open(fileName, 'wb')
     f.write(data)
@@ -77,9 +100,20 @@ def get_image(idx, html):
 qxt = open('qxt.txt', 'w')
 h_list=open("html_list.txt","wb")
 def down_src(idx):
+    headers = {
+        'Host': 'www.lydsy.com',
+        'Connection': 'keep-alive',
+        'Cache-Control': 'max-age=0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+        # 'Origin': 'https://www.lydsy.com',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
+        }
     url = "https://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
-        s = urllib2.urlopen(url).read()
+      req = urllib2.Request(url, headers)
+        s = urllib2.urlopen(req).read()
     except BaseException:
         s = None
         print "Got exception on url %s!" % url
@@ -99,7 +133,8 @@ def down_src(idx):
                 else:
                     picurl = 'https://www.lydsy.com/JudgeOnline/' + i['src']
                 if i['src'] != 'image/logo.png':
-                    temppic = urllib2.urlopen(picurl).read()
+                    req = urllib2.Request(picurl, headers)
+                    temppic = urllib2.urlopen(req).read()
                     f = open('html/image/%s'%str(i['src']).replace('.', '_').replace('/', '_'), 'wb')
                     f.write(temppic)
                     f.close()
