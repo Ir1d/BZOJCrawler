@@ -62,7 +62,7 @@ def get_html(url):
     t = 50
     while t > 0:
         try:
-            req = urllib2.Request(url, headers)
+            req = urllib2.Request(url, headers=headers)
             return urllib2.urlopen(req).read();
         except:
             t -= 1
@@ -79,7 +79,7 @@ def saveImg(imageURL,fileName):
         'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
         }
     print "start to fetch image on url:%s, name:%s" % (imageURL, fileName)
-    req = urllib2.Request(imageURL, headers)
+    req = urllib2.Request(imageURL, headers=headers)
     u = urllib2.urlopen(req)
     data = u.read()
     f = open(fileName, 'wb')
@@ -113,7 +113,7 @@ def down_src(idx):
         }
     url = "https://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
-        req = urllib2.Request(url, headers)
+        req = urllib2.Request(url, headers=headers)
         s = urllib2.urlopen(req).read()
     except Exception as e:
         s = None
@@ -135,7 +135,7 @@ def down_src(idx):
                 else:
                     picurl = 'https://www.lydsy.com/JudgeOnline/' + i['src']
                 if i['src'] != 'image/logo.png':
-                    req = urllib2.Request(picurl, headers)
+                    req = urllib2.Request(picurl, headers=headers)
                     temppic = urllib2.urlopen(req).read()
                     f = open('html/image/%s'%str(i['src']).replace('.', '_').replace('/', '_'), 'wb')
                     f.write(temppic)
