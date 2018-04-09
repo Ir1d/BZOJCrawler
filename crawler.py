@@ -1,6 +1,7 @@
 import urllib
 import urllib2
 import re
+import logging
 import os
 import sys
 import threading
@@ -108,15 +109,16 @@ def down_src(idx):
         # 'Origin': 'https://www.lydsy.com',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.82 Safari/537.36 OPR/35.0.2066.37',
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Referer': 'https://www.lydsy.com/JudgeOnline/loginpage.php'
+        'Referer': 'https://www.lydsy.com/JudgeOnline/'
         }
     url = "https://www.lydsy.com/JudgeOnline/problem.php?id=" + str(idx)
     try:
         req = urllib2.Request(url, headers)
         s = urllib2.urlopen(req).read()
-    except BaseException:
+    except Exception as e:
         s = None
         print "Got exception on url %s!" % url
+        logging.exception("message")
     if s:
         if (s.find('Please contact lydsy2012@163.com!') != -1):
             qxt.write('%d\n'%idx)
