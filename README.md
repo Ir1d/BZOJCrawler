@@ -13,3 +13,7 @@ Need to make dir `html/image` under current directory.
 如今想必没有人会需要离线包了吧 XD
 
 最后，愿诸君在算法竞赛之路一切顺利。
+
+----
+
+Upd: https://github.com/konnyakuxzy/BZPRO; https://github.com/Ruanxingzhi/bzojch; 这两位分别都 host 了 BZOJ 的镜像
